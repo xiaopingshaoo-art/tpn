@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta id="appThemeColor" name="theme-color" content="#eef2f7">
+  <meta id="appThemeColor" name="theme-color" content="#f2f5fa">
   <meta name="color-scheme" content="light dark">
   <link rel="manifest" href="./manifest.webmanifest">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -23,7 +23,7 @@
     var theme=preferred||(systemDark?"dark":"light");
     document.documentElement.setAttribute("data-theme",theme);
     document.documentElement.setAttribute("data-theme-source",preferred?"manual":"system");
-    var meta=document.getElementById("appThemeColor");if(meta){meta.setAttribute("content",theme==="dark"?"#111925":"#eef2f7");}
+    var meta=document.getElementById("appThemeColor");if(meta){meta.setAttribute("content",theme==="dark"?"#0f1722":"#f2f5fa");}
   }());
   </script>
 
@@ -739,6 +739,156 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after,.selected-sheet::backdrop{animation:none!important;transition:none!important;scroll-behavior:auto!important}.quick button:active,.stepper button:active,.theme-toggle:active,.copy-button:active,.mobile-status button:active{transform:none}}
 
 </style>
+<style id="ios-liquid-glass">
+:root{
+  --page:#f2f5fa;--paper:#fff;--ink:#1b293c;--muted:#53647a;
+  --blue:#2467a9;--deep:#173f69;--blue-soft:#e8f1ff;--blue-faint:#f5f8fd;
+  --orange:#cb895d;--orange-soft:#fff2e8;--orange-ink:#884724;
+  --line:#dce5f0;--control:#a4b5ca;--danger:#a23936;--danger-soft:#fff0ec;
+  --radius:18px;--radius-card:18px;--radius-control:12px;--radius-small:9px;
+  --chrome-muted:#41546d;--glass-fill:rgba(255,255,255,.86);--glass-edge:rgba(255,255,255,.85);
+  --glass-shadow:rgba(34,61,98,.14);--glass-cursor:#fff;--selection-fill:#edf5ff;
+  --energy-fill:#e4efff;--liquid-fill:#e8f4f3;--macro-aa:#fff1e6;--macro-fat:#eeeafb;
+  --glass-blur:22px;--glass-duration:280ms;--glass-ease:cubic-bezier(.2,.85,.25,1);
+}
+:root[data-theme="dark"]{
+  --page:#0f1722;--paper:#192638;--ink:#e9f0fa;--muted:#b3c2d5;
+  --blue:#a7cbfa;--deep:#c6dcf7;--blue-soft:#233b56;--blue-faint:#1c2c40;
+  --orange:#d8a27b;--orange-soft:#3b2c23;--orange-ink:#f2c6a4;
+  --line:#30435c;--control:#698099;--danger:#ffb8ad;--danger-soft:#492b2b;
+  --chrome-muted:#c0cee0;--glass-fill:rgba(26,40,59,.88);--glass-edge:rgba(215,233,255,.2);
+  --glass-shadow:rgba(0,0,0,.34);--glass-cursor:#354c68;--selection-fill:#20354e;
+  --energy-fill:#223c5d;--liquid-fill:#1e3c40;--macro-aa:#3b3028;--macro-fat:#302e4b;
+}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  font-optical-sizing:auto;font-size:15px;line-height:1.55;
+  background-color:var(--page);
+  background-image:radial-gradient(ellipse 850px 520px at 0 0,rgba(165,205,255,.32),transparent 72%),radial-gradient(ellipse 680px 450px at 100% 180px,rgba(215,221,250,.22),transparent 72%);
+  background-repeat:no-repeat;
+}
+[data-theme="dark"] body{background-image:radial-gradient(ellipse 850px 520px at 0 0,rgba(38,88,151,.24),transparent 72%),radial-gradient(ellipse 680px 450px at 100% 180px,rgba(83,71,137,.17),transparent 72%)}
+.header h1{font-size:29px;line-height:1.2;letter-spacing:-.5px;font-weight:700}
+.header h1 span{font-size:31px;font-weight:750;letter-spacing:-1px}
+.header .subtitle{font-size:12px;line-height:1.55;color:var(--muted);white-space:normal;overflow-wrap:anywhere}
+.brand-icon{border-radius:12px;box-shadow:0 2px 9px rgba(50,86,128,.08)}
+.heading h2{font-size:21px;font-weight:700;letter-spacing:-.25px}
+.heading:after{background:var(--line)}
+.panel,.group,.warning,.catalog-reference{background:var(--paper);border-color:var(--line);border-radius:18px;box-shadow:0 2px 10px rgba(36,61,94,.025)}
+.section-title h2{font-size:16px;font-weight:650;letter-spacing:-.1px}
+.field>span:first-child{font-size:13px;font-weight:500}
+.field-box,.stepper,.tool-field input,.tool-field select,.parameter-editor input{border-radius:12px;background:var(--paper);border-color:var(--control)}
+.field-box input,.stepper input{font-weight:600}
+.field-box b,.stepper label span{font-weight:500}
+.app .dose-row.active-dose{background:var(--selection-fill)}
+.app .dose-row.active-dose .dose-copy strong{color:var(--deep)}
+.app .dose-row.active-dose .dose-copy strong:before{background:var(--blue)}
+.app .stepper button:first-child{background:var(--blue-faint);color:var(--chrome-muted);border-color:var(--line)}
+.app .stepper button:last-child{background:var(--blue-soft);color:var(--blue);border-color:var(--line)}
+.app .quick button{background:var(--paper);color:var(--muted);border-color:var(--line);border-radius:9px;font-weight:550}
+.app .quick button:nth-child(n+3){background:var(--blue-soft);color:var(--blue);border-color:var(--line)}
+.app .quick button:active,.app .stepper button:active{background:var(--selection-fill)}
+.app .dose-copy strong{font-weight:600}
+.app .dose-copy small,.app .status{line-height:1.65}
+.app .mode,.mobile-category-bar,.mobile-status-host,.selected-sheet[open]{
+  background:var(--paper);border:1px solid var(--line);
+  box-shadow:0 12px 32px var(--glass-shadow),inset 0 1px 0 var(--glass-edge);
+}
+.app .mode{position:relative;isolation:isolate;padding:6px;gap:4px;border-radius:24px}
+.app .mode button{position:relative;z-index:1;min-height:44px;border-radius:18px;color:var(--chrome-muted);font-size:13px;font-weight:600}
+.app .mode button.active{color:var(--deep);background:var(--glass-cursor);box-shadow:0 2px 7px var(--glass-shadow)}
+.app .mode.glass-ready button.active{background:transparent;box-shadow:none}
+.glass-cursor{position:absolute;inset:0 auto auto 0;z-index:0;width:var(--glass-w,0px);height:var(--glass-h,0px);transform:translate3d(var(--glass-x,0px),var(--glass-y,0px),0);background:var(--glass-cursor);border:1px solid var(--glass-edge);border-radius:18px;box-shadow:0 3px 10px var(--glass-shadow),inset 0 1px 0 var(--glass-edge);pointer-events:none;opacity:0}
+.glass-ready>.glass-cursor{opacity:1;transition:transform var(--glass-duration) var(--glass-ease)}
+.app .mobile-category-bar{isolation:isolate;border-radius:24px}
+.mobile-category-bar button{position:relative;z-index:1;border:0!important;border-radius:18px;background:transparent!important;color:var(--chrome-muted);font-weight:600}
+.mobile-category-bar button[aria-selected="true"]{color:var(--deep);background:var(--glass-cursor)!important;box-shadow:0 2px 7px var(--glass-shadow)}
+.mobile-category-bar.glass-ready button[aria-selected="true"]{background:transparent!important;box-shadow:none}
+[data-theme="dark"] .mobile-category-bar button[aria-selected="true"]{color:var(--deep)}
+.mobile-category-bar button:active{color:var(--blue)}
+.mobile-status-host{border-radius:24px}
+.mobile-status{background:transparent;border-radius:0;padding:12px 12px 12px 16px}
+.mobile-status span,.mobile-status small{color:var(--chrome-muted);font-size:11px;line-height:1.4}
+.mobile-status strong{color:var(--deep);font-size:21px;font-weight:650;letter-spacing:-.2px}
+.mobile-status button{min-height:54px;border:1px solid rgba(255,255,255,.24);border-radius:16px;background:linear-gradient(155deg,#4e87bc,#2d679b);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 2px 6px rgba(35,83,128,.12);font-weight:600}
+.mobile-status button span{color:inherit;font-size:12px}
+.mobile-status [data-alert="true"] span,.mobile-status [data-alert="true"] strong{color:var(--danger)}
+[data-theme="dark"] .mobile-status button{background:linear-gradient(155deg,#bedafa,#91b9eb);color:#17324f}
+.selected-sheet[open]{border-radius:26px;box-shadow:0 24px 70px var(--glass-shadow),inset 0 1px 0 var(--glass-edge)}
+.sheet-heading{min-height:62px;padding:9px 16px;border-color:var(--line)}
+.sheet-heading h2{font-size:17px;font-weight:650;letter-spacing:-.15px}
+.sheet-heading button{border-radius:16px;background:var(--blue-soft);color:var(--blue);font-size:14px;font-weight:600}
+.selected-sheet .cart-items{background:transparent;padding:0 16px}
+.selected-sheet .cart-line{border-color:var(--line)}
+.selected-sheet .cart-line .dose-copy strong{font-weight:600}
+.selected-sheet .cart-line .stepper{background:var(--paper);border-color:var(--control)}
+.selected-sheet .cart-line .stepper button:first-child{background:var(--blue-faint);color:var(--chrome-muted)}
+.selected-sheet .cart-line .stepper button:last-child{background:var(--blue-soft);color:var(--blue);border-color:var(--line)}
+.sheet-result{border-color:var(--line);background:transparent;color:var(--blue);font-weight:550}
+#sheetStatusSlot{border-color:var(--line)}
+.selected-sheet::backdrop{background:rgba(13,24,41,.36)}
+.sheet-scrim:not([hidden]){background:rgba(13,24,41,.36)}
+.result-pane .cards .card.primary{background:var(--energy-fill);color:var(--deep);border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.4)}
+.result-pane .cards .card.primary>span,.result-pane .cards .card.primary strong,.result-pane .cards .card.primary>small{color:var(--deep)}
+.result-pane .cards>.card:nth-child(2){background:var(--liquid-fill);border-color:var(--line)}
+.result-pane .cards #osmCard{background:var(--paper);border-color:var(--line)}
+.result-pane .cards #osmCard.danger{background:var(--danger-soft);border-color:var(--danger)}
+.result-pane .cards #osmCard.danger strong,.result-pane .cards #osmCard.danger>span{color:var(--danger)}
+.cards .card,.summary{border-radius:18px}
+.macro:not(.focus-macro)>div{border:1px solid var(--line);border-radius:14px}
+.macro:not(.focus-macro)>div:nth-child(1){background:var(--blue-soft)}
+.macro:not(.focus-macro)>div:nth-child(2){background:var(--macro-aa)}
+.macro:not(.focus-macro)>div:nth-child(3){background:var(--macro-fat)}
+.macro:not(.focus-macro)>div b{color:var(--ink);font-weight:650}
+.macro:not(.focus-macro)>div span,.macro:not(.focus-macro)>div em{color:var(--muted)}
+.focus-macro{gap:8px;padding-top:0;margin-top:10px;border-top:0}
+.app .focus-macro>div,.app .focus-macro>div:nth-child(n){padding:12px 10px;border:1px solid var(--line);border-radius:12px;background:var(--blue-faint)}
+.focus-macro b{font-size:clamp(15px,3.8vw,18px);font-weight:650;color:var(--deep)}
+.warning article{border-radius:12px}
+.warning p{font-size:12px;line-height:1.7}
+.collapsible-panel>summary,.clinical-tool>summary{font-size:14px;font-weight:600}
+@media(hover:hover){
+  .app .mode button:not(.active):hover{background:var(--blue-soft)}
+  .app .quick button:hover{background:var(--blue-soft);border-color:var(--control);color:var(--blue)}
+  .app .quick button:nth-child(n+3):hover{background:var(--selection-fill);border-color:var(--control);color:var(--deep)}
+}
+@supports (backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px)){
+  .app .mode,.app .mobile-category-bar,.mobile-status-host,.selected-sheet[open]{background:var(--glass-fill);border-color:var(--glass-edge);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(145%);backdrop-filter:blur(var(--glass-blur)) saturate(145%)}
+  .selected-sheet::backdrop{-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+}
+@media screen and (max-width:680px), screen and (max-width:1000px) and (pointer:coarse){
+  html.mobile-enhanced{scroll-padding-top:calc(80px + env(safe-area-inset-top))}
+  .app .mobile-category-bar{top:8px;top:max(8px,env(safe-area-inset-top));padding:6px;gap:4px;margin-bottom:14px}
+  .mobile-category-bar button{padding:10px 3px;min-height:44px;font-size:13px}
+  .header h1{font-size:25px}.header h1 span{font-size:28px}
+  .header .subtitle{font-size:11px}
+  .dose-copy strong{font-size:14px;line-height:1.6}
+  .dose-copy small{font-size:12px}
+  .mobile-status{gap:7px;padding:11px 10px 11px 14px}
+  .mobile-status strong{font-size:20px}
+  .mobile-status-host{width:calc(100% - 24px)}
+  .selected-sheet[open]{inset:auto 8px calc(8px + env(safe-area-inset-bottom))}
+  .macro b{font-size:19px}
+  .focus-macro b{font-size:clamp(15px,3.8vw,18px)}
+  .app .focus-macro>div,.app .focus-macro>div:nth-child(n){padding:11px 7px}
+  [data-sheet-compact="true"] .sheet-heading{min-height:48px;padding-top:2px;padding-bottom:2px}
+}
+@media(max-width:360px){.mobile-category-bar button{font-size:12px}.mobile-status{gap:5px;padding-left:11px}.mobile-status strong{font-size:19px}.mobile-status small{font-size:10px}}
+@media(prefers-reduced-transparency:reduce),(prefers-contrast:more){
+  .app .mode,.app .mobile-category-bar,.mobile-status-host,.selected-sheet[open]{background:var(--paper)!important;border-color:var(--control)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:0 4px 12px var(--glass-shadow)}
+  .selected-sheet::backdrop{-webkit-backdrop-filter:none;backdrop-filter:none}
+  .glass-cursor{border-color:var(--control)}
+}
+@media(prefers-reduced-motion:reduce){
+  .glass-ready>.glass-cursor{transition:none!important}
+  .selected-sheet::backdrop{animation:none!important}
+}
+@media(forced-colors:active){
+  .app .mode,.app .mobile-category-bar,.mobile-status-host,.selected-sheet[open],.glass-cursor{background:Canvas!important;border:1px solid ButtonText!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+  .glass-cursor{outline:2px solid Highlight}
+}
+
+</style>
 </head>
 <body>
 <main class="app">
@@ -916,7 +1066,7 @@
   function play(node,frames,options){if(!motionAllowed()||!node.animate){return null;}try{return node.animate(frames,options);}catch(error){return null;}}
   function enterSheet(){
     cancelMotion(sheetMotion);
-    sheetMotion=play(sheet,[{transform:"translateY(22px)",opacity:0},{transform:"translateY(0)",opacity:1}],{duration:210,easing:"cubic-bezier(.2,.75,.25,1)"});
+    sheetMotion=play(sheet,[{transform:"translateY(30px) scale(.99)",opacity:0},{transform:"translateY(-1px) scale(1.001)",opacity:1,offset:.8},{transform:"translateY(0) scale(1)",opacity:1}],{duration:280,easing:"cubic-bezier(.18,.82,.22,1)"});
   }
   function fadePanel(){
     cancelMotion(panelMotion);
@@ -1031,7 +1181,7 @@
     if(immediate||(nativeDialog&&!sheet.open)||!motionAllowed()){finishClose(restoreFocus);return;}
     if(closing){return;}
     cancelMotion(sheetMotion);closing=true;
-    var animation=play(sheet,[{transform:"translateY(0)",opacity:1},{transform:"translateY(16px)",opacity:0}],{duration:140,easing:"ease-in",fill:"forwards"});
+    var animation=play(sheet,[{transform:"translateY(0)",opacity:1},{transform:"translateY(16px)",opacity:0}],{duration:160,easing:"ease-in",fill:"forwards"});
     if(!animation){finishClose(restoreFocus);return;}
     sheetMotion=animation;
     animation.onfinish=function(){if(sheetMotion===animation){finishClose(restoreFocus);}};
@@ -1347,7 +1497,7 @@
     if(manual){root.setAttribute("data-theme-source","manual");try{localStorage.setItem("pn-appearance",theme);}catch(error){}}
     var label=theme==="dark"?"切换到日间模式":"切换到夜间模式";
     if(button){button.setAttribute("aria-label",label);button.setAttribute("title",label);button.setAttribute("aria-pressed",theme==="dark"?"true":"false");}
-    var meta=document.getElementById("appThemeColor");if(meta){meta.setAttribute("content",theme==="dark"?"#111925":"#eef2f7");}
+    var meta=document.getElementById("appThemeColor");if(meta){meta.setAttribute("content",theme==="dark"?"#0f1722":"#f2f5fa");}
   }
   apply(root.getAttribute("data-theme")||"light",false);
   if(button){button.addEventListener("click",function(){apply(root.getAttribute("data-theme")==="dark"?"light":"dark",true);});}
@@ -1359,6 +1509,48 @@
 }());
 </script>
 
+<script id="glass-materials">
+(function(){
+  "use strict";
+  function frames(callback){return window.requestAnimationFrame?window.requestAnimationFrame(callback):window.setTimeout(callback,16);}
+  var records=[],scheduled=false,forceNext=false;
+  function create(container,selector,isMode){
+    if(!container){return;}
+    var cursor=document.createElement("span");cursor.className="glass-cursor";cursor.setAttribute("aria-hidden","true");container.appendChild(cursor);
+    var record={container:container,cursor:cursor,selector:selector,last:null,isMode:isMode};records.push(record);
+    if(window.MutationObserver){new window.MutationObserver(function(){schedule(false);}).observe(container,{subtree:true,attributes:true,attributeFilter:isMode?["class"]:["aria-selected"]});}
+    if(window.ResizeObserver){new window.ResizeObserver(function(){schedule(true);}).observe(container);}
+    container.addEventListener("click",function(){schedule(false);});
+  }
+  function update(record,force){
+    var target=record.container.querySelector(record.selector);
+    if(record.isMode){
+      var buttons=record.container.querySelectorAll("button"),i;for(i=0;i<buttons.length;i++){buttons[i].setAttribute("aria-pressed",buttons[i]===target?"true":"false");}
+    }
+    if(!target){record.container.classList.remove("glass-ready");record.last=null;return;}
+    if(!force&&target===record.last){return;}
+    var parent=record.container.getBoundingClientRect(),rect=target.getBoundingClientRect();
+    if(parent.width<=0||rect.width<=0){record.container.classList.remove("glass-ready");record.last=null;return;}
+    var style=record.cursor.style;
+    style.setProperty("--glass-x",Math.round((rect.left-parent.left-(record.container.clientLeft||0))*100)/100+"px");
+    style.setProperty("--glass-y",Math.round((rect.top-parent.top-(record.container.clientTop||0))*100)/100+"px");
+    style.setProperty("--glass-w",Math.round(rect.width*100)/100+"px");
+    style.setProperty("--glass-h",Math.round(rect.height*100)/100+"px");
+    record.last=target;record.container.classList.add("glass-ready");
+  }
+  function schedule(force){
+    forceNext=forceNext||force;
+    if(scheduled){return;}
+    scheduled=true;frames(function(){var force=forceNext;forceNext=false;scheduled=false;for(var i=0;i<records.length;i++){update(records[i],force);}});
+  }
+  create(document.querySelector(".mode"),"button.active",true);
+  create(document.getElementById("mobileCategories"),'button[aria-selected="true"]',false);
+  window.addEventListener("resize",function(){schedule(true);});
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){schedule(true);});}
+  schedule(true);
+}());
+
+</script>
 </body>
 </html>
 
