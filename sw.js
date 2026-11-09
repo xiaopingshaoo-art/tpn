@@ -1,9 +1,9 @@
 "use strict";
 var SCOPE = self.registration.scope;
 var PREFIX = "pn-calculator-" + encodeURIComponent(SCOPE) + "-";
-var CACHE_NAME = PREFIX + "2026-11-09-audit-1";
+var CACHE_NAME = PREFIX + "2026-11-09-flow-1";
 var APP_URL = new URL("index.html", SCOPE).href;
-var ASSETS = ["index.html","manifest.webmanifest","apple-touch-icon.png?v=20261109audit","icon-192.png","icon-192.png?v=20261109audit","icon-512.png"].map(function(path){return new URL(path,SCOPE).href;});
+var ASSETS = ["index.html","manifest.webmanifest","apple-touch-icon.png?v=20261109flow","icon-192.png","icon-192.png?v=20261109flow","icon-512.png"].map(function(path){return new URL(path,SCOPE).href;});
 self.addEventListener("install",function(event){
   event.waitUntil(caches.open(CACHE_NAME).then(function(cache){return cache.addAll(ASSETS);}).then(function(){return self.skipWaiting();}));
 });
