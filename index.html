@@ -316,7 +316,7 @@
     footer{margin-top:28px;padding:18px 0 0;border-top:1px solid #dce4ef;color:#5c6c83;font-size:12px;text-align:center}
     .hidden{display:none!important}
     .error-box{padding:20px;border:1px solid #d99b92;border-radius:12px;background:var(--danger-soft);color:var(--danger);font-size:14px;line-height:1.8}
-    @media(hover:hover){
+    @media(hover:hover) and (pointer:fine){
       .mode button:not(.active):hover{background:#f4f7fc}
       .group-head:hover{background:#eef3fb}
       .quick button:hover{border-color:#9eb5d3;background:#eaf1fc}
@@ -568,7 +568,7 @@
     [data-theme="dark"] footer{border-color:var(--line);color:#afc0d7}
     [data-theme="dark"] .theme-toggle{border-color:#627a99;background:#22364f}
     [data-theme="dark"] button:focus,[data-theme="dark"] input:focus,[data-theme="dark"] select:focus,[data-theme="dark"] textarea:focus,[data-theme="dark"] summary:focus{outline-color:#afcffa}
-    @media(hover:hover){
+    @media(hover:hover) and (pointer:fine){
       [data-theme="dark"] .mode button:not(.active):hover,[data-theme="dark"] .group-head:hover,[data-theme="dark"] .collapsible-panel>summary:hover,[data-theme="dark"] .clinical-tool>summary:hover,[data-theme="dark"] .formula-card-head:hover{background:#2a405b}
       [data-theme="dark"] .quick button:hover{border-color:#a5c1e4;background:#304d70}
       [data-theme="dark"] .quick button:nth-child(n+3):hover{border-color:#c49772;background:#59402e}
@@ -716,29 +716,7 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
 </style>
-<style id="flow-polish">
-:root{--radius:16px;--radius-card:16px;--radius-control:10px;--radius-small:7px}
-.panel,.group,.warning,.catalog-reference{border-radius:var(--radius-card)}
-.field-box,.stepper,.parameter-editor input,.tool-field input,.tool-field select,.report-text{border-radius:var(--radius-control)}
-.quick button,.reset-all,.parameter-editor button{border-radius:var(--radius-small)}
-.mode{border-radius:12px}.mode button{border-radius:8px}
-.dose-row{transition:background-color 180ms ease-out}
-.quick button,.stepper button,.theme-toggle,.copy-button,.cart-remove,.cart-auto{transition:background-color 120ms ease-out,color 120ms ease-out,transform 110ms ease-out}
-.quick button:active,.stepper button:active,.theme-toggle:active,.copy-button:active{transform:scale(.96)}
-.mobile-category-bar button{transition:background-color 140ms ease-out,color 140ms ease-out;border-radius:8px}
-.mobile-status-host{border-radius:16px}
-.mobile-status{border-radius:15px;background:transparent}
-#sheetStatusSlot .mobile-status{border-radius:0}
-.mobile-status button{border-radius:10px;transition:background-color 120ms ease-out,transform 110ms ease-out}
-.mobile-status button:active{transform:scale(.97)}
-.selected-sheet[open]{border-radius:20px}
-.sheet-heading button{border-radius:8px}
-.selected-sheet[open]::backdrop{animation:backdrop-in 170ms ease-out both}
-.sheet-scrim:not([hidden]){animation:backdrop-in 170ms ease-out both}
-@keyframes backdrop-in{from{opacity:0}to{opacity:1}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after,.selected-sheet::backdrop{animation:none!important;transition:none!important;scroll-behavior:auto!important}.quick button:active,.stepper button:active,.theme-toggle:active,.copy-button:active,.mobile-status button:active{transform:none}}
 
-</style>
 <style id="ios-liquid-glass">
 :root{
   --page:#f2f5fa;--paper:#fff;--ink:#1b293c;--muted:#53647a;
@@ -749,7 +727,7 @@
   --chrome-muted:#41546d;--glass-fill:rgba(255,255,255,.86);--glass-edge:rgba(255,255,255,.85);
   --glass-shadow:rgba(34,61,98,.14);--glass-cursor:#fff;--selection-fill:#edf5ff;
   --energy-fill:#e4efff;--liquid-fill:#e8f4f3;--macro-aa:#fff1e6;--macro-fat:#eeeafb;
-  --glass-blur:22px;--glass-duration:280ms;--glass-ease:cubic-bezier(.2,.85,.25,1);
+  --glass-blur:18px;--glass-duration:160ms;--glass-ease:cubic-bezier(0.23,1,0.32,1);
 }
 :root[data-theme="dark"]{
   --page:#0f1722;--paper:#192638;--ink:#e9f0fa;--muted:#b3c2d5;
@@ -798,7 +776,7 @@ body{
 .app .mode button{position:relative;z-index:1;min-height:44px;border-radius:18px;color:var(--chrome-muted);font-size:13px;font-weight:600}
 .app .mode button.active{color:var(--deep);background:var(--glass-cursor);box-shadow:0 2px 7px var(--glass-shadow)}
 .app .mode.glass-ready button.active{background:transparent;box-shadow:none}
-.glass-cursor{position:absolute;inset:0 auto auto 0;z-index:0;width:var(--glass-w,0px);height:var(--glass-h,0px);transform:translate3d(var(--glass-x,0px),var(--glass-y,0px),0);background:var(--glass-cursor);border:1px solid var(--glass-edge);border-radius:18px;box-shadow:0 3px 10px var(--glass-shadow),inset 0 1px 0 var(--glass-edge);pointer-events:none;opacity:0}
+.glass-cursor{position:absolute;inset:0 auto auto 0;z-index:0;width:0;height:0;transform:translate3d(0,0,0);background:var(--glass-cursor);border:1px solid var(--glass-edge);border-radius:18px;box-shadow:0 3px 10px var(--glass-shadow),inset 0 1px 0 var(--glass-edge);pointer-events:none;opacity:0}
 .glass-ready>.glass-cursor{opacity:1;transition:transform var(--glass-duration) var(--glass-ease)}
 .app .mobile-category-bar{isolation:isolate;border-radius:24px}
 .mobile-category-bar button{position:relative;z-index:1;border:0!important;border-radius:18px;background:transparent!important;color:var(--chrome-muted);font-weight:600}
@@ -847,7 +825,7 @@ body{
 .warning article{border-radius:12px}
 .warning p{font-size:12px;line-height:1.7}
 .collapsible-panel>summary,.clinical-tool>summary{font-size:14px;font-weight:600}
-@media(hover:hover){
+@media(hover:hover) and (pointer:fine){
   .app .mode button:not(.active):hover{background:var(--blue-soft)}
   .app .quick button:hover{background:var(--blue-soft);border-color:var(--control);color:var(--blue)}
   .app .quick button:nth-child(n+3):hover{background:var(--selection-fill);border-color:var(--control);color:var(--deep)}
@@ -886,6 +864,193 @@ body{
 @media(forced-colors:active){
   .app .mode,.app .mobile-category-bar,.mobile-status-host,.selected-sheet[open],.glass-cursor{background:Canvas!important;border:1px solid ButtonText!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
   .glass-cursor{outline:2px solid Highlight}
+}
+
+</style>
+<style id="craft-polish">
+:root{
+  --radius:20px;--radius-card:20px;--radius-control:12px;--radius-small:10px;
+  --surface-muted:#f6f8fc;--hairline:rgba(32,62,100,.1);--focus-ring:rgba(36,103,169,.18);
+  --sheet-fill:rgba(255,255,255,.95);--glass-blur:18px;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);--ease-drawer:cubic-bezier(0.32,0.72,0,1);
+  --glass-duration:160ms;--glass-ease:var(--ease-out);
+}
+:root[data-theme="dark"]{
+  --surface-muted:#1c2c40;--hairline:rgba(213,229,251,.12);--focus-ring:rgba(167,203,250,.2);
+  --sheet-fill:rgba(26,40,59,.96);
+}
+html{font-size:100%;-webkit-text-size-adjust:100%}
+body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
+.header h1{font-size:1.8125rem;letter-spacing:-.025em;font-weight:700}
+.header h1 span{font-size:2rem;letter-spacing:-.035em}
+.header .subtitle{font-size:.75rem;letter-spacing:.015em;line-height:1.6}
+.heading h2{font-size:1.25rem;letter-spacing:-.015em;font-weight:650}
+.heading:after{background:var(--hairline)}
+.panel,.group,.warning,.catalog-reference{border-radius:var(--radius-card);border-color:var(--hairline);box-shadow:0 2px 8px rgba(27,48,78,.025)}
+.patient-panel{padding:22px 24px;gap:18px 26px}
+.section-title{padding-bottom:14px;border-color:var(--hairline)}
+.section-title h2{font-size:1rem;letter-spacing:-.01em;font-weight:650}
+.field>span:first-child{font-size:.8125rem;font-weight:500;letter-spacing:.01em}
+.app .field-box{height:3.25rem;min-height:50px;border-color:var(--control);border-radius:12px;background:var(--surface-muted)}
+.field-box input{height:100%;font-size:1.3125rem;padding-left:12px;font-weight:600;letter-spacing:-.02em}
+.field-box b{flex:0 0 2.4em;font-size:.75rem;line-height:1;padding:0 5px 0 0}
+.app .field-box:focus-within,.app .stepper:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px var(--focus-ring)}
+.calc-weights{border-color:var(--hairline)}
+.calc-weights span{font-size:.75rem;font-weight:500}
+.calc-weights strong{font-size:1.1875rem;letter-spacing:-.02em;font-weight:650}
+.patient-reference{border-color:var(--hairline);font-size:.75rem}
+.app .group-head{padding-top:14px;padding-bottom:14px;background:var(--surface-muted);min-height:54px}
+.group-head .group-name{font-size:.9375rem;font-weight:650}
+.app .dose-row{padding:17px 18px;border-color:var(--hairline);transition:none}
+.app .dose-row:focus-within{background:var(--selection-fill)}
+.app .dose-copy strong{font-size:.9375rem;line-height:1.6;font-weight:600;letter-spacing:0}
+.app .dose-copy small{font-size:.75rem;line-height:1.65;margin-top:4px}
+.risk-badge,.external-badge{font-size:.625rem;vertical-align:1px;border-radius:5px}
+.app .stepper{height:48px;border-radius:12px;grid-template-columns:46px minmax(0,1fr) 46px;background:var(--paper);border-color:var(--control)}
+.app .stepper button{height:46px;line-height:46px;border-color:var(--hairline);border-radius:0;font-size:1.375rem;font-weight:400}
+.app .stepper label{height:46px;padding:0 12px;gap:6px}
+.app .stepper input{height:44px;font-size:1.1875rem;line-height:1.3;font-weight:600;letter-spacing:-.015em}
+.app .stepper label span{font-size:.75rem;line-height:1.2;flex:0 0 auto}
+.app .quick{gap:8px;margin-top:8px}
+.app .quick button{min-height:44px;padding:8px 3px;border-radius:10px;font-size:.75rem;font-weight:550;line-height:1.3}
+.app .status{font-size:.6875rem;line-height:1.6;margin-top:8px;color:var(--muted)}
+.app .dose-row.active-dose{background:var(--selection-fill)}
+.app .dose-row.active-dose .stepper{border-color:var(--blue)}
+.app .dose-row.active-dose .dose-copy strong:before{top:.5em;width:5px;height:5px}
+.app .mode{border-radius:22px;box-shadow:0 4px 14px var(--glass-shadow),inset 0 1px 0 var(--glass-edge)}
+.app .mode button{font-size:.8125rem;letter-spacing:.01em;border-radius:16px}
+.app .mobile-category-bar{border-radius:22px;box-shadow:0 5px 16px var(--glass-shadow),inset 0 1px 0 var(--glass-edge)}
+.glass-cursor{border-radius:16px}
+.glass-ready>.glass-cursor{transition:transform var(--glass-duration) var(--glass-ease)}
+.glass-cursor[data-instant="true"]{transition:none!important}
+.app .mobile-category-bar button{border-radius:16px;font-size:.8125rem;letter-spacing:0}
+.mobile-status-host{border-radius:24px;box-shadow:0 6px 26px var(--glass-shadow),inset 0 1px 0 var(--glass-edge)}
+[data-theme="dark"] .mobile-status-host{box-shadow:0 8px 28px var(--glass-shadow),inset 0 1px 0 var(--glass-edge)}
+.mobile-status{background:transparent;border-radius:0;column-gap:10px}
+.mobile-status>div{padding-left:9px;border-left:1px solid var(--hairline)}
+.mobile-status>div:first-child{padding-left:0;border-left:0}
+.mobile-status span,.mobile-status small{font-size:.6875rem;letter-spacing:.012em}
+.mobile-status strong{font-size:1.25rem;letter-spacing:-.02em;line-height:1.2;font-weight:650}
+.mobile-status button{border-radius:16px;font-size:.75rem;box-shadow:inset 0 1px 0 rgba(255,255,255,.23)}
+.selected-sheet[open]{border-radius:26px;transform-origin:50% 100%}
+.sheet-heading{padding:10px 18px;min-height:64px;border-color:var(--hairline)}
+.sheet-heading h2{font-size:1.0625rem;letter-spacing:-.015em;font-weight:650}
+.sheet-heading button{border-radius:14px;min-height:44px;font-size:.875rem}
+.selected-sheet .cart-items{padding:0 18px;scrollbar-gutter:stable}
+.selected-sheet .cart-line{padding:16px 0;border-color:var(--hairline)}
+.selected-sheet .cart-line .dose-copy strong{font-size:.9375rem}
+.selected-sheet .cart-line .dose-copy small{font-size:.75rem}
+.cart-remove,.cart-auto{font-size:.75rem;border-radius:10px;text-decoration:none}
+.sheet-result{font-size:.8125rem;min-height:44px;border-color:var(--hairline)}
+#sheetStatusSlot{border-color:var(--hairline)}
+.cards{gap:12px}
+.cards .card,.summary{border-radius:20px}
+.cards .card{padding:19px;gap:12px 6px}
+.cards .card>span{font-size:.8125rem;font-weight:500}
+.cards .card strong{font-size:1.9375rem;letter-spacing:-.035em;font-weight:650;overflow-wrap:anywhere}
+.cards .card>small{font-size:.75rem;line-height:1.4}
+.cards .card.primary{padding:22px;min-height:114px}
+.cards .card.primary>span{font-size:.9375rem}
+.cards .card.primary strong{font-size:2.625rem;letter-spacing:-.04em}
+.cards .card.primary>small{font-size:.75rem}
+.times{gap:8px}
+.times .time-value{font-size:1.0625rem;font-weight:650}
+.times b{gap:6px;border-color:var(--hairline)}
+.times small{font-size:.6875rem;border-radius:5px;background:var(--surface-muted);color:var(--muted)}
+.summary{padding:20px}
+.macro{gap:9px}
+.macro:not(.focus-macro)>div{padding:14px 10px;border-color:var(--hairline);border-radius:14px}
+.macro span{font-size:.75rem;line-height:1.45}
+.macro b{font-size:1.25rem;line-height:1.3;letter-spacing:-.025em;font-weight:650}
+.app .macro b{white-space:normal;overflow-wrap:anywhere}
+.macro em{font-size:.6875rem;line-height:1.55}
+.app .focus-macro{gap:9px;margin-top:9px}
+.app .focus-macro>div,.app .focus-macro>div:nth-child(n){padding:12px 10px;border-color:var(--hairline);border-radius:12px}
+.app .focus-macro b{font-size:1.125rem;letter-spacing:-.025em}
+.clinical-tool{border-radius:16px;border-color:var(--hairline)}
+.clinical-tool>summary{min-height:52px;padding:13px 18px}
+.clinical-tool>summary strong{font-size:.875rem;font-weight:600}
+.tool-body{background:var(--surface-muted);border-color:var(--hairline)}
+.tool-field span{font-size:.75rem}
+.tool-field input,.tool-field select{min-height:48px;border-radius:12px;font-size:1rem}
+.app .tool-result>div,.app .cp-capture-card{border-color:var(--hairline);background:var(--blue-soft);border-radius:14px}
+.app .cp-choice-title{background:var(--blue-soft);border-radius:10px;font-size:.875rem}
+.app .cp-option{min-height:52px;border-color:var(--hairline)}
+.app .cp-option span{font-size:.875rem;line-height:1.6}
+.app .cp-option.selected{background:var(--selection-fill)}
+.app .cp-capture-score>div{background:var(--paper);border-radius:12px}
+.warning article{border-radius:12px;box-shadow:none;border:0}
+.warning strong{font-size:.8125rem}.warning p{font-size:.75rem;line-height:1.75}
+.metrics th{font-size:.75rem}.metrics td{font-size:.75rem;padding:12px 6px}
+.metrics td:nth-child(3){font-size:.6875rem}
+.collapsible-panel>summary,.formula-button{font-size:.875rem;min-height:54px;border-radius:16px}
+.formula-workbench{border-radius:20px;background:var(--surface-muted)}
+.formula-card{border-radius:14px;border-color:var(--hairline)}
+.report-text{font-family:inherit;border-radius:12px;line-height:1.8}
+.parameter-editor input{border-radius:10px}
+.quick button,.stepper button,.mobile-category-bar button,.cart-remove,.cart-auto{transition:none}
+.quick button:active,.stepper button:active{transform:none;background:var(--selection-fill)}
+.theme-toggle,.copy-button,.mobile-status button,.sheet-heading button{transition:transform 100ms var(--ease-out)}
+.theme-toggle:active,.copy-button:active,.mobile-status button:active,.sheet-heading button:active{transform:scale(.98);transition-duration:60ms}
+.selected-sheet::backdrop,.sheet-scrim:not([hidden]){animation:none}
+[data-input-modality="keyboard"] .theme-toggle,[data-input-modality="keyboard"] .copy-button,[data-input-modality="keyboard"] .mobile-status button,[data-input-modality="keyboard"] .sheet-heading button{transition:none!important;transform:none}
+[data-input-modality="keyboard"] .glass-cursor{transition:none!important}
+@supports (backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px)){
+  .selected-sheet[open]{background:var(--sheet-fill);-webkit-backdrop-filter:blur(18px) saturate(130%);backdrop-filter:blur(18px) saturate(130%)}
+  .selected-sheet::backdrop{-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+@media(hover:hover) and (pointer:fine){
+  .theme-toggle:hover,.copy-button:hover,.sheet-heading button:hover{opacity:.9}
+  .cart-remove:hover,.cart-auto:hover{background:var(--blue-soft)}
+}
+@media screen and (max-width:680px), screen and (max-width:1000px) and (pointer:coarse){
+  .app{padding-left:14px;padding-right:14px}
+  .patient-panel{padding:18px 16px;gap:16px}
+  .patient{gap:10px}
+  .header h1{font-size:1.5625rem}.header h1 span{font-size:1.8125rem}
+  .header .subtitle{font-size:.6875rem}
+  .field-box input{font-size:1.25rem;padding-left:10px}
+  .field-box b{font-size:.6875rem;flex-basis:2.2em}
+  .calc-weights{padding:14px;border-radius:12px}
+  .calc-weights strong{font-size:1rem;white-space:normal;overflow-wrap:anywhere}
+  .app .mobile-category-bar{margin-bottom:12px;padding:5px;gap:3px}
+  .app .mobile-category-bar button{font-size:.8125rem;min-height:44px;padding:9px 2px}
+  .mobile-enhanced #groups .group{border-radius:18px}
+  .mobile-enhanced .dose-row{padding:16px 14px}
+  .app .dose-row .stepper{grid-template-columns:48px minmax(0,1fr) 48px}
+  .app .dose-copy{padding-bottom:10px}
+  .app .status{font-size:.75rem}
+  .mobile-status{column-gap:7px;padding:11px 10px 11px 14px}
+  .mobile-status>div{padding-left:7px}
+  .mobile-status strong{font-size:1.1875rem}
+  .mobile-status span,.mobile-status small{font-size:.6875rem}
+  .mobile-status-host{width:calc(100% - 20px)}
+  .selected-sheet .cart-line .stepper{grid-template-columns:48px minmax(0,1fr) 48px}
+  .selected-sheet .cart-line .stepper input{font-size:1.1875rem}
+  .cards .card{padding:17px}
+  .cards .card.primary{padding:20px}
+  .summary{padding:17px}
+  .macro:not(.focus-macro)>div{padding:12px 8px}
+  .macro b{font-size:1.1875rem}
+  .app .focus-macro>div,.app .focus-macro>div:nth-child(n){padding:11px 8px}
+  .app .focus-macro b{font-size:clamp(.9375rem,4vw,1.125rem)}
+  .report-text{font-size:1rem}
+}
+@media(max-width:360px){
+  .app .mobile-category-bar button{font-size:.75rem}
+  .mobile-status{column-gap:5px;padding-left:11px}
+  .mobile-status>div{padding-left:5px}
+  .mobile-status strong{font-size:1.125rem}
+  .mobile-status span,.mobile-status small{font-size:.625rem}
+  .patient{gap:8px}.field-box input{padding-left:8px;font-size:1.125rem}
+  .macro{gap:7px}.macro b{font-size:1.0625rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .glass-ready>.glass-cursor,.theme-toggle,.copy-button,.mobile-status button,.sheet-heading button{transition:none!important}
+  .theme-toggle:active,.copy-button:active,.mobile-status button:active,.sheet-heading button:active{transform:none}
+}
+@media(prefers-reduced-transparency:reduce),(prefers-contrast:more){
+  .selected-sheet[open]{background:var(--paper)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-color:var(--control)!important}
 }
 
 </style>
@@ -973,13 +1138,13 @@ body{
     <button id="doseTab-amino" type="button" role="tab" data-dose-tab="amino" data-label="氨基酸" aria-selected="false" aria-controls="mobileDosePanel" tabindex="-1">氨基酸<span class="category-count" aria-hidden="true"></span></button>
     <button id="doseTab-fat" type="button" role="tab" data-dose-tab="fat" data-label="脂肪乳" aria-selected="false" aria-controls="mobileDosePanel" tabindex="-1">脂肪乳<span class="category-count" aria-hidden="true"></span></button>
     <button id="doseTab-electrolyte" type="button" role="tab" data-dose-tab="electrolyte" data-label="电解质" aria-selected="false" aria-controls="mobileDosePanel" tabindex="-1">电解质<span class="category-count" aria-hidden="true"></span></button>
-    <button id="doseTab-additive" type="button" role="tab" data-dose-tab="additive" data-label="添加剂" aria-selected="false" aria-controls="mobileDosePanel" tabindex="-1">添加剂<span class="category-count" aria-hidden="true"></span></button>
+    <button id="doseTab-additive" type="button" role="tab" data-dose-tab="additive" data-label="维生素" aria-selected="false" aria-controls="mobileDosePanel" tabindex="-1">维生素<span class="category-count" aria-hidden="true"></span></button>
   </nav>
   <div id="mobileDosePanel">
   <section id="kawenBox" class="panel hidden"><div class="section-title"><div><small>全合一制剂</small><h2>卡文液体量</h2></div><div><small>1袋 = 1440 ml</small></div></div><div id="kawenRow"></div></section>
   <section id="kaquanBox" class="panel hidden"><div class="section-title"><div><small>全合一制剂</small><h2>卡全液体量</h2></div><div><small>1袋 = 1026 ml</small></div></div><div id="kaquanRow"></div></section>
   <div id="groups"></div>
-  <div id="catalogReference"></div>
+  
   <div class="catalog-empty" id="catalogEmpty" hidden>本类暂无可选产品。</div>
   </div>
     </div>
@@ -1030,13 +1195,13 @@ body{
 <script id="pn-mobile-workspace">
 (function(){
   "use strict";
-  var root=document.documentElement,bar=document.getElementById("mobileCategories"),list=document.getElementById("cartItems"),panel=document.getElementById("mobileDosePanel");
+  var root=document.documentElement,bar=document.getElementById("mobileCategories"),list=document.getElementById("cartItems");
   var tabs=bar.querySelectorAll("[data-dose-tab]"),media=window.matchMedia?window.matchMedia("(max-width:680px), (max-width:1000px) and (pointer:coarse)"):null;
-  var current="glucose",mode=null,bridge=null,entries={},cartNodes={},sourceRows=[],latest=null,lastCount=null;
+  var current="glucose",mode=null,bridge=null,entries={},cartNodes={},sourceRows=[],sourceSort={},latest=null;
   var sheet=document.getElementById("cartSheet"),opener=document.getElementById("cartJump"),closeButton=document.getElementById("sheetClose");
   var metrics=document.getElementById("cartMetrics"),statusHost=document.getElementById("mobileStatusHost"),slot=document.getElementById("sheetStatusSlot");
   var scrim=document.getElementById("sheetScrim"),expanded=false,nativeDialog=false,lastFocus=null,oldInert=false,oldAriaHidden=null;
-  var sheetMotion=null,panelMotion=null,badgeMotion=null,closing=false;
+  var sheetMotion=null,closing=false,keyboardMode=false;
   root.classList.add("mobile-enhanced");
   function mobile(){return media?media.matches:window.innerWidth<=680;}
   function num(value){var n=Number(value);return isFinite(n)&&n>0?n:0;}
@@ -1061,16 +1226,27 @@ body{
   function keepCatalogPosition(action){
     action();
   }
-  function motionAllowed(){return typeof sheet.animate==="function"&&!(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches);}
+  function modality(value){keyboardMode=value==="keyboard";if(root.getAttribute("data-input-modality")!==value){root.setAttribute("data-input-modality",value);}}
+  document.addEventListener("keydown",function(){modality("keyboard");},true);
+  document.addEventListener("pointerdown",function(){modality("pointer");},{capture:true,passive:true});
+  document.addEventListener("touchstart",function(){modality("pointer");},{capture:true,passive:true});
+  document.addEventListener("mousedown",function(){modality("pointer");},{capture:true,passive:true});
+  function motionAllowed(){return !keyboardMode&&typeof sheet.animate==="function"&&!(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches);}
   function cancelMotion(animation){if(animation){animation.onfinish=null;animation.cancel();}}
   function play(node,frames,options){if(!motionAllowed()||!node.animate){return null;}try{return node.animate(frames,options);}catch(error){return null;}}
-  function enterSheet(){
-    cancelMotion(sheetMotion);
-    sheetMotion=play(sheet,[{transform:"translateY(30px) scale(.99)",opacity:0},{transform:"translateY(-1px) scale(1.001)",opacity:1,offset:.8},{transform:"translateY(0) scale(1)",opacity:1}],{duration:280,easing:"cubic-bezier(.18,.82,.22,1)"});
+  function presentation(fallback){
+    if(!sheetMotion||!window.getComputedStyle){return fallback;}
+    var style=window.getComputedStyle(sheet),opacity=Number(style.opacity);
+    return {transform:style.transform||"none",opacity:isFinite(opacity)?opacity:1};
   }
-  function fadePanel(){
-    cancelMotion(panelMotion);
-    panelMotion=play(panel,[{opacity:.6,transform:"translateY(3px)"},{opacity:1,transform:"translateY(0)"}],{duration:140,easing:"ease-out"});
+  function enterSheet(){
+    var start=presentation({transform:"translateY(18px)",opacity:0});
+    cancelMotion(sheetMotion);sheetMotion=null;
+    sheet.style.willChange="transform, opacity";
+    var animation=play(sheet,[start,{transform:"translateY(0)",opacity:1}],{duration:240,easing:"cubic-bezier(0.32,0.72,0,1)"});
+    sheetMotion=animation;
+    if(animation){animation.onfinish=function(){if(sheetMotion===animation){sheet.style.willChange="";}};}
+    else{sheet.style.willChange="";}
   }
   function makeCartNode(row){
     var id=row.getAttribute("data-id"),node=document.createElement("article");
@@ -1094,10 +1270,20 @@ body{
       var restore=document.createElement("button");restore.type="button";restore.className="cart-auto";restore.textContent="恢复自动";
       bindTap(restore,function(){bridge.restoreInsulin();});copy.appendChild(restore);
     }
-    list.appendChild(node);return node;
+    var key=sourceSort[id],before=null,existing=list.querySelectorAll("[data-cart-id]");
+    for(var k=0;k<existing.length;k++){
+      var other=sourceSort[existing[k].getAttribute("data-cart-id")];
+      if(other&&(other.group>key.group||other.group===key.group&&other.index>key.index)){before=existing[k];break;}
+    }
+    if(before){list.insertBefore(node,before);}else{list.appendChild(node);}return node;
   }
   function setupRows(){
     sourceRows=Array.prototype.slice.call(document.querySelectorAll(".prescription-pane .dose-row"));
+    var groups={glucose:0,amino:1,fat:2,electrolyte:3,vitamin:4,additive:4,kawen:-1,allinone:-1};
+    for(var i=0;i<sourceRows.length;i++){
+      var row=sourceRows[i],id=row.getAttribute("data-id"),group=row.getAttribute("data-product-group");
+      sourceSort[id]={group:id==="insulin"?0:groups.hasOwnProperty(group)?groups[group]:4,index:i};
+    }
   }
   function refresh(){
     if(!bridge){return;}
@@ -1141,8 +1327,6 @@ body{
     var panel=document.getElementById("mobileDosePanel");
     if(mobile()){panel.setAttribute("role","tabpanel");}else{panel.removeAttribute("role");panel.removeAttribute("aria-labelledby");}
     document.getElementById("cartCount").textContent="已选 "+count+" 项";
-    if(lastCount!==null&&count>lastCount){cancelMotion(badgeMotion);badgeMotion=play(opener,[{opacity:.65},{opacity:1}],{duration:180,easing:"ease-out"});}
-    lastCount=count;
     document.getElementById("cartEmpty").hidden=cartVisible>0;
     document.getElementById("catalogEmpty").hidden=visible>0;
     if(latest){
@@ -1156,7 +1340,7 @@ body{
   }
   function jumpTo(id){document.getElementById(id).scrollIntoView({block:"start",behavior:"auto"});}
   for(var i=0;i<tabs.length;i++){
-    tabs[i].addEventListener("click",function(){var top=document.getElementById("mobileWorkspaceStart").getBoundingClientRect().top;current=this.getAttribute("data-dose-tab");refresh();fadePanel();if(top<0){jumpTo("mobileWorkspaceStart");}});
+    tabs[i].addEventListener("click",function(){var top=document.getElementById("mobileWorkspaceStart").getBoundingClientRect().top;current=this.getAttribute("data-dose-tab");refresh();if(top<0){jumpTo("mobileWorkspaceStart");}});
     tabs[i].addEventListener("keydown",function(e){
       var n=Array.prototype.indexOf.call(tabs,this),next=n;
       if(e.key==="ArrowRight"){next=(n+1)%tabs.length;}else if(e.key==="ArrowLeft"){next=(n+tabs.length-1)%tabs.length;}
@@ -1170,7 +1354,7 @@ body{
   }
   function finishClose(restoreFocus){
     if(!expanded){return;}
-    cancelMotion(sheetMotion);sheetMotion=null;closing=false;
+    cancelMotion(sheetMotion);sheetMotion=null;closing=false;sheet.style.willChange="";
     expanded=false;if(nativeDialog&&sheet.open){sheet.close();}else{sheet.removeAttribute("open");}
     scrim.hidden=true;releasePage();statusHost.appendChild(metrics);
     root.classList.remove("drawer-open");root.setAttribute("data-cart-open","false");opener.setAttribute("aria-expanded","false");
@@ -1180,8 +1364,9 @@ body{
     if(!expanded){return;}
     if(immediate||(nativeDialog&&!sheet.open)||!motionAllowed()){finishClose(restoreFocus);return;}
     if(closing){return;}
-    cancelMotion(sheetMotion);closing=true;
-    var animation=play(sheet,[{transform:"translateY(0)",opacity:1},{transform:"translateY(16px)",opacity:0}],{duration:160,easing:"ease-in",fill:"forwards"});
+    var start=presentation({transform:"translateY(0)",opacity:1});
+    cancelMotion(sheetMotion);closing=true;sheet.style.willChange="transform, opacity";
+    var animation=play(sheet,[start,{transform:"translateY(18px)",opacity:0}],{duration:160,easing:"cubic-bezier(0.23,1,0.32,1)",fill:"forwards"});
     if(!animation){finishClose(restoreFocus);return;}
     sheetMotion=animation;
     animation.onfinish=function(){if(sheetMotion===animation){finishClose(restoreFocus);}};
@@ -1197,12 +1382,13 @@ body{
     }
     measure();enterSheet();focusQuietly(closeButton);
   }
-  bindTap(opener,openSheet);bindTap(closeButton,function(){closeSheet();});
+  bindTap(opener,function(event){if(event.detail===0){modality("keyboard");}openSheet();});bindTap(closeButton,function(event){if(event.detail===0){modality("keyboard");}closeSheet();});
   scrim.addEventListener("click",function(){closeSheet();});
   sheet.addEventListener("cancel",function(event){event.preventDefault();closeSheet();});
   sheet.addEventListener("close",function(){closeSheet();});
   sheet.addEventListener("click",function(event){if(event.target===sheet){closeSheet();}});
   sheet.addEventListener("keydown",function(event){
+    modality("keyboard");
     if(event.key==="Escape"){event.preventDefault();closeSheet();return;}
     if(event.key!=="Tab"){return;}
     var candidates=sheet.querySelectorAll("button,input,select,textarea,a[href],[tabindex]"),focusable=[],i;
@@ -1226,6 +1412,11 @@ body{
   window.addEventListener("resize",measure);
   if(window.visualViewport){window.visualViewport.addEventListener("resize",measure);}
   if(window.ResizeObserver){new window.ResizeObserver(measure).observe(metrics);}
+  var reducedMotion=window.matchMedia?window.matchMedia("(prefers-reduced-motion: reduce)"):null;
+  if(reducedMotion){
+    var reduceChanged=function(){if(reducedMotion.matches){if(closing){finishClose();}else{cancelMotion(sheetMotion);sheetMotion=null;sheet.style.willChange="";}}};
+    if(reducedMotion.addEventListener){reducedMotion.addEventListener("change",reduceChanged);}else if(reducedMotion.addListener){reducedMotion.addListener(reduceChanged);}
+  }
   window.pnMobileUI={
     sync:function(result,nextMode,nextBridge){
       latest=result;bridge=nextBridge;if(!sourceRows.length){setupRows();}
@@ -1293,10 +1484,6 @@ body{
     ["insulin","胰岛素","计算器保留项 · 自动值可手动修改","additive",1,"U","","不在本次目录表内"]
   ];
   var productSources={soluvit:"https://www.fresenius-kabi.com/cn/products/parenteral-nutrition/shuileweita",kcl15:"https://chinaotsuka.com.cn/article/88",magnesium50:"https://www.medicines.org.uk/emc/product/1990/smpc",aa85:"https://swin.zy91.com/pages/m-instruction/m.instruction.html?hospitalCode=1&webHisId=12116",aa18ix:"https://m-pharma.com.cn/en/proList/3.html",aaGreen:"https://m-pharma.com.cn/en/proList/3.html",aaPediatric:"https://xxcx.yjj.beijing.gov.cn/eportal/ui?artileId=d4de30c92d1b4c4d87e248c2d50f9b4d&pageId=723944",alaGln:"https://deepevid.medsci.cn/drugs/DOC_PMH_671bee8b926331a5",fatMct:"https://www.baxter.com.cn/sites/g/files/ebysai1351/files/2020-06/Kalu.pdf",fatLiwen:"https://www.fresenius-kabi-sspc.com/ZFRZSY/6.html",fatIntra:"https://www.fresenius-kabi.com/gb/healthcare-professional-area/clinical-nutrition/parenteral-nutrition/macronutrients/intralipid-emulsion-for-infusion-soya-bean-oil",fatClin:"https://www.cych.org.tw/pharm/drugnewsdetail.aspx?msg_id=5337",fatVitamin:"https://swin.zy91.com/pages/m-instruction/m.instruction.html?hospitalCode=1&webHisId=34283",trace:"https://www.tsu.tw/xiyi/yao/48909.html",nacl09:"https://www.chinaotsuka.com.cn/article/128",nacl:"https://www.chinaotsuka.com.cn/article/124",kcl:"https://www.chinaotsuka.com.cn/article/87",kawenLiquid:"https://tricura.medsci.cn/instruction?category=intro&id=1991440239429349378&kind=%E9%9D%99%E8%84%89%E7%94%A8%E6%B0%A8%E5%9F%BA%E9%85%B8&name=%E5%8D%A1%E6%96%87",g5ns:"https://www.baxter.com.cn/sites/g/files/ebysai1351/files/2022-06/%E8%91%A1%E8%90%84%E7%B3%96%E6%B0%AF%E5%8C%96%E9%92%A0%E6%B3%A8%E5%B0%84%E6%B6%B2_2022%E6%9B%B4%E6%96%B0.pdf",aspartateKM:"https://www.zjhpyy.com/goods/60984.jhtml",pediatricElectrolyte:"https://www.yuxi.gov.cn/yxszfxxgk/spaq/20211102/1370133.html",leJia:"https://csem.cma.org.cn/module/download/downfile.jsp?classid=0&filename=46b1570c8c3645a49d218369a5413635.pdf",ringer:"https://www.drugfuture.com/Pharmacopoeia/CP2015-2/821-821.pdf",fatVitaminPediatric:"https://www.cdttszy.com/product/detail.html?id=48",vitamin12:"https://www.pudepharma.com/index.php?a=show&c=index&catid=29&id=21&m=content",fish10:"https://www.fresenius-kabi-sspc.com/ZFRZSY/5.html",kPhos:"https://www.nhsa.gov.cn/attach/Ypsn/YPSW202200117-W4/YPSW202200117-W4.pdf",kaquanLiquid:"https://www.fresenius-kabi-sspc.com/DCDZSY/2.html"};
-  var catalogReference = [
-    ["碳水化合物","果糖注射液","12.5 g/250 ml","江苏正大丰海","","说明书规格已核实；PN指南不建议果糖作为PN底物，暂不进入能量、胰岛素及输注速度公式"],
-    ["碳水化合物","木糖醇注射液","12.5 g/250 ml","南京正大天晴","","厂家规格已核实；PN指南不常规推荐木糖醇，暂不进入计算"]
-  ];
   var vial = {kcl15:10,magnesium50:2,kPhos:2,nacl09:10,nacl:10,kcl:10,calcium:10,magnesium:10,naPhos:10,aspartateKM:10,pediatricElectrolyte:100,leJia:500,ringer:500,vitD2:1,vitK1:1,vitB1:2,vitB6:2,vitB12:1,vitC:5,fatVitamin:10,fatVitaminPediatric:2,vitamin12:5,trace:10,kaquanLiquid:1026};
   var groupKeys = ["glucose","amino","fat","electrolyte","vitamin","additive"];
   var groupNames = {glucose:"葡萄糖与复方糖盐",amino:"氨基酸",fat:"脂肪乳",allinone:"全合一制剂",electrolyte:"电解质与平衡液",vitamin:"维生素",additive:"微量元素与其他添加剂"};
@@ -1318,7 +1505,7 @@ body{
     osmThreshold:900,energyPerKgMin:25,energyPerKgMax:30,heatNitrogenMin:100,heatNitrogenMax:200,sugarFatMin:1,sugarFatMax:2,glucosePerKgMax:7,glucoseConcentrationMin:.033,glucoseConcentrationMax:.23,aminoConcentrationMin:.025,alaGlnConcentrationMax:.035,alaGlnRatioMax:.2,monovalentCaution:130,monovalentAlert:150,divalentCaution:8,divalentAlert:10
   };
   var formulas = [
-    ["理想体重","身高(cm) − 理想体重扣减值","kg"],["TPN推荐能量","理想体重(kg) × 25 kcal/kg；30 kcal/kg仅作少数严重应激参考","kcal/d"],["TPN推荐液体量","前10 kg×100 + 第二个10 kg×50 + 剩余体重×20（≤50岁）或×15（＞50岁）","ml/d"],["校正体重","理想体重 +（实际体重 − 理想体重）× 校正系数","kg"],["营养素总量","Σ（院内制剂用量 × 说明书换算系数）+ 全合一制剂袋数 × 每袋含量","g"],["总液体量","当前模式基础袋液体量 + Σ已纳入制剂ml（含额外注射用水）；冻干粉支数不计入体积","ml"],["水乐维他","粉末按支计；每支近似渗透量4.9mOsm；额外复溶水另计，已在配方内的载体不重复计量","支、mOsm"],["总能量","葡萄糖与氨基酸按 g 换算；脂肪乳按目录每 ml 能量；全合一制剂按每袋总能量","kcal"],["非蛋白热量","葡萄糖热量 + 脂肪乳热量 + 全合一制剂每袋非蛋白热量","kcal"],["复方糖盐与小儿电解质","葡萄糖按质量浓度计入；NaCl按钠离子与理论渗透粒子分别计入","g、mmol"],["门冬氨酸钾镁","K=用量×0.2642；Mg=用量×0.1387；渗透量采用可调理论值","mmol"],["乐加与林格液","离子按说明书浓度×用量；渗透量采用成品容积渗透浓度","mmol、mOsm"],["氮量","常规氨基酸总量 ÷ 氮量除数 + 全合一制剂每袋氮量","gN"],["热氮比","非蛋白热量 ÷ 氮量","kcal/gN"],["糖脂比","葡萄糖供能 ÷ 脂肪供能","比值"],["渗透压","已建模组分的mOsm加总×1000÷总ml；普通氨基酸估算，20%丙谷单独按0.921mOsm/ml；维生素等未建模部分另提示","mOsm/L"],["离子浓度","离子总量 × 1000 ÷ 总液体量","mmol/L"],["磷浓度","磷总量 × 1000 ÷ 总液体量（ml）","mmol/L"],["旧表钙磷指数","钙浓度 × 磷总量；仅保留用于对照，不判定配伍安全","mmol²/L"],["三大营养素供能比","该营养素供能 ÷ 三大营养素供能合计 × 100%","%"],["葡萄糖限速时间","葡萄糖总量(g) × 1000 ÷ 实际体重 ÷ 对应速度（3.5、4.0、5.0 mg/kg/min）÷ 60","小时"]
+    ["理想体重","身高(cm) − 理想体重扣减值","kg"],["TPN推荐能量","理想体重(kg) × 25 kcal/kg；30 kcal/kg仅作少数严重应激参考","kcal/d"],["TPN推荐液体量","前10 kg×100 + 第二个10 kg×50 + 剩余体重×20（≤50岁）或×15（＞50岁）","ml/d"],["校正体重","理想体重 +（实际体重 − 理想体重）× 校正系数","kg"],["营养素总量","Σ（院内制剂用量 × 说明书换算系数）+ 全合一制剂袋数 × 每袋含量","g"],["总液体量","当前模式基础袋液体量 + Σ已纳入制剂ml（含额外注射用水）；冻干粉支数不计入体积","ml"],["水乐维他","粉末按支计；每支近似渗透量4.9mOsm；额外复溶水另计，已在配方内的载体不重复计量","支、mOsm"],["总能量","葡萄糖与氨基酸按 g 换算；脂肪乳按目录每 ml 能量；全合一制剂按每袋总能量","kcal"],["非蛋白热量","葡萄糖热量 + 脂肪乳热量 + 全合一制剂每袋非蛋白热量","kcal"],["复方糖盐与小儿电解质","葡萄糖按质量浓度计入；NaCl按钠离子与理论渗透粒子分别计入","g、mmol"],["门冬氨酸钾镁","K=用量×0.2642；Mg=用量×0.1387；渗透量采用可调理论值","mmol"],["乐加与林格液","离子按说明书浓度×用量；渗透量采用成品容积渗透浓度","mmol、mOsm"],["氮量","常规氨基酸总量 ÷ 氮量除数 + 全合一制剂每袋氮量","gN"],["热氮比","非蛋白热量 ÷ 氮量","kcal/gN"],["糖脂比","葡萄糖供能 ÷ 脂肪供能","比值"],["渗透压","已建模组分的mOsm加总×1000÷总ml；普通氨基酸估算，20%丙谷单独按0.921mOsm/ml；按已建模系数估算","mOsm/L"],["离子浓度","离子总量 × 1000 ÷ 总液体量","mmol/L"],["磷浓度","磷总量 × 1000 ÷ 总液体量（ml）","mmol/L"],["旧表钙磷指数","钙浓度 × 磷总量；仅保留用于对照，不判定配伍安全","mmol²/L"],["三大营养素供能比","该营养素供能 ÷ 三大营养素供能合计 × 100%","%"],["葡萄糖限速时间","葡萄糖总量(g) × 1000 ÷ 实际体重 ÷ 对应速度（3.5、4.0、5.0 mg/kg/min）÷ 60","小时"]
   ];
   var configGroups = [
     ["基础计算系数","决定体重、能量、氮量和最短输注时间。",[["idealWeightOffset","理想体重身高扣减","kg",1],["correctedWeightFactor","校正体重差值系数","",.05],["glucoseKcalPerG","葡萄糖供能","kcal/g",.1],["aminoKcalPerG","氨基酸供能","kcal/g",.1],["fatKcalPerG","全合一制剂脂肪供能","kcal/g",.1],["nitrogenDivisor","氨基酸换算氮量除数","g/gN",.01],["maxGlucoseRate","最大葡萄糖输注速度","mg/kg/min",.1]]],
@@ -1399,19 +1586,13 @@ body{
     if(isKawen){status='<small class="status" data-status="kawen"></small>';}if(id==="insulin"){status='<small class="status" data-status="insulin"></small>';}
     return '<div class="dose-row" data-id="'+id+'" data-product-group="'+group+'"><div class="dose-copy"><strong>'+name+riskHtml+externalHtml+'</strong><small>'+spec+'</small>'+(note?'<small class="drug-note">'+note+'</small>':'')+(source?'<a class="drug-link" href="'+source+'" target="_blank" rel="noopener">查看说明书 ↗</a>':'')+'</div><div class="dose-controls" role="group" aria-label="'+name+'用量调整"><div class="stepper"><button type="button" data-delta="'+(-step)+'">−</button><label><input type="number" min="0" step="any" inputmode="decimal" aria-label="'+name+'用量" placeholder="0"><span>'+unit+'</span></label><button type="button" data-delta="'+step+'">＋</button></div>'+quick+status+'</div></div>';
   }
-  function buildCatalogReference(){
-    var grouped={},order=["碳水化合物","电解质","维生素","全合一"],i,item,group,html='<section class="catalog-reference"><div class="section-title"><div><small>目录参考</small><h2>暂未纳入计算的品规</h2></div><div><small>指南不建议常规使用</small></div></div>';
-    for(i=0;i<catalogReference.length;i++){item=catalogReference[i];if(!grouped[item[0]]){grouped[item[0]]=[];}grouped[item[0]].push(item);}
-    for(i=0;i<order.length;i++){group=order[i];if(!grouped[group]){continue;}html+='<div class="catalog-ref-group"><h3>'+group+'</h3>';for(var j=0;j<grouped[group].length;j++){item=grouped[group][j];html+='<div class="catalog-ref-item"><strong>'+item[1]+(item[4]?'<em class="risk-badge risk-'+String(item[4]).toLowerCase()+'">高警示 '+item[4]+'</em>':'')+'</strong><span>'+item[2]+' · '+item[3]+'</span><small>'+item[5]+'</small></div>';}html+='</div>';}
-    byId("catalogReference").innerHTML=html+'</section>';
-  }
   function build(){
     var html="",g,i,p,rows;
     for(g=0;g<groupKeys.length;g++){rows="";for(i=0;i<products.length;i++){p=products[i];if(p[3]===groupKeys[g]){rows+=rowHtml(p,false);}}html+='<section class="group" data-group="'+groupKeys[g]+'"><button class="group-head" type="button" aria-expanded="'+(g===0?"true":"false")+'"><span class="group-name">'+groupNames[groupKeys[g]]+'</span><span class="group-meta" data-active="'+groupKeys[g]+'">已用 0 项</span></button><div class="group-body" style="display:'+(g===0?"block":"none")+'">'+rows+'</div></section>';}
     byId("groups").innerHTML=html;
     byId("kawenRow").innerHTML=rowHtml(["kawenLiquid","脂肪乳氨基酸（17）葡萄糖（11%）针","卡文 · 默认1袋 · "+decimalText(state.config.kawenVolume)+" ml · 华瑞分装","kawen",state.config.kawenVolume,"ml","B","糖97 g / 脂肪51 g / 氨基酸34 g"],true);
     byId("kaquanRow").innerHTML=rowHtml(["kaquanLiquid","脂肪乳氨基酸（17）葡萄糖（19%）注射液","卡全 · 默认1袋 · "+decimalText(state.config.kaquanVolume)+" ml · 费森尤斯卡比华瑞","allinone",state.config.kaquanVolume,"ml","B","中心静脉制剂；糖100 g / 脂肪40 g / 氨基酸34 g","袋"],false);
-    buildCatalogReference();bindRows();bindGroups();
+    bindRows();bindGroups();
   }
   function bindGroups(){var groups=document.querySelectorAll(".group"),i;for(i=0;i<groups.length;i++){groups[i].getElementsByClassName("group-head")[0].onclick=function(){var body=this.parentNode.getElementsByClassName("group-body")[0];var open=body.style.display!=="none";body.style.display=open?"none":"block";this.setAttribute("aria-expanded",open?"false":"true");};}}
   function applyDoseButton(button){var row=button;while(row&&String(row.className).indexOf("dose-row")<0){row=row.parentNode;}if(!row){return;}var rowId=row.getAttribute("data-id");if(button.blur){button.blur();}var delta=Number(button.getAttribute("data-delta"));if(window.pnMobileUI&&window.pnMobileUI.adjust(rowId,delta)){return;}setValue(rowId,currentValue(rowId)+delta);}
@@ -1451,16 +1632,14 @@ body{
   }
   function syncFormulaButton(){var open=byId("formulaContent").style.display==="block",count=configModifiedCount();byId("formulaButton").className=open?"formula-button active":"formula-button";byId("formulaButton").innerHTML=open?"收起公式与参数":"公式与参数"+(count?" · 已修改":"");}
   function syncKawenControls(){var row=byId("kawenRow").getElementsByClassName("dose-row")[0],buttons,copy,volume;if(row){buttons=row.querySelectorAll(".stepper button[data-delta]");copy=row.getElementsByClassName("dose-copy")[0].getElementsByTagName("small")[0];volume=state.config.kawenVolume;buttons[0].setAttribute("data-delta",-volume);buttons[buttons.length-1].setAttribute("data-delta",volume);copy.innerHTML="卡文 · 默认1袋 · "+decimalText(volume)+" ml · 华瑞分装";}row=byId("kaquanRow").getElementsByClassName("dose-row")[0];if(row){buttons=row.querySelectorAll(".stepper button[data-delta]");copy=row.getElementsByClassName("dose-copy")[0].getElementsByTagName("small")[0];volume=state.config.kaquanVolume;buttons[0].setAttribute("data-delta",-volume);buttons[buttons.length-1].setAttribute("data-delta",volume);copy.innerHTML="卡全 · 默认1袋 · "+decimalText(volume)+" ml · 费森尤斯卡比华瑞";}}
-  function makeReport(result){var items=[],i,p,value,digits,modeName=state.mode==="kawen"?"卡文":state.mode==="kaquan"?"卡全":"常规 TPN";if(state.mode==="kawen"&&n("kawenLiquid")>0){items.push("卡文："+format(n("kawenLiquid"),0)+" ml（"+format(result.bags,2)+" 袋）");}for(i=0;i<products.length;i++){p=products[i];if(p[0]==="kaquanLiquid"&&state.mode!=="kaquan"){continue;}value=p[0]==="insulin"?result.insulin:n(p[0]);if(value>0){digits=value%1===0?0:2;items.push(p[1]+"："+format(value,digits)+" "+p[5]);}}if(items.length===0){items.push("暂无非零用量");}for(i=0;i<items.length;i++){items[i]=(i+1)+". "+items[i];}return ["TPN简要报告","模式："+modeName,"年龄："+format(state.age,0)+" 岁","身高："+format(state.height,1)+" cm","体重："+format(state.weight,1)+" kg","理想体重："+format(result.ideal,1)+" kg","校正体重："+format(result.corrected,1)+" kg","BMI："+format(result.bmi,1)+" kg/m²","TPN推荐能量："+format(result.recommendedEnergy,0)+" kcal/d","TPN推荐液体量："+format(result.recommendedLiquid,0)+" ml/d","总能量："+format(result.energy,0)+" kcal","总液体量："+format(result.liquid,0)+" ml","估算渗透压："+format(result.osm,0)+" mOsm/L","非蛋白热量："+format(result.nonProtein,0)+" kcal","估算氮量："+format(result.nitrogen,2)+" gN","热氮比："+format(result.heatNitrogen,0),"糖脂比："+format(result.sugarFat,2),"葡萄糖限速时间："+format(result.time35,1)+" h（"+state.config.maxGlucoseRate+" mg/kg/min）；"+format(result.time4,1)+" h（4.0 mg/kg/min）；"+format(result.time5,1)+" h（5.0 mg/kg/min）","葡萄糖："+format(result.glucose,1)+" g；氨基酸："+format(result.amino,1)+" g；脂肪："+format(result.fat,1)+" g","","说明：限速时间仅按葡萄糖计算；渗透压为估算，未包含所有维生素及辅料；钙磷配伍另需核对。","具体配方：",items.join("\r\n")].join("\r\n");}
+  function makeReport(result){var items=[],i,p,value,digits,modeName=state.mode==="kawen"?"卡文":state.mode==="kaquan"?"卡全":"常规 TPN";if(state.mode==="kawen"&&n("kawenLiquid")>0){items.push("卡文："+format(n("kawenLiquid"),0)+" ml（"+format(result.bags,2)+" 袋）");}for(i=0;i<products.length;i++){p=products[i];if(p[0]==="kaquanLiquid"&&state.mode!=="kaquan"){continue;}value=p[0]==="insulin"?result.insulin:n(p[0]);if(value>0){digits=value%1===0?0:2;items.push(p[1]+"："+format(value,digits)+" "+p[5]);}}if(items.length===0){items.push("暂无非零用量");}for(i=0;i<items.length;i++){items[i]=(i+1)+". "+items[i];}return ["TPN简要报告","模式："+modeName,"年龄："+format(state.age,0)+" 岁","身高："+format(state.height,1)+" cm","体重："+format(state.weight,1)+" kg","理想体重："+format(result.ideal,1)+" kg","校正体重："+format(result.corrected,1)+" kg","BMI："+format(result.bmi,1)+" kg/m²","TPN推荐能量："+format(result.recommendedEnergy,0)+" kcal/d","TPN推荐液体量："+format(result.recommendedLiquid,0)+" ml/d","总能量："+format(result.energy,0)+" kcal","总液体量："+format(result.liquid,0)+" ml","估算渗透压："+format(result.osm,0)+" mOsm/L","非蛋白热量："+format(result.nonProtein,0)+" kcal","估算氮量："+format(result.nitrogen,2)+" gN","热氮比："+format(result.heatNitrogen,0),"糖脂比："+format(result.sugarFat,2),"葡萄糖限速时间："+format(result.time35,1)+" h（"+state.config.maxGlucoseRate+" mg/kg/min）；"+format(result.time4,1)+" h（4.0 mg/kg/min）；"+format(result.time5,1)+" h（5.0 mg/kg/min）","葡萄糖："+format(result.glucose,1)+" g；氨基酸："+format(result.amino,1)+" g；脂肪："+format(result.fat,1)+" g","","说明：限速时间仅按葡萄糖计算；渗透压为估算值。","具体配方：",items.join("\r\n")].join("\r\n");}
   function renderResults(){
     var r=calculate(),c=state.config,warnings=[],rows,html,i,reference;
     byId("idealWeight").innerHTML=format(r.ideal,1)+" kg";byId("correctedWeight").innerHTML=format(r.corrected,1)+" kg";byId("bmi").innerHTML=format(r.bmi,1);byId("recommendedEnergy").innerHTML=format(r.recommendedEnergy,0)+(r.recommendedEnergy===null?"":" kcal/d");byId("recommendedEnergyNote").innerHTML="25 kcal/kg；30 kcal/kg参考："+format(r.recommendedEnergy30,0)+" kcal/d";byId("recommendedLiquid").innerHTML=format(r.recommendedLiquid,0)+(r.recommendedLiquid===null?"":" ml/d");byId("recommendedLiquidNote").innerHTML=state.age>0?"分段公式；30–40 ml/kg："+format(r.fluid30,0)+"–"+format(r.fluid40,0)+" ml/d":"请填写年龄；30–40 ml/kg："+format(r.fluid30,0)+"–"+format(r.fluid40,0)+" ml/d";byId("energy").innerHTML=format(r.energy,0);byId("liquid").innerHTML=format(r.liquid,0);byId("osm").innerHTML=format(r.osm,0);byId("time35").innerHTML=format(r.time35,1);byId("time4").innerHTML=format(r.time4,1);byId("time5").innerHTML=format(r.time5,1);byId("rate35").innerHTML=format(c.maxGlucoseRate,1);byId("glucose").innerHTML=format(r.glucose,1)+" g";byId("amino").innerHTML=format(r.amino,1)+" g";byId("fat").innerHTML=format(r.fat,1)+" g";byId("carbShareSummary").innerHTML=format(r.carbShare===null?null:r.carbShare*100,1)+"%";byId("proteinShareSummary").innerHTML=format(r.proteinShare===null?null:r.proteinShare*100,1)+"%";byId("fatShareSummary").innerHTML=format(r.fatShare===null?null:r.fatShare*100,1)+"%";byId("nonProteinSummary").innerHTML=format(r.nonProtein,0)+" kcal";byId("heatNitrogenSummary").innerHTML=format(r.heatNitrogen,0);byId("sugarFatSummary").innerHTML=format(r.sugarFat,2);byId("heatNitrogenRange").innerHTML=decimalText(c.heatNitrogenMin)+"–"+decimalText(c.heatNitrogenMax);byId("sugarFatRange").innerHTML=decimalText(c.sugarFatMin)+"–"+decimalText(c.sugarFatMax);byId("osmCard").className=r.osm!==null&&r.osm>c.osmThreshold?"card danger":"card";
-    if(n("soluvit")>0&&n("vitamin12")>0){warnings.push(["水溶性维生素可能重复","水乐维他与12种复合维生素均已录入，请复核重复成分及总剂量。","caution"]);}if(n("soluvit")>0&&r.liquid<=0){warnings.push(["请录入复溶载体或配方液体","水乐维他为冻干粉，按支计，不自动增加液体体积。","caution"]);}if(n("fatVitamin")>0&&r.fat<=0){warnings.push(["维他利匹特需要脂肪乳载体","当前已添加维他利匹特，但配方中未检测到脂肪乳，请复核。","alert"]);}if(n("kPhos")>0){warnings.push(["院外复合磷酸氢钾需复核","参考品规每ml含K 4.4、P 3.0 mmol，理论渗透量 "+c.kPhosOsm+" mOsm/ml估算；请按外院实物说明书核对浓度并注意钙磷相容性。","alert"]);}if(n("aspartateKM")>0){warnings.push(["门冬氨酸钾镁渗透量需复核","钾、镁离子已按说明书换算；成品渗透量暂用可调理论值 "+c.aspartateOsm+" mOsm/ml。","caution"]);}if(state.mode==="kaquan"&&n("kaquanLiquid")>0){warnings.push(["卡全1026 ml为中心静脉制剂","说明书容积渗透压约1060 mOsm/L；请结合最终配方及静脉通路复核。","alert"]);}if(r.osm!==null&&r.osm>c.osmThreshold){warnings.push(["渗透压超过 "+c.osmThreshold+" mOsm/L","超过"+c.osmThreshold+"mOsm/L宜选择中心静脉输注。","alert"]);}if(r.energyKg!==null&&(r.energyKg<c.energyPerKgMin||r.energyKg>c.energyPerKgMax)){warnings.push(["单位体重热量不在 "+c.energyPerKgMin+"–"+c.energyPerKgMax+" kcal/kg","当前 "+format(r.energyKg,1)+" kcal/kg（按理想体重）。","caution"]);}if(r.heatNitrogen!==null&&(r.heatNitrogen<c.heatNitrogenMin||r.heatNitrogen>c.heatNitrogenMax)){warnings.push(["热氮比不在 "+c.heatNitrogenMin+"–"+c.heatNitrogenMax,"当前 "+format(r.heatNitrogen,0)+"。","caution"]);}if(r.sugarFat!==null&&(r.sugarFat<c.sugarFatMin||r.sugarFat>c.sugarFatMax)){warnings.push(["糖脂比不在 "+c.sugarFatMin+"–"+c.sugarFatMax,"当前 "+format(r.sugarFat,2)+"。","caution"]);}if(r.glucoseKg!==null&&r.glucoseKg>c.glucosePerKgMax){warnings.push(["葡萄糖供给量超过 "+c.glucosePerKgMax+" g/kg","当前 "+format(r.glucoseKg,2)+" g/kg。","alert"]);}if(r.glucoseConcentration!==null&&(r.glucoseConcentration<c.glucoseConcentrationMin||r.glucoseConcentration>c.glucoseConcentrationMax)){warnings.push(["葡萄糖浓度超出 "+c.glucoseConcentrationMin+"–"+c.glucoseConcentrationMax+" g/ml","当前 "+format(r.glucoseConcentration,3)+" g/ml。","alert"]);}if(r.aminoConcentration!==null&&r.aminoConcentration<c.aminoConcentrationMin){warnings.push(["氨基酸浓度低于 "+c.aminoConcentrationMin+" g/ml","当前 "+format(r.aminoConcentration,3)+" g/ml。","alert"]);}if(r.alaGlnConcentration!==null&&r.alaGlnConcentration>c.alaGlnConcentrationMax){warnings.push(["丙-谷浓度超过 "+c.alaGlnConcentrationMax+" g/ml","当前 "+format(r.alaGlnConcentration,3)+" g/ml。","alert"]);}if(r.alaGlnRatio!==null&&r.alaGlnRatio>c.alaGlnRatioMax){warnings.push(["丙-谷占总氨基酸比例超过 "+c.alaGlnRatioMax,"当前 "+format(r.alaGlnRatio,2)+"。","caution"]);}if(r.calcium>0&&r.phosphorus>0){warnings.push(["钙磷相容性需另行审核",r.inorganicPhosphorus>0?"已加入无机磷，需依据具体配伍曲线及混合过程浓度审核；旧表指数不能作为安全阈值。":"含钙和磷，需结合具体制剂、pH及配伍依据审核，旧表指数不判定安全。","caution"]);}if(r.monovalent!==null&&r.monovalent>c.monovalentCaution){warnings.push(["一价阳离子浓度需关注","当前 "+format(r.monovalent,1)+" mmol/L；当前阈值 ≤"+c.monovalentCaution+"–"+c.monovalentAlert+"。",r.monovalent>c.monovalentAlert?"alert":"caution"]);}if(r.divalent!==null&&r.divalent>c.divalentCaution){warnings.push(["二价阳离子浓度需关注","当前 "+format(r.divalent,1)+" mmol/L；当前阈值 ≤"+c.divalentCaution+"–"+c.divalentAlert+"。",r.divalent>c.divalentAlert?"alert":"caution"]);}
+    if(n("soluvit")>0&&n("vitamin12")>0){warnings.push(["水溶性维生素可能重复","水乐维他与12种复合维生素均已录入，请复核重复成分及总剂量。","caution"]);}if(n("soluvit")>0&&r.liquid<=0){warnings.push(["请录入复溶载体或配方液体","水乐维他为冻干粉，按支计，不自动增加液体体积。","caution"]);}if(n("fatVitamin")>0&&r.fat<=0){warnings.push(["维他利匹特需要脂肪乳载体","当前已添加维他利匹特，但配方中未检测到脂肪乳，请复核。","alert"]);}if(n("kPhos")>0){warnings.push(["院外复合磷酸氢钾需复核","参考品规每ml含K 4.4、P 3.0 mmol，理论渗透量 "+c.kPhosOsm+" mOsm/ml估算；请按外院实物说明书核对浓度并注意钙磷相容性。","alert"]);}if(n("aspartateKM")>0){warnings.push(["门冬氨酸钾镁渗透量需复核","钾、镁离子已按说明书换算；成品渗透量暂用可调理论值 "+c.aspartateOsm+" mOsm/ml。","caution"]);}if(state.mode==="kaquan"&&n("kaquanLiquid")>0){warnings.push(["卡全1026 ml为中心静脉制剂","说明书容积渗透压约1060 mOsm/L；请结合最终配方及静脉通路复核。","alert"]);}if(r.osm!==null&&r.osm>c.osmThreshold){warnings.push(["渗透压超过 "+c.osmThreshold+" mOsm/L","超过"+c.osmThreshold+"mOsm/L宜选择中心静脉输注。","alert"]);}if(r.energyKg!==null&&(r.energyKg<c.energyPerKgMin||r.energyKg>c.energyPerKgMax)){warnings.push(["单位体重热量不在 "+c.energyPerKgMin+"–"+c.energyPerKgMax+" kcal/kg","当前 "+format(r.energyKg,1)+" kcal/kg（按理想体重）。","caution"]);}if(r.heatNitrogen!==null&&(r.heatNitrogen<c.heatNitrogenMin||r.heatNitrogen>c.heatNitrogenMax)){warnings.push(["热氮比不在 "+c.heatNitrogenMin+"–"+c.heatNitrogenMax,"当前 "+format(r.heatNitrogen,0)+"。","caution"]);}if(r.sugarFat!==null&&(r.sugarFat<c.sugarFatMin||r.sugarFat>c.sugarFatMax)){warnings.push(["糖脂比不在 "+c.sugarFatMin+"–"+c.sugarFatMax,"当前 "+format(r.sugarFat,2)+"。","caution"]);}if(r.glucoseKg!==null&&r.glucoseKg>c.glucosePerKgMax){warnings.push(["葡萄糖供给量超过 "+c.glucosePerKgMax+" g/kg","当前 "+format(r.glucoseKg,2)+" g/kg。","alert"]);}if(r.glucoseConcentration!==null&&(r.glucoseConcentration<c.glucoseConcentrationMin||r.glucoseConcentration>c.glucoseConcentrationMax)){warnings.push(["葡萄糖浓度超出 "+c.glucoseConcentrationMin+"–"+c.glucoseConcentrationMax+" g/ml","当前 "+format(r.glucoseConcentration,3)+" g/ml。","alert"]);}if(r.aminoConcentration!==null&&r.aminoConcentration<c.aminoConcentrationMin){warnings.push(["氨基酸浓度低于 "+c.aminoConcentrationMin+" g/ml","当前 "+format(r.aminoConcentration,3)+" g/ml。","alert"]);}if(r.alaGlnConcentration!==null&&r.alaGlnConcentration>c.alaGlnConcentrationMax){warnings.push(["丙-谷浓度超过 "+c.alaGlnConcentrationMax+" g/ml","当前 "+format(r.alaGlnConcentration,3)+" g/ml。","alert"]);}if(r.alaGlnRatio!==null&&r.alaGlnRatio>c.alaGlnRatioMax){warnings.push(["丙-谷占总氨基酸比例超过 "+c.alaGlnRatioMax,"当前 "+format(r.alaGlnRatio,2)+"。","caution"]);}if(r.monovalent!==null&&r.monovalent>c.monovalentCaution){warnings.push(["一价阳离子浓度需关注","当前 "+format(r.monovalent,1)+" mmol/L；当前阈值 ≤"+c.monovalentCaution+"–"+c.monovalentAlert+"。",r.monovalent>c.monovalentAlert?"alert":"caution"]);}if(r.divalent!==null&&r.divalent>c.divalentCaution){warnings.push(["二价阳离子浓度需关注","当前 "+format(r.divalent,1)+" mmol/L；当前阈值 ≤"+c.divalentCaution+"–"+c.divalentAlert+"。",r.divalent>c.divalentAlert?"alert":"caution"]);}
 
     if(state.age>0&&state.age<18){warnings.push(["当前为未成年患者","成人理想体重、能量与液体推荐及Cockcroft–Gault公式不用于本例；营养处方与限速请按儿科方案复核。","alert"]);}
-    var unmodeled=["vitD2","vitK1","vitB1","vitB6","vitB12","vitC","fatVitamin","fatVitaminPediatric","vitamin12"],missing=[],u;
-    for(u=0;u<unmodeled.length;u++){if(n(unmodeled[u])>0){for(var pi=0;pi<products.length;pi++){if(products[pi][0]===unmodeled[u]){missing.push(products[pi][1]);break;}}}}
-    if(missing.length){warnings.push(["渗透压估算未覆盖全部成分",missing.join("、")+"当前仅计入体积，未完整计入溶质及辅料贡献；以实物说明书或测定结果复核。","caution"]);}
+    var u;
     if(n("alaGln")>0){warnings.push(["丙谷的渗透量单独计算","20%丙氨酰谷氨酰胺按0.921mOsm/ml，未再按普通氨基酸×10重复累加；氮量仍按通用系数近似。","caution"]);}
     var pairs=[["heatNitrogenMin","heatNitrogenMax"],["sugarFatMin","sugarFatMax"],["energyPerKgMin","energyPerKgMax"],["glucoseConcentrationMin","glucoseConcentrationMax"]];
     for(u=0;u<pairs.length;u++){if(c[pairs[u][0]]>c[pairs[u][1]]){warnings.push(["参数范围需要修正","公式与参数中存在下限大于上限，请先修正后解读提示。","alert"]);break;}}
@@ -1517,10 +1696,14 @@ body{
   function create(container,selector,isMode){
     if(!container){return;}
     var cursor=document.createElement("span");cursor.className="glass-cursor";cursor.setAttribute("aria-hidden","true");container.appendChild(cursor);
-    var record={container:container,cursor:cursor,selector:selector,last:null,isMode:isMode};records.push(record);
+    var record={container:container,cursor:cursor,selector:selector,last:null,isMode:isMode,instant:false};records.push(record);
     if(window.MutationObserver){new window.MutationObserver(function(){schedule(false);}).observe(container,{subtree:true,attributes:true,attributeFilter:isMode?["class"]:["aria-selected"]});}
     if(window.ResizeObserver){new window.ResizeObserver(function(){schedule(true);}).observe(container);}
-    container.addEventListener("click",function(){schedule(false);});
+    container.addEventListener("keydown",function(){record.instant=true;schedule(false);},true);
+    container.addEventListener("pointerdown",function(){record.instant=false;},{capture:true,passive:true});
+    container.addEventListener("touchstart",function(){record.instant=false;},{capture:true,passive:true});
+    container.addEventListener("mousedown",function(){record.instant=false;},{capture:true,passive:true});
+    container.addEventListener("click",function(event){if(event.detail===0){record.instant=true;}schedule(false);});
   }
   function update(record,force){
     var target=record.container.querySelector(record.selector);
@@ -1531,11 +1714,11 @@ body{
     if(!force&&target===record.last){return;}
     var parent=record.container.getBoundingClientRect(),rect=target.getBoundingClientRect();
     if(parent.width<=0||rect.width<=0){record.container.classList.remove("glass-ready");record.last=null;return;}
-    var style=record.cursor.style;
-    style.setProperty("--glass-x",Math.round((rect.left-parent.left-(record.container.clientLeft||0))*100)/100+"px");
-    style.setProperty("--glass-y",Math.round((rect.top-parent.top-(record.container.clientTop||0))*100)/100+"px");
-    style.setProperty("--glass-w",Math.round(rect.width*100)/100+"px");
-    style.setProperty("--glass-h",Math.round(rect.height*100)/100+"px");
+    var style=record.cursor.style,x=Math.round((rect.left-parent.left-(record.container.clientLeft||0))*100)/100,y=Math.round((rect.top-parent.top-(record.container.clientTop||0))*100)/100;
+    record.cursor.setAttribute("data-instant",force||!record.last||record.instant?"true":"false");
+    style.transform="translate3d("+x+"px,"+y+"px,0)";
+    style.width=Math.round(rect.width*100)/100+"px";
+    style.height=Math.round(rect.height*100)/100+"px";
     record.last=target;record.container.classList.add("glass-ready");
   }
   function schedule(force){
