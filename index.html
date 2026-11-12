@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta id="appThemeColor" name="theme-color" content="#f2f5fa">
+  <meta id="appThemeColor" name="theme-color" content="#a8c8bb">
   <meta name="color-scheme" content="light dark">
   <link rel="manifest" href="./manifest.webmanifest">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -23,7 +23,7 @@
     var theme=preferred||(systemDark?"dark":"light");
     document.documentElement.setAttribute("data-theme",theme);
     document.documentElement.setAttribute("data-theme-source",preferred?"manual":"system");
-    var meta=document.getElementById("appThemeColor");if(meta){meta.setAttribute("content",theme==="dark"?"#0f1722":"#f2f5fa");}
+    var meta=document.getElementById("appThemeColor");if(meta){meta.setAttribute("content",theme==="dark"?"#1e2926":"#a8c8bb");}
   }());
   </script>
 
@@ -1054,6 +1054,449 @@ body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
 }
 
 </style>
+<style id="looseleaf-style">
+/* Looseleaf theme adaptation. MIT © 2026 Looseleaf contributors.
+   Full notice: LICENSE-Looseleaf.txt. Geometry and interactions remain local. */
+:root{
+  --ll-desk:#a8c8bb;--ll-paper:#f8f5ee;--ll-slip:#fbf8f1;--ll-pad:#f8f2de;
+  --ll-ink:#2a2420;--ll-muted:#4a433c;--ll-line:#787168;--ll-rule:#d0c8b9;
+  --ll-blue:#2c4f9e;--ll-yellow:#f7e38a;--ll-note-blue:#bcd8f0;--ll-note-green:#cfe6a8;
+  --ll-note-orange:#f7c08e;--ll-checked:#eaf0dc;--ll-white:#fffdf6;
+  --ll-green:#326342;--ll-green-soft:#e0eadc;--ll-red:#a63325;--ll-red-soft:#f9e3da;
+  --ll-caution:#765115;--ll-caution-soft:#f7edc7;--ll-focus-soft:#dbe5f5;
+  --ll-shadow:rgba(58,44,30,.16);--ll-scrim:rgba(42,36,32,.4);
+  --page:var(--ll-desk);--paper:var(--ll-paper);--ink:var(--ll-ink);--muted:var(--ll-muted);
+  --blue:var(--ll-blue);--deep:var(--ll-ink);--blue-soft:var(--ll-note-blue);--blue-faint:var(--ll-slip);
+  --orange:#b45d28;--orange-soft:var(--ll-note-orange);--orange-ink:var(--ll-ink);
+  --line:var(--ll-rule);--control:var(--ll-line);--hairline:var(--ll-rule);
+  --danger:var(--ll-red);--danger-soft:var(--ll-red-soft);--caution:var(--ll-caution);--caution-soft:var(--ll-caution-soft);
+  --chrome-muted:var(--ll-muted);--selection-fill:var(--ll-checked);--surface-muted:var(--ll-slip);
+  --energy-fill:var(--ll-yellow);--liquid-fill:var(--ll-note-blue);--macro-aa:var(--ll-note-orange);--macro-fat:var(--ll-note-green);
+  --glass-fill:var(--ll-paper);--glass-cursor:var(--ll-yellow);--glass-edge:var(--ll-line);
+  --glass-shadow:var(--ll-shadow);--sheet-fill:var(--ll-paper);--focus-ring:var(--ll-focus-soft);
+  --radius:8px;--radius-card:8px;--radius-control:7px;--radius-small:5px;
+  --ll-frame:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%3E%3Cpath%20d%3D%22M9%202.8%20C31%201.5%2082%203.1%20110%202.4%20Q117.8%202%20117.2%2011%20C118%2040%20116.8%2080%20117.5%20109%20Q118%20117%20109%20117.1%20C81%20118.1%2039%20116.9%2010%20117.5%20Q2.4%20117.9%202.7%20109%20C1.8%2080%203.1%2040%202.4%2011%20Q2%202.5%209%202.8%20Z%22%20fill%3D%22none%22%20stroke%3D%22%23787168%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");--ll-underline:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%227%22%20viewBox%3D%220%200%20100%207%22%3E%3Cpath%20d%3D%22M2%204%20Q24%201%2048%203%20T97%202.5%22%20fill%3D%22none%22%20stroke%3D%22%232c4f9e%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+}
+:root[data-theme="dark"]{
+  --ll-desk:#1e2926;--ll-paper:#2b2c29;--ll-slip:#30312d;--ll-pad:#363427;
+  --ll-ink:#f1eadf;--ll-muted:#ccc2b4;--ll-line:#a59a88;--ll-rule:#56564c;
+  --ll-blue:#b0cbff;--ll-yellow:#4b4128;--ll-note-blue:#2d414f;--ll-note-green:#334632;
+  --ll-note-orange:#4d392b;--ll-checked:#343e2e;--ll-white:#252723;
+  --ll-green:#c3e6a9;--ll-green-soft:#334632;--ll-red:#ffc0b0;--ll-red-soft:#4b302b;
+  --ll-caution:#f2d796;--ll-caution-soft:#473d28;--ll-focus-soft:#384b67;
+  --ll-shadow:rgba(0,0,0,.3);--ll-scrim:rgba(0,0,0,.6);
+  --page:var(--ll-desk);--paper:var(--ll-paper);--ink:var(--ll-ink);--muted:var(--ll-muted);
+  --blue:var(--ll-blue);--deep:var(--ll-ink);--blue-soft:var(--ll-note-blue);--blue-faint:var(--ll-slip);
+  --orange:#efb584;--orange-soft:var(--ll-note-orange);--orange-ink:var(--ll-ink);
+  --line:var(--ll-rule);--control:var(--ll-line);--hairline:var(--ll-rule);
+  --danger:var(--ll-red);--danger-soft:var(--ll-red-soft);--caution:var(--ll-caution);--caution-soft:var(--ll-caution-soft);
+  --chrome-muted:var(--ll-muted);--selection-fill:var(--ll-checked);--surface-muted:var(--ll-slip);
+  --energy-fill:var(--ll-yellow);--liquid-fill:var(--ll-note-blue);--macro-aa:var(--ll-note-orange);--macro-fat:var(--ll-note-green);
+  --glass-fill:var(--ll-paper);--glass-cursor:var(--ll-yellow);--glass-edge:var(--ll-line);
+  --glass-shadow:var(--ll-shadow);--sheet-fill:var(--ll-paper);--focus-ring:var(--ll-focus-soft);
+  --ll-frame:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%3E%3Cpath%20d%3D%22M9%202.8%20C31%201.5%2082%203.1%20110%202.4%20Q117.8%202%20117.2%2011%20C118%2040%20116.8%2080%20117.5%20109%20Q118%20117%20109%20117.1%20C81%20118.1%2039%20116.9%2010%20117.5%20Q2.4%20117.9%202.7%20109%20C1.8%2080%203.1%2040%202.4%2011%20Q2%202.5%209%202.8%20Z%22%20fill%3D%22none%22%20stroke%3D%22%23a59a88%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");--ll-underline:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%227%22%20viewBox%3D%220%200%20100%207%22%3E%3Cpath%20d%3D%22M2%204%20Q24%201%2048%203%20T97%202.5%22%20fill%3D%22none%22%20stroke%3D%22%23b0cbff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+}
+html[data-theme] body{
+  background:var(--ll-desk);color:var(--ll-ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:.9375rem;line-height:1.6;letter-spacing:0;
+}
+html[data-theme] .app{max-width:1280px;padding-top:30px}
+html[data-theme] .app .topbar{margin-bottom:24px;gap:30px}
+html[data-theme] .app .header h1{font-size:1.625rem;line-height:1.3;font-weight:700;letter-spacing:-.02em;color:var(--ll-ink)}
+html[data-theme] .app .header h1 span{
+  font-size:2rem;font-weight:750;letter-spacing:-.045em;margin-right:10px;
+  padding:0 3px 5px;background:var(--ll-underline) left bottom/100% 7px no-repeat;
+}
+html[data-theme] .app .subtitle{color:var(--ll-muted);font-size:.75rem;line-height:1.5;margin-top:5px}
+html[data-theme] .app .brand-icon{border-radius:10px;box-shadow:1px 2px 0 var(--ll-shadow)}
+html[data-theme] .app .theme-toggle{border:1.3px solid var(--ll-line);border-radius:50%;background:var(--ll-paper);color:var(--ll-ink);box-shadow:1px 2px 0 var(--ll-shadow)}
+html[data-theme] .app .heading{gap:15px;margin-bottom:14px}
+html[data-theme] .app .heading h2{font-size:1.1875rem;font-weight:700;letter-spacing:.02em;color:var(--ll-ink)}
+html[data-theme] .app .heading:after{height:1px;background:var(--ll-line);opacity:.6}
+html[data-theme] .app .section-title{border-color:var(--ll-rule)}
+html[data-theme] .app .section-title h2{color:var(--ll-ink);font-size:1rem;letter-spacing:.015em;font-weight:650}
+html[data-theme] .app .panel,html[data-theme] .app .group,html[data-theme] .app .clinical-tool,html[data-theme] .app .warning,html[data-theme] .app .catalog-reference{
+  background:var(--ll-paper);color:var(--ll-ink);border:1.3px solid var(--ll-line);
+  border-radius:7px 9px 7px 8px / 8px 6px 9px 7px;
+  box-shadow:0 1px 1px var(--ll-shadow),0 5px 10px -7px var(--ll-shadow);
+}
+html[data-theme] .app .patient-panel,html[data-theme] .app .cards .card,html[data-theme] .app .summary{
+  border-image-source:var(--ll-frame);border-image-slice:12;border-image-width:9px;border-image-repeat:stretch;
+}
+html[data-theme] .app .patient-panel{padding:22px 24px;gap:17px 26px;background:var(--ll-slip)}
+html[data-theme] .app .patient-panel>.section-title{padding-bottom:10px;border-bottom:1px solid var(--ll-rule)}
+html[data-theme] .app .field>span:first-child{color:var(--ll-muted);font-size:.8125rem}
+html[data-theme] .app .field-box{border:1.2px solid var(--ll-line);border-radius:6px 8px 6px 7px;background:var(--ll-white);height:52px;min-height:52px;box-shadow:none}
+html[data-theme] .app .field-box input{color:var(--ll-blue);font-size:1.3125rem;letter-spacing:0;font-weight:650;height:100%;padding:0 0 0 12px}
+html[data-theme] .app .field-box b{color:var(--ll-muted);flex:0 0 2.6em;padding:0 7px 0 0;font-size:.75rem;line-height:1;text-align:right;white-space:nowrap}
+html[data-theme] .app .calc-weights{border-color:var(--ll-rule);background:transparent;border-radius:0}
+html[data-theme] .app .calc-weights span{color:var(--ll-muted)}
+html[data-theme] .app .calc-weights strong{color:var(--ll-ink);letter-spacing:0;font-weight:650}
+html[data-theme] .app .patient-reference{border-color:var(--ll-rule);padding-top:12px;color:var(--ll-muted)}
+html[data-theme] .app .patient-reference b{color:var(--ll-blue);font-weight:600}
+
+/* Paper index tabs: retain the existing measured, noninteractive indicator. */
+html[data-theme] .app .mode,html[data-theme] .app .mobile-category-bar{
+  background:var(--ll-paper);border:1.3px solid var(--ll-line);border-radius:7px 9px 6px 8px;
+  box-shadow:1px 3px 0 var(--ll-shadow);-webkit-backdrop-filter:none;backdrop-filter:none;
+}
+html[data-theme] .app .mode{padding:6px;gap:4px}
+html[data-theme] .app .mode button{color:var(--ll-muted);font-weight:600;border-radius:4px 6px 4px 5px;min-height:44px}
+html[data-theme] .app .mode button.active{color:var(--ll-ink);background:var(--ll-yellow);box-shadow:none}
+html[data-theme] .app .mode.glass-ready button.active{background:transparent}
+html[data-theme] .glass-cursor{background:var(--ll-yellow);border:1px solid var(--ll-line);border-radius:4px 6px 4px 5px;box-shadow:1px 1px 0 var(--ll-shadow)}
+html[data-theme] .app .mobile-category-bar button{color:var(--ll-muted);font-weight:600;border-radius:4px 6px 4px 5px}
+html[data-theme] .app .mobile-category-bar button[aria-selected="true"]{color:var(--ll-ink);background:var(--ll-yellow)!important;box-shadow:none}
+html[data-theme] .app .mobile-category-bar.glass-ready button[aria-selected="true"]{background:transparent!important}
+
+/* Ruled prescription list; no rotation, animated dose, or extra row badges. */
+html[data-theme] .app .group-head,html[data-theme] .app .group-head[aria-expanded="true"]{background:var(--ll-pad);color:var(--ll-ink)}
+html[data-theme] .app .group-head:after{border-color:var(--ll-muted)}
+html[data-theme] .app .group-body{border-color:var(--ll-rule)}
+html[data-theme] .app .dose-row{background:var(--ll-paper);border-color:var(--ll-rule);padding:18px;gap:18px}
+html[data-theme] .app .dose-row.active-dose,html[data-theme] .app .dose-row:focus-within{background:var(--ll-checked)}
+html[data-theme] .app .dose-copy strong{color:var(--ll-ink);font-size:.9375rem;font-weight:600;line-height:1.6}
+html[data-theme] .app .dose-copy small{color:var(--ll-muted);font-size:.75rem;line-height:1.65}
+html[data-theme] .app .dose-row.active-dose .dose-copy strong{color:var(--ll-green)}
+html[data-theme] .app .dose-row.active-dose .dose-copy strong:before{background:var(--ll-green);width:6px;height:6px;border-radius:2px;top:.5em}
+html[data-theme] .app .stepper,html[data-theme] .selected-sheet .stepper{
+  height:48px;grid-template-columns:46px minmax(0,1fr) 46px;border:1.2px solid var(--ll-line);border-radius:6px 8px 6px 7px;
+  background:var(--ll-white);box-shadow:none;
+}
+html[data-theme] .app .stepper button,html[data-theme] .selected-sheet .stepper button{height:46px;line-height:46px;color:var(--ll-muted);background:var(--ll-slip);border-color:var(--ll-rule);border-radius:0;font-size:1.375rem;font-weight:400}
+html[data-theme] .app .stepper button:last-child,html[data-theme] .selected-sheet .stepper button:last-child{background:var(--ll-note-blue);color:var(--ll-ink);border-color:var(--ll-rule)}
+html[data-theme] .app .stepper input,html[data-theme] .selected-sheet .stepper input{color:var(--ll-blue);font-size:1.1875rem;font-weight:650;letter-spacing:0}
+html[data-theme] .app .stepper label span,html[data-theme] .selected-sheet .stepper label span{color:var(--ll-muted);font-size:.75rem}
+html[data-theme] .app .dose-row.active-dose .stepper{border-color:var(--ll-green)}
+html[data-theme] .app .quick{gap:8px;margin-top:9px}
+html[data-theme] .app .quick button{background:var(--ll-slip);border:1px solid var(--ll-line);border-radius:4px 6px 4px 5px;color:var(--ll-muted);min-height:44px;font-size:.75rem;box-shadow:0 1px 0 var(--ll-shadow)}
+html[data-theme] .app .quick button:nth-child(n+3){background:var(--ll-note-blue);color:var(--ll-ink);border-color:var(--ll-line)}
+html[data-theme] .app .quick button:active,html[data-theme] .app .stepper button:active,html[data-theme] .selected-sheet .stepper button:active{background:var(--ll-checked);color:var(--ll-ink);transform:none;box-shadow:none}
+html[data-theme] .app .status{color:var(--ll-muted)}
+html[data-theme] .app .restore-auto{color:var(--ll-blue);background:var(--ll-slip);border-color:var(--ll-line);border-radius:5px}
+html[data-theme] .risk-a{color:var(--ll-red);background:var(--ll-red-soft)}
+html[data-theme] .risk-b{color:var(--ll-caution);background:var(--ll-caution-soft)}
+html[data-theme] .external-badge{color:var(--ll-muted);background:var(--ll-slip);border:1px solid var(--ll-rule)}
+
+/* A restrained paper record, with a yellow energy note as its visual anchor. */
+html[data-theme] .app .cards{gap:12px}
+html[data-theme] .app .cards .card{background:var(--ll-paper);color:var(--ll-ink);border:1.3px solid var(--ll-line);border-image:var(--ll-frame) 12 / 9px stretch;border-radius:7px 9px 6px 8px;box-shadow:0 2px 2px -1px var(--ll-shadow);padding:20px}
+html[data-theme] .app .cards .card>span{color:var(--ll-muted);font-size:.8125rem}
+html[data-theme] .app .cards .card strong{color:var(--ll-ink);font-weight:650;letter-spacing:-.035em}
+html[data-theme] .app .cards .card>small{color:var(--ll-muted);font-size:.75rem}
+html[data-theme] .app .cards .card.primary{background:var(--ll-yellow);border-color:var(--ll-line);color:var(--ll-ink);box-shadow:0 2px 1px -1px var(--ll-shadow),0 6px 8px -7px var(--ll-shadow);min-height:114px;padding:22px}
+html[data-theme] .app .cards .card.primary>span,html[data-theme] .app .cards .card.primary strong,html[data-theme] .app .cards .card.primary>small{color:var(--ll-ink)}
+html[data-theme] .app .cards>.card:nth-child(2){background:var(--ll-note-blue)}
+html[data-theme] .app .cards #osmCard{background:var(--ll-paper)}
+html[data-theme] .app .cards #osmCard.danger{background:var(--ll-red-soft);border-image:none;border-color:var(--ll-red)}
+html[data-theme] .app .cards #osmCard.danger strong,html[data-theme] .app .cards #osmCard.danger>span,html[data-theme] .app .cards #osmCard.danger>small{color:var(--ll-red)}
+html[data-theme] .app .times{gap:8px}
+html[data-theme] .app .times b{border-color:var(--ll-rule);padding:0 6px;gap:6px}
+html[data-theme] .app .times .time-value{color:var(--ll-ink);font-size:1.0625rem;font-weight:650;white-space:nowrap}
+html[data-theme] .app .times small{background:var(--ll-pad);color:var(--ll-muted);border-radius:3px;padding:4px 5px}
+html[data-theme] .app .summary{padding:20px;background:var(--ll-slip)}
+html[data-theme] .app .macro:not(.focus-macro)>div{border:1px solid var(--ll-rule);border-radius:5px 7px 4px 6px;background:var(--ll-note-blue);box-shadow:none}
+html[data-theme] .app .macro:not(.focus-macro)>div:nth-child(2){background:var(--ll-note-orange)}
+html[data-theme] .app .macro:not(.focus-macro)>div:nth-child(3){background:var(--ll-note-green)}
+html[data-theme] .app .macro span,html[data-theme] .app .macro em{color:var(--ll-muted)}
+html[data-theme] .app .macro b{color:var(--ll-ink);font-weight:650}
+html[data-theme] .app .focus-macro{border:0;padding-top:0;margin-top:9px;gap:9px}
+html[data-theme] .app .focus-macro>div,html[data-theme] .app .focus-macro>div:nth-child(n){background:var(--ll-paper);border:1px solid var(--ll-rule);border-radius:5px 6px 4px 6px;padding:12px 10px}
+html[data-theme] .app .warning article{border:0;border-radius:5px;box-shadow:none}
+html[data-theme] .app .warning .section-title h2{color:var(--ll-ink)}
+html[data-theme] .app .warning article.alert{background:var(--ll-red-soft);color:var(--ll-red)}
+html[data-theme] .app .warning article.caution{background:var(--ll-caution-soft);color:var(--ll-caution)}
+
+/* The same paper and ink system extends to clinical tools and parameter editing. */
+html[data-theme] .app .clinical-tool>summary:after{color:var(--ll-blue)}
+html[data-theme] .app .tool-body{background:var(--ll-slip);border-color:var(--ll-rule)}
+html[data-theme] .app .tool-field input,html[data-theme] .app .tool-field select,html[data-theme] .app .parameter-editor input{background:var(--ll-white);color:var(--ll-blue);border-color:var(--ll-line);border-radius:6px}
+html[data-theme] .app .tool-result>div,html[data-theme] .app .cp-capture-card{background:var(--ll-note-blue);border:1px solid var(--ll-line);border-radius:6px}
+html[data-theme] .app .tool-result strong{color:var(--ll-ink)}
+html[data-theme] .app .tool-result span,html[data-theme] .app .tool-result small,html[data-theme] .app .cp-prognosis{color:var(--ll-muted)}
+html[data-theme] .app .cp-capture-head{color:var(--ll-ink)}
+html[data-theme] .app .cp-capture-score>div{background:var(--ll-paper);border-radius:4px;color:var(--ll-ink)}
+html[data-theme] .app .cp-choice-title{background:var(--ll-pad);color:var(--ll-ink);border:1px solid var(--ll-rule);border-radius:4px}
+html[data-theme] .app .cp-option{color:var(--ll-ink);border-color:var(--ll-rule)}
+html[data-theme] .app .cp-option:after{background:var(--ll-white);border-color:var(--ll-line)}
+html[data-theme] .app .cp-option.selected{background:var(--ll-checked);color:var(--ll-green);border-radius:5px}
+html[data-theme] .app .cp-option.selected:after{border-color:var(--ll-green)}
+html[data-theme] .app .tool-reference{background:var(--ll-paper);border-color:var(--ll-rule);border-radius:6px}
+html[data-theme] .app .score-table th{background:var(--ll-pad);color:var(--ll-ink)}
+html[data-theme] .app .score-table td,html[data-theme] .app .score-table th{border-color:var(--ll-rule)}
+html[data-theme] .app .cp-reset,html[data-theme] .app .back-to-cart{background:var(--ll-paper);color:var(--ll-blue);border-color:var(--ll-line);border-radius:5px}
+html[data-theme] .app .collapsible-panel>summary{border-radius:6px;color:var(--ll-ink)}
+html[data-theme] .app .collapsible-panel>summary:after{color:var(--ll-muted)}
+html[data-theme] .app .metrics td{border-color:var(--ll-rule)}
+html[data-theme] .app .metrics td:nth-child(2){color:var(--ll-ink)}
+html[data-theme] .app .metrics tbody tr:nth-child(even){background:var(--ll-slip)}
+html[data-theme] .app .copy-button{background:var(--ll-note-blue);color:var(--ll-ink);border:1px solid var(--ll-line);border-radius:5px;box-shadow:1px 2px 0 var(--ll-shadow);min-height:44px}
+html[data-theme] .app .report-text{background:var(--ll-slip);color:var(--ll-ink);border-color:var(--ll-line);border-radius:6px}
+html[data-theme] .app .formula-button{background:var(--ll-paper);color:var(--ll-ink);border-color:var(--ll-line);border-radius:6px}
+html[data-theme] .app .formula-button.active{background:var(--ll-pad);color:var(--ll-ink);border-color:var(--ll-line)}
+html[data-theme] .app .formula-workbench{background:var(--ll-slip);border-color:var(--ll-line);border-radius:7px}
+html[data-theme] .app .formula-intro h2{color:var(--ll-ink)}
+html[data-theme] .app .formula-card,html[data-theme] .app .formula-card-head{background:var(--ll-paper);border-color:var(--ll-rule);color:var(--ll-ink);border-radius:5px}
+html[data-theme] .app .formula-card-body,html[data-theme] .app .formula-row,html[data-theme] .app .parameter-row{border-color:var(--ll-rule)}
+html[data-theme] .app .formula-row code{color:var(--ll-blue)}
+html[data-theme] .app .parameter-row.modified{background:var(--ll-pad)}
+html[data-theme] .app .parameter-editor button,html[data-theme] .app .modified-badge.active{background:var(--ll-note-orange);color:var(--ll-ink);border-radius:4px}
+html[data-theme] .app .modified-badge{background:var(--ll-pad);color:var(--ll-muted);border-radius:4px}
+html[data-theme] .app .catalog-ref-item{border-color:var(--ll-rule)}
+html[data-theme] .app footer{border-color:var(--ll-line);color:var(--ll-muted)}
+html[data-theme] input::placeholder,html[data-theme] textarea::placeholder{color:var(--ll-muted);opacity:1}
+html[data-theme] .app .field-box:focus-within,html[data-theme] .app .stepper:focus-within,html[data-theme] .selected-sheet .stepper:focus-within{border-color:var(--ll-blue);box-shadow:0 0 0 3px var(--ll-focus-soft)}
+html[data-theme] button:focus,html[data-theme] input:focus,html[data-theme] select:focus,html[data-theme] textarea:focus,html[data-theme] summary:focus,html[data-theme] .app .cp-option:focus-within{outline-color:var(--ll-blue)}
+html[data-theme] ::selection{background:var(--ll-yellow);color:var(--ll-ink)}
+
+/* Bottom paper strip and selected sheet: preserve positioning and WAAPI transforms. */
+html[data-theme] .mobile-status-host{
+  background:var(--ll-paper);border:1.3px solid var(--ll-line);border-radius:8px 10px 7px 9px;
+  box-shadow:0 2px 2px var(--ll-shadow),0 8px 20px -8px var(--ll-shadow);-webkit-backdrop-filter:none;backdrop-filter:none;
+}
+html[data-theme] .mobile-status{background:transparent;border-radius:0}
+html[data-theme] .mobile-status>div{border-color:var(--ll-rule)}
+html[data-theme] .mobile-status span,html[data-theme] .mobile-status small{color:var(--ll-muted)}
+html[data-theme] .mobile-status strong{color:var(--ll-ink);letter-spacing:-.02em}
+html[data-theme] .mobile-status button{background:var(--ll-yellow);color:var(--ll-ink);border:1px solid var(--ll-line);border-radius:5px 7px 4px 6px;box-shadow:1px 1px 0 var(--ll-shadow)}
+html[data-theme] .mobile-status button span{color:inherit}
+html[data-theme] .mobile-status [data-alert="true"] span,html[data-theme] .mobile-status [data-alert="true"] strong{color:var(--ll-red)}
+html[data-theme] .selected-sheet[open]{background:var(--ll-paper);color:var(--ll-ink);border:1.3px solid var(--ll-line);border-radius:12px 14px 8px 10px;box-shadow:0 14px 36px var(--ll-shadow);-webkit-backdrop-filter:none;backdrop-filter:none}
+html[data-theme] .sheet-heading{background:var(--ll-pad);border-color:var(--ll-rule)}
+html[data-theme] .sheet-heading h2{color:var(--ll-ink)}
+html[data-theme] .sheet-heading button{background:var(--ll-paper);color:var(--ll-blue);border:1px solid var(--ll-line);border-radius:5px;box-shadow:none}
+html[data-theme] .selected-sheet .cart-line{border-color:var(--ll-rule)}
+html[data-theme] .selected-sheet .dose-copy strong{color:var(--ll-ink)}
+html[data-theme] .selected-sheet .dose-copy small{color:var(--ll-muted)}
+html[data-theme] .cart-remove,html[data-theme] .cart-auto{color:var(--ll-blue);border-radius:4px}
+html[data-theme] .sheet-result{background:var(--ll-slip);color:var(--ll-blue);border-color:var(--ll-rule)}
+html[data-theme] #sheetStatusSlot{border-color:var(--ll-rule)}
+html[data-theme] .selected-sheet::backdrop,html[data-theme] .sheet-scrim:not([hidden]){background:var(--ll-scrim);-webkit-backdrop-filter:none;backdrop-filter:none}
+
+@media(hover:hover) and (pointer:fine){
+  html[data-theme] .app .mode button:not(.active):hover,html[data-theme] .app .group-head:hover,
+  html[data-theme] .app .collapsible-panel>summary:hover,html[data-theme] .app .clinical-tool>summary:hover,
+  html[data-theme] .app .formula-card-head:hover{background:var(--ll-pad)}
+  html[data-theme] .app .quick button:hover,html[data-theme] .app .quick button:nth-child(n+3):hover{background:var(--ll-checked);border-color:var(--ll-blue);color:var(--ll-ink)}
+  html[data-theme] .cart-remove:hover,html[data-theme] .cart-auto:hover{background:var(--ll-note-blue)}
+}
+@media screen and (max-width:680px), screen and (max-width:1000px) and (pointer:coarse){
+  html[data-theme] .app{padding-top:20px;padding-left:14px;padding-right:14px}
+  html[data-theme] .app .topbar{margin-bottom:18px}
+  html[data-theme] .app .header h1{font-size:1.4375rem}
+  html[data-theme] .app .header h1 span{font-size:1.8125rem;margin-right:8px}
+  html[data-theme] .app .subtitle{font-size:.6875rem}
+  html[data-theme] .app .patient-panel{padding:18px 16px;gap:15px}
+  html[data-theme] .app .patient{gap:10px}
+  html[data-theme] .app .field-box{height:52px}
+  html[data-theme] .app .field-box input{font-size:1.25rem;padding-left:10px}
+  html[data-theme] .app .field-box b{font-size:.6875rem;flex-basis:2.4em;padding-right:6px}
+  html[data-theme] .app .calc-weights{padding:13px 0;border:0;border-top:1px solid var(--ll-rule);border-bottom:1px solid var(--ll-rule);background:transparent;border-radius:0}
+  html[data-theme] .app .patient-reference{border:0;padding-top:0}
+  html[data-theme] .app .mobile-category-bar{padding:5px;gap:3px;margin-bottom:12px;top:max(8px,env(safe-area-inset-top))}
+  html[data-theme] .app .mobile-category-bar button{font-size:.8125rem;min-height:44px;padding:9px 2px}
+  html[data-theme] .app #groups .group{border-radius:6px 8px 5px 7px}
+  html[data-theme] .app .dose-row{padding:17px 14px}
+  html[data-theme] .app .dose-row .stepper,html[data-theme] .selected-sheet .cart-line .stepper{grid-template-columns:48px minmax(0,1fr) 48px}
+  html[data-theme] .app .dose-copy{padding-bottom:10px}
+  html[data-theme] .app .dose-copy strong{font-size:.9375rem}
+  html[data-theme] .app .cards .card{padding:18px}
+  html[data-theme] .app .cards .card.primary{padding:20px}
+  html[data-theme] .app .summary{padding:17px}
+  html[data-theme] .app .focus-macro>div,html[data-theme] .app .focus-macro>div:nth-child(n){padding:11px 8px}
+  html[data-theme] .app .times b{flex-direction:column;gap:5px;padding:0 3px}
+  html[data-theme] .app .times small{font-size:.6875rem}
+  html[data-theme] .mobile-status-host{width:calc(100% - 20px)}
+  html[data-theme] .mobile-status strong{font-size:1.1875rem}
+  html[data-theme] .selected-sheet .cart-line .stepper input{font-size:1.1875rem}
+}
+@media(max-width:360px){
+  html[data-theme] .app .header h1{font-size:1.3125rem}
+  html[data-theme] .app .header h1 span{font-size:1.625rem}
+  html[data-theme] .app .subtitle{font-size:.625rem}
+  html[data-theme] .app .mobile-category-bar button{font-size:.75rem}
+  html[data-theme] .app .patient{gap:8px}
+  html[data-theme] .app .field-box input{padding-left:8px;font-size:1.125rem}
+  html[data-theme] .mobile-status strong{font-size:1.0625rem}
+}
+@media(display-mode:standalone){html[data-theme] .app{padding-top:calc(20px + env(safe-area-inset-top))}}
+@media(prefers-reduced-transparency:reduce),(prefers-contrast:more){
+  html[data-theme] .app .mode,html[data-theme] .app .mobile-category-bar,html[data-theme] .mobile-status-host,html[data-theme] .selected-sheet[open]{background:var(--ll-paper)!important;border-color:var(--ll-line)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+  html[data-theme] .app .patient-panel,html[data-theme] .app .cards .card,html[data-theme] .app .summary{border-image:none;border-color:var(--ll-line)}
+}
+@media(forced-colors:active){
+  html[data-theme] body,html[data-theme] .app .panel,html[data-theme] .app .group,html[data-theme] .app .cards .card,
+  html[data-theme] .app .mode,html[data-theme] .app .mobile-category-bar,html[data-theme] .mobile-status-host,html[data-theme] .selected-sheet[open],html[data-theme] .glass-cursor{background:Canvas!important;color:CanvasText!important;border:1px solid ButtonText!important;border-image:none!important;box-shadow:none!important}
+  html[data-theme] .glass-cursor{outline:2px solid Highlight}
+  html[data-theme] .app .header h1 span{background:none}
+}
+@media print{
+  html[data-theme],html[data-theme] body{background:#fff;color:#000}
+  html[data-theme] .app{padding:0;max-width:none}
+  html[data-theme] .app .panel,html[data-theme] .app .cards .card,html[data-theme] .app .group{background:#fff;color:#000;border:1px solid #777;border-image:none;box-shadow:none}
+  html[data-theme] .mobile-status-host,html[data-theme] .selected-sheet{display:none!important}
+}
+
+</style>
+<style id="looseleaf-finish">
+/* Second pass: paper stocks, pencil rules and state ink, adapted from
+   Looseleaf Paper / Button / card-rule recipes. MIT notice accompanies HTML. */
+:root{
+  --ll-fibre:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22144%22%20height%3D%22144%22%20viewBox%3D%220%200%20144%20144%22%3E%3Cpath%20d%3D%22M59%20135l2%200%20M69%2035l2%200%20M96%2051l3%201%20M59%2065l3%200%20M117%2012l4%200%20M29%2069l4%20-1%20M93%2010l2%201%20M89%2054l3%200%20M81%2018l2%200%20M77%2049l3%20-1%20M57%2025l3%201%20M111%2073l2%200%20M62%2039l4%20-1%20M37%2067l4%200%20M123%20127l4%20-1%20M115%2042l3%201%20M33%2022l3%20-1%20M126%2039l2%201%20M128%2050l4%20-1%20M31%2025l4%201%20M43%2012l2%200%20M85%20121l3%20-1%20M113%2014l3%20-1%20M65%2017l2%201%20M27%2093l3%200%20M84%2093l4%201%20M121%2018l4%20-1%20M129%2042l4%20-1%20M60%2073l3%200%20M97%2095l4%200%20M43%2016l4%200%20M84%2047l4%20-1%22%20stroke%3D%22%232a2420%22%20stroke-opacity%3D%22.027%22%20stroke-width%3D%22.75%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E");--ll-pencil-rule:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22180%22%20height%3D%225%22%20viewBox%3D%220%200%20180%205%22%3E%3Cpath%20d%3D%22M1%202.6%20Q26%201.7%2053%202.4%20T106%202.2%20T150%202.5%20L179%202.1%22%20fill%3D%22none%22%20stroke%3D%22%23787168%22%20stroke-width%3D%221%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%2212%204%2017%203%2010%204%22%2F%3E%3C%2Fsvg%3E");
+  --ll-tick:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.4%208.3%20Q4.3%2010%206%2012%20L13.7%203.7%22%20fill%3D%22none%22%20stroke%3D%22%23326342%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");--ll-button-edge:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%3E%3Cpath%20d%3D%22M7%202.8%20C38%201.6%2081%203%20112%202.1%20Q117.6%202.1%20117.1%208%20C118%2038%20116.7%2080%20117.5%20111%20Q118%20117.7%20111%20117.1%20C82%20118%2040%20116.9%209%20117.4%20Q2.3%20118%202.6%20111%20C1.8%2080%203.2%2038%202.4%209%20Q2%202.6%207%202.8Z%22%20fill%3D%22none%22%20stroke%3D%22%23787168%22%20stroke-width%3D%221.55%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+  --ll-vitamin-ink:#8b680e;--ll-pressed:var(--ll-checked);
+}
+:root[data-theme="dark"]{
+  --ll-fibre:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22144%22%20height%3D%22144%22%20viewBox%3D%220%200%20144%20144%22%3E%3Cpath%20d%3D%22M59%20135l2%200%20M69%2035l2%200%20M96%2051l3%201%20M59%2065l3%200%20M117%2012l4%200%20M29%2069l4%20-1%20M93%2010l2%201%20M89%2054l3%200%20M81%2018l2%200%20M77%2049l3%20-1%20M57%2025l3%201%20M111%2073l2%200%20M62%2039l4%20-1%20M37%2067l4%200%20M123%20127l4%20-1%20M115%2042l3%201%20M33%2022l3%20-1%20M126%2039l2%201%20M128%2050l4%20-1%20M31%2025l4%201%20M43%2012l2%200%20M85%20121l3%20-1%20M113%2014l3%20-1%20M65%2017l2%201%20M27%2093l3%200%20M84%2093l4%201%20M121%2018l4%20-1%20M129%2042l4%20-1%20M60%2073l3%200%20M97%2095l4%200%20M43%2016l4%200%20M84%2047l4%20-1%22%20stroke%3D%22%23f1eadf%22%20stroke-opacity%3D%22.03%22%20stroke-width%3D%22.75%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E");--ll-pencil-rule:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22180%22%20height%3D%225%22%20viewBox%3D%220%200%20180%205%22%3E%3Cpath%20d%3D%22M1%202.6%20Q26%201.7%2053%202.4%20T106%202.2%20T150%202.5%20L179%202.1%22%20fill%3D%22none%22%20stroke%3D%22%23a59a88%22%20stroke-width%3D%221%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%2212%204%2017%203%2010%204%22%2F%3E%3C%2Fsvg%3E");
+  --ll-tick:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.4%208.3%20Q4.3%2010%206%2012%20L13.7%203.7%22%20fill%3D%22none%22%20stroke%3D%22%23c3e6a9%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");--ll-button-edge:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%3E%3Cpath%20d%3D%22M7%202.8%20C38%201.6%2081%203%20112%202.1%20Q117.6%202.1%20117.1%208%20C118%2038%20116.7%2080%20117.5%20111%20Q118%20117.7%20111%20117.1%20C82%20118%2040%20116.9%209%20117.4%20Q2.3%20118%202.6%20111%20C1.8%2080%203.2%2038%202.4%209%20Q2%202.6%207%202.8Z%22%20fill%3D%22none%22%20stroke%3D%22%23a59a88%22%20stroke-width%3D%221.55%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+  --ll-vitamin-ink:#e1c66c;--ll-pressed:var(--ll-checked);
+}
+
+/* Prebaked fibres: no filters, animated noise or extra document nodes. */
+html[data-theme] .app .patient-panel,html[data-theme] .app .summary,html[data-theme] .app .formula-workbench{
+  background-image:var(--ll-fibre);background-size:144px 144px;background-repeat:repeat;
+}
+html[data-theme] .app .patient-panel{
+  box-shadow:0 1px 1px var(--ll-shadow),2px 3px 0 -1px var(--ll-slip),2px 3px 0 0 var(--ll-rule),0 8px 14px -10px var(--ll-shadow);
+}
+html[data-theme] .app .heading:after{
+  height:5px;background:var(--ll-pencil-rule) left center/180px 5px repeat-x;opacity:.7;
+}
+html[data-theme] .app .section-title h2{font-weight:650;letter-spacing:.025em}
+html[data-theme] .app .group-head{letter-spacing:.01em}
+html[data-theme] .app .group-body{border-top-style:dashed}
+html[data-theme] .app .dose-row{border-bottom-style:dashed}
+html[data-theme] .app .dose-row .dose-copy{padding-left:20px}
+html[data-theme] .app .dose-row.active-dose .dose-copy strong:before{
+  width:13px;height:13px;top:.38em;border:0;border-radius:0;
+  background:var(--ll-tick) center/contain no-repeat;
+}
+html[data-theme] .app .dose-copy small{margin-top:5px;line-height:1.7}
+html[data-theme] .app .status{line-height:1.7}
+html[data-theme] .selected-sheet .cart-line{border-bottom-style:dashed}
+
+/* Native labels and touch boxes stay fixed; only the prepainted wash responds. */
+html[data-theme] .app .quick button,
+html[data-theme] .app .copy-button,
+html[data-theme] .app .restore-auto,
+html[data-theme] .app .back-to-cart,
+html[data-theme] .sheet-heading button,
+html[data-theme] .mobile-status button{
+  position:relative;isolation:isolate;transform:none;
+  transition:none;border-image-source:var(--ll-button-edge);border-image-slice:10;border-image-width:7px;border-image-repeat:stretch;
+  box-shadow:1px 2px 0 var(--ll-shadow);
+}
+html[data-theme] .app .quick button::before,
+html[data-theme] .app .copy-button::before,
+html[data-theme] .app .restore-auto::before,
+html[data-theme] .app .back-to-cart::before,
+html[data-theme] .sheet-heading button::before,
+html[data-theme] .mobile-status button::before{
+  content:"";position:absolute;inset:1px;z-index:-1;border-radius:4px 6px 3px 5px;
+  pointer-events:none;background:var(--ll-pressed);opacity:0;
+  transform:translate3d(0,0,0);transition:opacity 90ms cubic-bezier(0.23,1,0.32,1),transform 90ms cubic-bezier(0.23,1,0.32,1);
+}
+html[data-theme] .app .quick button:active,
+html[data-theme] .app .copy-button:active,
+html[data-theme] .app .restore-auto:active,
+html[data-theme] .app .back-to-cart:active,
+html[data-theme] .sheet-heading button:active,
+html[data-theme] .mobile-status button:active{transform:none;box-shadow:none}
+html[data-theme] .app .quick button:active::before,
+html[data-theme] .app .copy-button:active::before,
+html[data-theme] .app .restore-auto:active::before,
+html[data-theme] .app .back-to-cart:active::before,
+html[data-theme] .sheet-heading button:active::before,
+html[data-theme] .mobile-status button:active::before{opacity:1;transform:translate3d(0,1px,0);transition-duration:50ms}
+html[data-theme] button:disabled::before{opacity:0!important}
+html[data-theme] .app .stepper button{font-weight:450}
+
+/* Quiet index marks: color supplements the words, never replaces selection. */
+html[data-theme] .app .mobile-category-bar button{--tab-ink:var(--ll-blue)}
+html[data-theme] .app .mobile-category-bar button[data-dose-tab="amino"]{--tab-ink:var(--orange)}
+html[data-theme] .app .mobile-category-bar button[data-dose-tab="fat"]{--tab-ink:var(--ll-green)}
+html[data-theme] .app .mobile-category-bar button[data-dose-tab="electrolyte"]{--tab-ink:var(--ll-muted)}
+html[data-theme] .app .mobile-category-bar button[data-dose-tab="additive"]{--tab-ink:var(--ll-vitamin-ink)}
+html[data-theme] .app .mobile-category-bar button::after{
+  content:"";position:absolute;bottom:5px;left:calc(50% - 8px);width:16px;height:2px;
+  border-radius:2px 4px 2px 3px;background:var(--tab-ink);opacity:.6;pointer-events:none;
+}
+html[data-theme] .app .mobile-category-bar button[aria-selected="true"]{font-weight:700}
+html[data-theme] .app .mobile-category-bar button[aria-selected="true"]::after{opacity:1;background:var(--ll-blue);height:3px}
+html[data-theme] .app .mode button.active{font-weight:700}
+
+/* A single folded energy note; no repeated clips, tape, or rotating content. */
+html[data-theme] .app .cards .card.primary{position:relative;overflow:hidden}
+html[data-theme] .app .cards .card.primary::after{
+  content:"";position:absolute;right:5px;bottom:5px;width:15px;height:15px;pointer-events:none;
+  background:linear-gradient(135deg,transparent 45%,var(--ll-line) 47%,var(--ll-line) 50%,var(--ll-paper) 53%);
+  border-radius:0 0 3px 0;opacity:.75;
+}
+html[data-theme] .app .cards .card.primary>span{font-weight:600;letter-spacing:.015em}
+html[data-theme] .app .cards .card>small{font-variant-numeric:tabular-nums}
+html[data-theme] .app .macro:not(.focus-macro)>div{box-shadow:0 1px 0 var(--ll-shadow)}
+html[data-theme] .app .macro span{font-weight:550;letter-spacing:.01em}
+html[data-theme] .app .macro em{line-height:1.65}
+html[data-theme] .app .times small{min-width:2.4em;text-align:center;border:1px dashed var(--ll-rule)}
+html[data-theme] .app .metrics thead{border-bottom:1.3px solid var(--ll-line)}
+html[data-theme] .app .metrics th{font-weight:600;color:var(--ll-muted)}
+html[data-theme] .app .metrics td{border-top-style:dashed}
+html[data-theme] .app .formula-card-head strong{font-weight:650;line-height:1.6}
+html[data-theme] .sheet-heading{border-bottom-style:dashed}
+
+/* Compact glucose infusion time, with the unit kept on the same value line. */
+html[data-theme] .app .cards>.card:last-child{min-height:0;padding:12px 16px}
+html[data-theme] .app .cards>.card:last-child>span{font-size:.8125rem;line-height:1.45}
+html[data-theme] .app .cards>.card:last-child .times{margin-top:7px;gap:6px}
+html[data-theme] .app .cards>.card:last-child .times b{flex-direction:row;gap:4px;padding:0 4px}
+html[data-theme] .app .cards>.card:last-child .time-value{font-size:1rem;line-height:1.3;white-space:nowrap}
+html[data-theme] .app .cards>.card:last-child .times small{font-size:.625rem;padding:2px 4px}
+
+@media(hover:hover) and (pointer:fine){
+  html[data-theme] .app .quick button:hover::before,
+  html[data-theme] .app .copy-button:hover::before,
+  html[data-theme] .app .restore-auto:hover::before,
+  html[data-theme] .app .back-to-cart:hover::before,
+  html[data-theme] .sheet-heading button:hover::before,
+  html[data-theme] .mobile-status button:hover::before{opacity:.55}
+  html[data-theme] .app .quick button:active::before,
+  html[data-theme] .app .copy-button:active::before,
+  html[data-theme] .app .restore-auto:active::before,
+  html[data-theme] .app .back-to-cart:active::before,
+  html[data-theme] .sheet-heading button:active::before,
+  html[data-theme] .mobile-status button:active::before{opacity:1}
+}
+@media screen and (max-width:680px), screen and (max-width:1000px) and (pointer:coarse){
+  html[data-theme] .app .dose-row .dose-copy{padding-left:18px}
+  html[data-theme] .app .patient-panel{box-shadow:0 1px 1px var(--ll-shadow),1px 2px 0 -1px var(--ll-slip),1px 2px 0 0 var(--ll-rule)}
+  html[data-theme] .app .macro em{font-size:.6875rem}
+  html[data-theme] .app .dose-copy small{line-height:1.65}
+  html[data-theme] .app .cards>.card:last-child{padding:11px 14px}
+  html[data-theme] .app .cards>.card:last-child .times b{flex-direction:column;gap:3px}
+}
+@media(prefers-reduced-motion:reduce){
+  html[data-theme] button::before{transition:none!important;transform:none!important}
+}
+html[data-input-modality="keyboard"] button::before{transition:none!important;transform:none!important}
+@media(prefers-contrast:more),(prefers-reduced-transparency:reduce){
+  html[data-theme] .app .patient-panel,html[data-theme] .app .summary,html[data-theme] .app .formula-workbench{background-image:none;box-shadow:none}
+  html[data-theme] .app .quick button,html[data-theme] .app .copy-button,html[data-theme] .app .restore-auto,html[data-theme] .app .back-to-cart,html[data-theme] .sheet-heading button,html[data-theme] .mobile-status button{border-image:none}
+}
+@media(forced-colors:active){
+  html[data-theme] .app .patient-panel,html[data-theme] .app .summary,html[data-theme] .app .formula-workbench{background-image:none!important;box-shadow:none!important}
+  html[data-theme] .app .quick button,html[data-theme] .app .copy-button,html[data-theme] .app .restore-auto,html[data-theme] .app .back-to-cart,html[data-theme] .sheet-heading button,html[data-theme] .mobile-status button{border:1px solid ButtonText!important;border-image:none!important;box-shadow:none!important}
+  html[data-theme] .app .dose-row.active-dose .dose-copy strong:before{background:none;border:2px solid Highlight;border-radius:2px;width:7px;height:7px}
+  html[data-theme] .app .heading:after{height:1px;background:ButtonText}
+  html[data-theme] .app .mobile-category-bar button::after{background:ButtonText}
+  html[data-theme] .app .cards .card.primary::after,html[data-theme] button::before{display:none}
+}
+@media print{
+  html[data-theme] .app .patient-panel,html[data-theme] .app .summary,html[data-theme] .app .formula-workbench{background-image:none;box-shadow:none}
+  html[data-theme] .app .cards .card.primary::after{display:none}
+}
+
+</style>
 </head>
 <body>
 <main class="app">
@@ -1063,7 +1506,7 @@ body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
   </div>
 
   <section class="panel patient-panel">
-    <div class="section-title"><div><h2>患者</h2></div></div>
+    <div class="section-title"><div><h2>患者信息</h2></div></div>
     <div class="patient">
       <label class="field"><span>实际体重</span><span class="field-box"><input id="weight" type="number" min="0" step="any" inputmode="decimal" placeholder="0"><b>kg</b></span></label>
       <label class="field"><span>身高</span><span class="field-box"><input id="height" type="number" min="0" step="any" inputmode="decimal" placeholder="0"><b>cm</b></span></label>
@@ -1150,7 +1593,7 @@ body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
     </div>
     <div class="result-pane" id="mobileResults"><div class="result-stack">
   <div class="heading"><h2>结果</h2><button class="back-to-cart" id="backToCart" type="button">返回配方</button></div>
-  <section class="cards"><article class="card primary"><span>总能量</span><strong id="energy">—</strong><small>kcal</small></article><article class="card"><span>总液体量</span><strong id="liquid">—</strong><small>ml</small></article><article id="osmCard" class="card"><span>估算渗透压</span><strong id="osm">—</strong><small>mOsm/L</small></article><article class="card"><span>葡萄糖限速时间</span><div class="times"><b><span class="time-value"><i id="time35">—</i> h</span><small id="rate35">3.5</small></b><b><span class="time-value"><i id="time4">—</i> h</span><small>4.0</small></b><b><span class="time-value"><i id="time5">—</i> h</span><small>5.0</small></b></div></article></section>
+  <section class="cards"><article class="card primary"><span>总能量</span><strong id="energy">—</strong><small>kcal</small></article><article class="card"><span>总液体量</span><strong id="liquid">—</strong><small>ml</small></article><article id="osmCard" class="card"><span>估算渗透压</span><strong id="osm">—</strong><small>mOsm/L</small></article><article class="card"><span>葡萄糖输注时间</span><div class="times"><b><span class="time-value"><i id="time35">—</i> h</span><small id="rate35">3.5</small></b><b><span class="time-value"><i id="time4">—</i> h</span><small>4.0</small></b><b><span class="time-value"><i id="time5">—</i> h</span><small>5.0</small></b></div></article></section>
   <section class="panel summary"><div class="section-title"><div><h2>营养构成</h2></div></div><div class="macro"><div><span>葡萄糖</span><b id="glucose">—</b><em>供能 <i id="carbShareSummary">—</i></em></div><div><span>氨基酸</span><b id="amino">—</b><em>供能 <i id="proteinShareSummary">—</i></em></div><div><span>脂肪</span><b id="fat">—</b><em>供能 <i id="fatShareSummary">—</i></em></div></div><div class="macro focus-macro"><div><span>非蛋白热量</span><b id="nonProteinSummary">—</b></div><div><span>热氮比</span><b id="heatNitrogenSummary">—</b><em>参考 <i id="heatNitrogenRange">—</i></em></div><div><span>糖脂比</span><b id="sugarFatSummary">—</b><em>参考 <i id="sugarFatRange">—</i></em></div></div></section>
   <section id="warnings" class="warning"></section>
   <details class="panel collapsible-panel"><summary>详细指标</summary><div class="collapsible-content"><table class="metrics"><thead><tr><th>指标</th><th>计算值</th><th>参考</th></tr></thead><tbody id="metrics"></tbody></table></div></details>
@@ -1438,17 +1881,17 @@ body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
   var products = [
     ["g5","5%葡萄糖注射液","院内规格 50 / 100 / 250 / 500 ml · 上海百特医疗","glucose",50,"ml","",""],
     ["g10","10%葡萄糖注射液","院内规格 100 / 250 / 500 ml · 上海百特医疗","glucose",50,"ml","",""],
-    ["g50","50%葡萄糖注射液","院内10 g/20 ml；原表50 g/100 ml（同浓度）","glucose",20,"ml","A",""],
+    ["g50","50%葡萄糖注射液","10 g/20 ml","glucose",20,"ml","A",""],
     ["g5ns","5%葡萄糖氯化钠注射液","院内规格 250 / 500 ml · 每100 ml含葡萄糖5 g、氯化钠0.9 g · 上海百特","glucose",250,"ml","","同时计入葡萄糖、钠和液体量"],
     ["aa85","复方氨基酸注射液18AA-II","乐凡命 · 8.5% 21.25 g/250 ml · 华瑞制药","amino",50,"ml","","pH 5.6"],
     ["aa18ix","复方氨基酸注射液18AA-IX","普舒清 · 12.25 g/200 ml · 广州绿十字药业","amino",50,"ml","",""],
     ["aaPediatric","小儿复方氨基酸注射液（19AA-I）","1.2 g/20 ml · 华润双鹤药业","amino",20,"ml","",""],
     ["alaGln","丙氨酰-谷氨酰胺注射液","院内10 g/50 ml；原表20 g/100 ml（同浓度）","amino",50,"ml","","不推荐妊娠期和哺乳期使用"],
-    ["aaGreen","绿支安（18AA-VII）","20.65 g/200 ml · 院外处方评估","amino",50,"ml","","非本院目录，使用前核对外院实际品规"],
-    ["aa10","10%安平","50 g/500 ml · 院外处方评估","amino",50,"ml","","非本院目录，使用前核对外院实际品规"],
-    ["aa9","复方氨基酸注射液（9AA）","13.98 g/250 ml · 院外处方评估","amino",50,"ml","","非本院目录，使用前核对外院实际品规"],
-    ["aa3","复方氨基酸注射液（3AA）","10.65 g/250 ml · 院外处方评估","amino",50,"ml","","非本院目录，使用前核对外院实际品规"],
-    ["aa15di","复方氨基酸（15）双肽（2）","67 g/500 ml · 院外处方评估","amino",50,"ml","","非本院目录，使用前核对外院实际品规"],
+    ["aaGreen","绿支安（18AA-VII）","20.65 g/200 ml","amino",50,"ml","","非本院目录，使用前核对外院实际品规"],
+    ["aa10","10%安平","50 g/500 ml","amino",50,"ml","","非本院目录，使用前核对外院实际品规"],
+    ["aa9","复方氨基酸注射液（9AA）","13.98 g/250 ml","amino",50,"ml","","非本院目录，使用前核对外院实际品规"],
+    ["aa3","复方氨基酸注射液（3AA）","10.65 g/250 ml","amino",50,"ml","","非本院目录，使用前核对外院实际品规"],
+    ["aa15di","复方氨基酸（15）双肽（2）","67 g/500 ml","amino",50,"ml","","非本院目录，使用前核对外院实际品规"],
     ["fatIntra","脂肪乳（C14-24）20%","英脱利匹特 · 50 g/250 ml · 500 kcal · 华瑞制药","fat",50,"ml","B",""],
     ["fatIntra30","脂肪乳（C14-24）30%","英脱利匹特 · 75 g/250 ml · 750 kcal · 华瑞制药","fat",50,"ml","B",""],
     ["fatMct","中/长链脂肪乳注射液20%","卡路 · 250 ml · 477 kcal · 百特侨光","fat",50,"ml","B",""],
@@ -1456,44 +1899,44 @@ body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
     ["fish10","ω-3鱼油脂肪乳注射液10%","尤文 · 10 g/100 ml · 112 kcal · 院外处方评估","fat",10,"ml","B","非本院目录；同时计算鱼油占总脂肪比例"],
     ["fatClin","橄榄油大豆油脂肪乳注射液20%","克凌诺 · 50 g/250 ml · 院外处方评估","fat",50,"ml","B","非本院目录，使用前核对外院实际品规"],
     ["kaquanLiquid","脂肪乳氨基酸（17）葡萄糖（19%）注射液","卡全 · 1026 ml/袋 · 900 kcal · 费森尤斯卡比华瑞","allinone",1026,"ml","B","中心静脉制剂；葡萄糖100 g / 氨基酸34 g / 脂肪40 g","袋"],
-    ["nacl09","0.9%氯化钠注射液","90 mg/10 ml · Na 1.54 mmol/支 · 大冢制药","electrolyte",1,"ml","","","支"],
     ["nacl","浓氯化钠注射液","1 g/10 ml · Na 17.1 mmol/瓶 · 大冢制药","electrolyte",1,"ml","A","","瓶"],
     ["kcl","10%氯化钾注射液","10 ml · K 13.4 mmol/支 · 大冢制药","electrolyte",1,"ml","A","","支"],
-    ["kcl15","15%氯化钾注射液","原Excel品规 · 1.5 g/10 ml · 院外处方评估","electrolyte",1,"ml","A","按0.15 g/ml换算，与10%品规分别计算","支"],
     ["calcium","葡萄糖酸钙注射液","1 g/10 ml · Ca 2.23 mmol/支 · 扬州中宝制药","electrolyte",1,"ml","","","支"],
     ["magnesium","25%硫酸镁注射液","2.5 g/10 ml · Mg 10.14 mmol/支 · 扬州中宝制药","electrolyte",1,"ml","A","","支"],
-    ["magnesium50","50%硫酸镁注射液","原Excel品规 · 1 g/2 ml · 按七水合物换算 · 院外处方评估","electrolyte",1,"ml","A","与25%品规分别计算","支"],
     ["naPhos","甘油磷酸钠注射液","格利福斯 · 2.16 g/10 ml · P 10 / Na 20 mmol · 华瑞制药","electrolyte",1,"ml","","","支"],
+    ["nacl09","0.9%氯化钠注射液","90 mg/10 ml · Na 1.54 mmol/支 · 大冢制药","electrolyte",1,"ml","","","支"],
+    ["kcl15","15%氯化钾注射液","原Excel品规 · 1.5 g/10 ml · 院外处方评估","electrolyte",1,"ml","A","按0.15 g/ml换算，与10%品规分别计算","支"],
+    ["magnesium50","50%硫酸镁注射液","原Excel品规 · 1 g/2 ml · 按七水合物换算 · 院外处方评估","electrolyte",1,"ml","A","与25%品规分别计算","支"],
     ["aspartateKM","门冬氨酸钾镁注射液","10 ml/支 · 每1 ml含K 10.33 mg、Mg 3.37 mg · 杭州民生","electrolyte",10,"ml","","离子量按说明书换算；渗透量为理论估值","支"],
     ["pediatricElectrolyte","小儿电解质补给注射液","100 ml · 葡萄糖3.75 g + 氯化钠0.225 g · 四川科伦","electrolyte",100,"ml","","补充热能和体液；小儿输液速度需严格控制","瓶"],
     ["leJia","钠钾镁钙葡萄糖注射液","乐加 · 500 ml/袋 · Na/K/Mg/Ca 140/4/1/1.5 mmol/L","electrolyte",500,"ml","","含葡萄糖10 g/L；容积渗透浓度约304 mOsm/L","袋"],
     ["ringer","复方氯化钠注射液","林格液 · 500 ml/袋 · 浙江济民制药","electrolyte",500,"ml","","按中国药典处方换算Na/K/Ca","袋"],
     ["kPhos","复合磷酸氢钾注射液","参考品规2 ml：KH₂PO₄ 0.4354 g＋K₂HPO₄·3H₂O 0.639 g · 院外处方评估","electrolyte",1,"ml","A","非本院目录；高浓度磷、钾制剂，必须充分稀释并复核外院品规","支"],
-    ["soluvit","注射用水溶性维生素（水乐维他）","冻干粉按支计；额外复溶水另录入 · 院外处方评估","vitamin",1,"支","","粉末不直接增加液体量；渗透量近似估算","支"],
+    ["fatVitamin","脂溶性维生素注射液","维他利匹特 · 10 ml/瓶 · 华瑞制药","vitamin",10,"ml","","含维生素K1，注意与华法林相互作用","瓶"],
+    ["trace","多种微量元素注射液","安达美 · 10 ml/支 · 华瑞制药","additive",10,"ml","","","支"],
+    ["soluvit","注射用水溶性维生素（水乐维他）","复方制剂","vitamin",1,"支","","粉末不直接增加液体量；渗透量近似估算","支"],
     ["vitD2","维生素D2注射液","5 mg/1 ml · 江西赣南海欣药业","vitamin",1,"ml","","","支"],
     ["vitK1","维生素K1注射液","10 mg/1 ml · 浙江诚意药业","vitamin",1,"ml","","","支"],
     ["vitB1","维生素B1注射液","0.1 g/2 ml · 华中药业股份","vitamin",2,"ml","","","支"],
     ["vitB6","维生素B6注射液","0.1 g/2 ml · 华润双鹤利民","vitamin",2,"ml","","","支"],
     ["vitB12","维生素B12注射液","1 mg/1 ml · 江苏大红鹰恒顺药业","vitamin",1,"ml","","","支"],
     ["vitC","维生素C注射液","1 g/5 ml · 上海信谊金朱","vitamin",5,"ml","","","支"],
-    ["fatVitamin","脂溶性维生素注射液","维他利匹特 · 10 ml/瓶 · 华瑞制药","vitamin",10,"ml","","含维生素K1，注意与华法林相互作用","瓶"],
     ["fatVitaminPediatric","注射用脂溶性维生素（I）","每瓶用2 ml注射用水复溶 · 成都天台山","vitamin",2,"ml","","11岁以下儿童及婴儿；含维生素K1","瓶"],
     ["vitamin12","注射用12种复合维生素","每瓶用5 ml注射用水复溶 · 山西普德","vitamin",5,"ml","","成人及11岁以上儿童通常每日1瓶","瓶"],
-    ["trace","多种微量元素注射液","安达美 · 10 ml/支 · 华瑞制药","additive",10,"ml","","","支"],
-    ["waterInjection","注射用水（额外加入）","仅录入额外加入的体积；用配方内液体复溶时不重复填写","additive",10,"ml","",""],
+    ["waterInjection","用水","","additive",10,"ml","",""],
     ["insulin","胰岛素","计算器保留项 · 自动值可手动修改","additive",1,"U","","不在本次目录表内"]
   ];
   var productSources={soluvit:"https://www.fresenius-kabi.com/cn/products/parenteral-nutrition/shuileweita",kcl15:"https://chinaotsuka.com.cn/article/88",magnesium50:"https://www.medicines.org.uk/emc/product/1990/smpc",aa85:"https://swin.zy91.com/pages/m-instruction/m.instruction.html?hospitalCode=1&webHisId=12116",aa18ix:"https://m-pharma.com.cn/en/proList/3.html",aaGreen:"https://m-pharma.com.cn/en/proList/3.html",aaPediatric:"https://xxcx.yjj.beijing.gov.cn/eportal/ui?artileId=d4de30c92d1b4c4d87e248c2d50f9b4d&pageId=723944",alaGln:"https://deepevid.medsci.cn/drugs/DOC_PMH_671bee8b926331a5",fatMct:"https://www.baxter.com.cn/sites/g/files/ebysai1351/files/2020-06/Kalu.pdf",fatLiwen:"https://www.fresenius-kabi-sspc.com/ZFRZSY/6.html",fatIntra:"https://www.fresenius-kabi.com/gb/healthcare-professional-area/clinical-nutrition/parenteral-nutrition/macronutrients/intralipid-emulsion-for-infusion-soya-bean-oil",fatClin:"https://www.cych.org.tw/pharm/drugnewsdetail.aspx?msg_id=5337",fatVitamin:"https://swin.zy91.com/pages/m-instruction/m.instruction.html?hospitalCode=1&webHisId=34283",trace:"https://www.tsu.tw/xiyi/yao/48909.html",nacl09:"https://www.chinaotsuka.com.cn/article/128",nacl:"https://www.chinaotsuka.com.cn/article/124",kcl:"https://www.chinaotsuka.com.cn/article/87",kawenLiquid:"https://tricura.medsci.cn/instruction?category=intro&id=1991440239429349378&kind=%E9%9D%99%E8%84%89%E7%94%A8%E6%B0%A8%E5%9F%BA%E9%85%B8&name=%E5%8D%A1%E6%96%87",g5ns:"https://www.baxter.com.cn/sites/g/files/ebysai1351/files/2022-06/%E8%91%A1%E8%90%84%E7%B3%96%E6%B0%AF%E5%8C%96%E9%92%A0%E6%B3%A8%E5%B0%84%E6%B6%B2_2022%E6%9B%B4%E6%96%B0.pdf",aspartateKM:"https://www.zjhpyy.com/goods/60984.jhtml",pediatricElectrolyte:"https://www.yuxi.gov.cn/yxszfxxgk/spaq/20211102/1370133.html",leJia:"https://csem.cma.org.cn/module/download/downfile.jsp?classid=0&filename=46b1570c8c3645a49d218369a5413635.pdf",ringer:"https://www.drugfuture.com/Pharmacopoeia/CP2015-2/821-821.pdf",fatVitaminPediatric:"https://www.cdttszy.com/product/detail.html?id=48",vitamin12:"https://www.pudepharma.com/index.php?a=show&c=index&catid=29&id=21&m=content",fish10:"https://www.fresenius-kabi-sspc.com/ZFRZSY/5.html",kPhos:"https://www.nhsa.gov.cn/attach/Ypsn/YPSW202200117-W4/YPSW202200117-W4.pdf",kaquanLiquid:"https://www.fresenius-kabi-sspc.com/DCDZSY/2.html"};
   var vial = {kcl15:10,magnesium50:2,kPhos:2,nacl09:10,nacl:10,kcl:10,calcium:10,magnesium:10,naPhos:10,aspartateKM:10,pediatricElectrolyte:100,leJia:500,ringer:500,vitD2:1,vitK1:1,vitB1:2,vitB6:2,vitB12:1,vitC:5,fatVitamin:10,fatVitaminPediatric:2,vitamin12:5,trace:10,kaquanLiquid:1026};
   var groupKeys = ["glucose","amino","fat","electrolyte","vitamin","additive"];
-  var groupNames = {glucose:"葡萄糖与复方糖盐",amino:"氨基酸",fat:"脂肪乳",allinone:"全合一制剂",electrolyte:"电解质与平衡液",vitamin:"维生素",additive:"微量元素与其他添加剂"};
+  var groupNames = {glucose:"葡萄糖与复方糖盐",amino:"氨基酸",fat:"脂肪乳",allinone:"全合一制剂",electrolyte:"电解质与平衡液",vitamin:"维生素与其他",additive:"微量元素与其他添加剂"};
   var values = {};
   var standardDefaults = {fatVitamin:10,trace:10,naPhos:10,kcl:20,nacl:30,calcium:10,magnesium:2,kawenLiquid:0,kaquanLiquid:0};
   var kawenDefaults = {fatVitamin:10,trace:10,naPhos:10,kcl:20,nacl:30,calcium:10,magnesium:2,kawenLiquid:1440,kaquanLiquid:0};
   var kaquanDefaults = {fatVitamin:10,trace:10,naPhos:10,kcl:20,nacl:30,calcium:10,magnesium:2,kawenLiquid:0,kaquanLiquid:1026};
   var defaultConfig = {
     soluvitOsmoles:4.9,kcl15Potassium:2.012,kcl15Osm:4.024,magnesium50Factor:2.0286,magnesium50Osm:4.0572,
-    idealWeightOffset:105,correctedWeightFactor:.4,glucoseKcalPerG:4,aminoKcalPerG:4,fatKcalPerG:10,nitrogenDivisor:6.25,maxGlucoseRate:3.5,
+    idealWeightOffset:105,correctedWeightFactor:.4,glucoseKcalPerG:3.4,aminoKcalPerG:4,fatKcalPerG:10,nitrogenDivisor:6.25,maxGlucoseRate:3.5,
     g5Factor:.05,g10Factor:.1,g50Factor:.5,pediatricElectrolyteGlucose:.0375,leJiaGlucose:.01,aa85Factor:.085,aa18ixFactor:.06125,aaPediatricFactor:.06,aaGreenFactor:.10325,aa10Factor:.1,aa9Factor:.05592,aa3Factor:.0426,aa15diFactor:.134,alaGlnFactor:.2,
     fatMctFactor:.2,fatIntraFactor:.2,fatIntra30Factor:.3,fatLiwenFactor:.2,fish10Factor:.1,fatClinFactor:.2,fatMctKcalPerMl:1.908,fatIntraKcalPerMl:2,fatIntra30KcalPerMl:3,fatLiwenKcalPerMl:1.96,fish10KcalPerMl:1.12,fatClinKcalPerMl:2,
     naPhosSodium:2,kPhosPotassium:4.4,kPhosPhosphorus:3,kPhosOsm:7.4,nacl09Sodium:.154,naclSodium:1.71,kclPotassium:1.34,calciumFactor:.223,magnesiumFactor:1.014,naPhosPhosphorus:1,
@@ -1505,7 +1948,7 @@ body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
     osmThreshold:900,energyPerKgMin:25,energyPerKgMax:30,heatNitrogenMin:100,heatNitrogenMax:200,sugarFatMin:1,sugarFatMax:2,glucosePerKgMax:7,glucoseConcentrationMin:.033,glucoseConcentrationMax:.23,aminoConcentrationMin:.025,alaGlnConcentrationMax:.035,alaGlnRatioMax:.2,monovalentCaution:130,monovalentAlert:150,divalentCaution:8,divalentAlert:10
   };
   var formulas = [
-    ["理想体重","身高(cm) − 理想体重扣减值","kg"],["TPN推荐能量","理想体重(kg) × 25 kcal/kg；30 kcal/kg仅作少数严重应激参考","kcal/d"],["TPN推荐液体量","前10 kg×100 + 第二个10 kg×50 + 剩余体重×20（≤50岁）或×15（＞50岁）","ml/d"],["校正体重","理想体重 +（实际体重 − 理想体重）× 校正系数","kg"],["营养素总量","Σ（院内制剂用量 × 说明书换算系数）+ 全合一制剂袋数 × 每袋含量","g"],["总液体量","当前模式基础袋液体量 + Σ已纳入制剂ml（含额外注射用水）；冻干粉支数不计入体积","ml"],["水乐维他","粉末按支计；每支近似渗透量4.9mOsm；额外复溶水另计，已在配方内的载体不重复计量","支、mOsm"],["总能量","葡萄糖与氨基酸按 g 换算；脂肪乳按目录每 ml 能量；全合一制剂按每袋总能量","kcal"],["非蛋白热量","葡萄糖热量 + 脂肪乳热量 + 全合一制剂每袋非蛋白热量","kcal"],["复方糖盐与小儿电解质","葡萄糖按质量浓度计入；NaCl按钠离子与理论渗透粒子分别计入","g、mmol"],["门冬氨酸钾镁","K=用量×0.2642；Mg=用量×0.1387；渗透量采用可调理论值","mmol"],["乐加与林格液","离子按说明书浓度×用量；渗透量采用成品容积渗透浓度","mmol、mOsm"],["氮量","常规氨基酸总量 ÷ 氮量除数 + 全合一制剂每袋氮量","gN"],["热氮比","非蛋白热量 ÷ 氮量","kcal/gN"],["糖脂比","葡萄糖供能 ÷ 脂肪供能","比值"],["渗透压","已建模组分的mOsm加总×1000÷总ml；普通氨基酸估算，20%丙谷单独按0.921mOsm/ml；按已建模系数估算","mOsm/L"],["离子浓度","离子总量 × 1000 ÷ 总液体量","mmol/L"],["磷浓度","磷总量 × 1000 ÷ 总液体量（ml）","mmol/L"],["旧表钙磷指数","钙浓度 × 磷总量；仅保留用于对照，不判定配伍安全","mmol²/L"],["三大营养素供能比","该营养素供能 ÷ 三大营养素供能合计 × 100%","%"],["葡萄糖限速时间","葡萄糖总量(g) × 1000 ÷ 实际体重 ÷ 对应速度（3.5、4.0、5.0 mg/kg/min）÷ 60","小时"]
+    ["理想体重","身高(cm) − 理想体重扣减值","kg"],["TPN推荐能量","理想体重(kg) × 25 kcal/kg；30 kcal/kg仅作少数严重应激参考","kcal/d"],["TPN推荐液体量","前10 kg×100 + 第二个10 kg×50 + 剩余体重×20（≤50岁）或×15（＞50岁）","ml/d"],["校正体重","理想体重 +（实际体重 − 理想体重）× 校正系数","kg"],["营养素总量","Σ（院内制剂用量 × 说明书换算系数）+ 全合一制剂袋数 × 每袋含量","g"],["总液体量","当前模式基础袋液体量 + Σ已纳入制剂ml（含额外注射用水）；冻干粉支数不计入体积","ml"],["水乐维他","粉末按支计；每支近似渗透量4.9mOsm；额外复溶水另计，已在配方内的载体不重复计量","支、mOsm"],["总能量","葡萄糖与氨基酸按 g 换算；脂肪乳按目录每 ml 能量；全合一制剂按每袋总能量","kcal"],["非蛋白热量","葡萄糖热量 + 脂肪乳热量 + 全合一制剂每袋非蛋白热量","kcal"],["复方糖盐与小儿电解质","葡萄糖按质量浓度计入；NaCl按钠离子与理论渗透粒子分别计入","g、mmol"],["门冬氨酸钾镁","K=用量×0.2642；Mg=用量×0.1387；渗透量采用可调理论值","mmol"],["乐加与林格液","离子按说明书浓度×用量；渗透量采用成品容积渗透浓度","mmol、mOsm"],["氮量","常规氨基酸总量 ÷ 氮量除数 + 全合一制剂每袋氮量","gN"],["热氮比","非蛋白热量 ÷ 氮量","kcal/gN"],["糖脂比","葡萄糖供能 ÷ 脂肪供能","比值"],["渗透压","已建模组分的mOsm加总×1000÷总ml；普通氨基酸估算，20%丙谷单独按0.921mOsm/ml；按已建模系数估算","mOsm/L"],["离子浓度","离子总量 × 1000 ÷ 总液体量","mmol/L"],["磷浓度","磷总量 × 1000 ÷ 总液体量（ml）","mmol/L"],["旧表钙磷指数","钙浓度 × 磷总量；仅保留用于对照，不判定配伍安全","mmol²/L"],["三大营养素供能比","该营养素供能 ÷ 三大营养素供能合计 × 100%","%"],["葡萄糖输注时间","葡萄糖总量(g) × 1000 ÷ 实际体重 ÷ 对应速度（3.5、4.0、5.0 mg/kg/min）÷ 60","小时"]
   ];
   var configGroups = [
     ["基础计算系数","决定体重、能量、氮量和最短输注时间。",[["idealWeightOffset","理想体重身高扣减","kg",1],["correctedWeightFactor","校正体重差值系数","",.05],["glucoseKcalPerG","葡萄糖供能","kcal/g",.1],["aminoKcalPerG","氨基酸供能","kcal/g",.1],["fatKcalPerG","全合一制剂脂肪供能","kcal/g",.1],["nitrogenDivisor","氨基酸换算氮量除数","g/gN",.01],["maxGlucoseRate","最大葡萄糖输注速度","mg/kg/min",.1]]],
@@ -1578,7 +2021,7 @@ body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
   function currentValue(id){return id==="insulin"?calculate().insulin:n(id);}
   function setValue(id,value){var next=Math.max(0,Math.round(numberValue(value)*100)/100);if(id==="insulin"){state.insulinOverride=next;}else{state.values[id]=next;}render();}
   function rowHtml(product,isKawen){
-    var id=product[0],name=product[1],spec=product[2],group=product[3],step=product[4],unit=product[5],risk=product[6],note=product[7],pack=product[8]||"支",quick="",status="",source=productSources[id],riskHtml=risk?'<em class="risk-badge risk-'+String(risk).toLowerCase()+'">高警示 '+risk+'</em>':"",externalHtml=spec.indexOf("院外处方评估")>=0?'<em class="external-badge">非本院目录</em>':"";
+    var id=product[0],name=product[1],spec=product[2],group=product[3],step=product[4],unit=product[5],risk=product[6],note=product[7],pack=product[8]||"支",quick="",status="",source=productSources[id],riskHtml=risk?'<em class="risk-badge risk-'+String(risk).toLowerCase()+'">高警示 '+risk+'</em>':"",externalHtml=(spec.indexOf("院外处方评估")>=0||note.indexOf("非本院目录")>=0)?'<em class="external-badge">非本院目录</em>':"";
     if(id==="soluvit"){quick='<div class="quick"><button type="button" data-delta="-2">−2支</button><button type="button" data-delta="-1">−1支</button><button type="button" data-delta="1">＋1支</button><button type="button" data-delta="2">＋2支</button></div>';status='<small class="status" data-status="powder"></small>';}
     else if(id==="waterInjection"){quick='<div class="quick"><button type="button" data-delta="-10">−10</button><button type="button" data-delta="-5">−5</button><button type="button" data-delta="5">＋5</button><button type="button" data-delta="10">＋10</button></div>';}
     else if(group==="glucose"||group==="amino"||group==="fat"){quick='<div class="quick"><button type="button" data-delta="-100">−100</button><button type="button" data-delta="-50">−50</button><button type="button" data-delta="50">＋50</button><button type="button" data-delta="100">＋100</button></div>';}
@@ -1588,7 +2031,7 @@ body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
   }
   function build(){
     var html="",g,i,p,rows;
-    for(g=0;g<groupKeys.length;g++){rows="";for(i=0;i<products.length;i++){p=products[i];if(p[3]===groupKeys[g]){rows+=rowHtml(p,false);}}html+='<section class="group" data-group="'+groupKeys[g]+'"><button class="group-head" type="button" aria-expanded="'+(g===0?"true":"false")+'"><span class="group-name">'+groupNames[groupKeys[g]]+'</span><span class="group-meta" data-active="'+groupKeys[g]+'">已用 0 项</span></button><div class="group-body" style="display:'+(g===0?"block":"none")+'">'+rows+'</div></section>';}
+    for(g=0;g<groupKeys.length;g++){if(groupKeys[g]==="additive"){continue;}rows="";for(i=0;i<products.length;i++){p=products[i];if(p[3]===groupKeys[g]||(groupKeys[g]==="vitamin"&&p[3]==="additive")){rows+=rowHtml(p,false);}}html+='<section class="group" data-group="'+groupKeys[g]+'"><button class="group-head" type="button" aria-expanded="'+(g===0?"true":"false")+'"><span class="group-name">'+groupNames[groupKeys[g]]+'</span><span class="group-meta" data-active="'+groupKeys[g]+'">已用 0 项</span></button><div class="group-body" style="display:'+(g===0?"block":"none")+'">'+rows+'</div></section>';}
     byId("groups").innerHTML=html;
     byId("kawenRow").innerHTML=rowHtml(["kawenLiquid","脂肪乳氨基酸（17）葡萄糖（11%）针","卡文 · 默认1袋 · "+decimalText(state.config.kawenVolume)+" ml · 华瑞分装","kawen",state.config.kawenVolume,"ml","B","糖97 g / 脂肪51 g / 氨基酸34 g"],true);
     byId("kaquanRow").innerHTML=rowHtml(["kaquanLiquid","脂肪乳氨基酸（17）葡萄糖（19%）注射液","卡全 · 默认1袋 · "+decimalText(state.config.kaquanVolume)+" ml · 费森尤斯卡比华瑞","allinone",state.config.kaquanVolume,"ml","B","中心静脉制剂；糖100 g / 脂肪40 g / 氨基酸34 g","袋"],false);
@@ -1598,9 +2041,9 @@ body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
   function applyDoseButton(button){var row=button;while(row&&String(row.className).indexOf("dose-row")<0){row=row.parentNode;}if(!row){return;}var rowId=row.getAttribute("data-id");if(button.blur){button.blur();}var delta=Number(button.getAttribute("data-delta"));if(window.pnMobileUI&&window.pnMobileUI.adjust(rowId,delta)){return;}setValue(rowId,currentValue(rowId)+delta);}
   function bindDoseButton(button){var startX=0,startY=0,moved=false;button.onclick=function(event){if(this._ignoreClickUntil&&Date.now()<this._ignoreClickUntil){if(event&&event.preventDefault){event.preventDefault();}return false;}applyDoseButton(this);};button.onmousedown=function(event){if(event&&event.preventDefault){event.preventDefault();}};button.ontouchstart=function(event){var touch=event&&event.touches&&event.touches[0];if(touch){startX=touch.clientX;startY=touch.clientY;moved=false;}};button.ontouchmove=function(event){var touch=event&&event.touches&&event.touches[0];if(touch&&(Math.abs(touch.clientX-startX)>10||Math.abs(touch.clientY-startY)>10)){moved=true;}};button.ontouchend=function(event){this._ignoreClickUntil=Date.now()+700;if(moved){return;}if(event&&event.preventDefault){event.preventDefault();}applyDoseButton(this);};button.ontouchcancel=function(){moved=true;this._ignoreClickUntil=Date.now()+700;};}
   function bindRows(){var rows=document.querySelectorAll(".dose-row"),i,j,buttons,input,id;for(i=0;i<rows.length;i++){id=rows[i].getAttribute("data-id");buttons=rows[i].getElementsByTagName("button");for(j=0;j<buttons.length;j++){bindDoseButton(buttons[j]);}input=rows[i].getElementsByTagName("input")[0];input.oninput=function(){var row=this;while(row&&String(row.className).indexOf("dose-row")<0){row=row.parentNode;}var rowId=row.getAttribute("data-id"),next=numberValue(this.value);if(window.pnMobileUI&&window.pnMobileUI.input(rowId,this.value)){return;}if(rowId==="insulin"){state.insulinOverride=next;}else{state.values[rowId]=next;}syncRows();renderResults();};input.onblur=function(){if(window.pnMobileUI&&window.pnMobileUI.blur(this)){return;}syncRows();};}}
-  function syncRows(){var rows=document.querySelectorAll(".dose-row"),counts={},i,id,value,input,status,restore,restoreAuto,product,j,group,pack;for(i=0;i<groupKeys.length;i++){counts[groupKeys[i]]=0;}for(i=0;i<rows.length;i++){id=rows[i].getAttribute("data-id");value=currentValue(id);rows[i].className=value>0?"dose-row active-dose":"dose-row";input=rows[i].getElementsByTagName("input")[0];if(document.activeElement!==input){input.value=value>0?value:"";}status=rows[i].getElementsByClassName("status")[0];if(status){if(status.getAttribute("data-status")==="vial"){pack=status.getAttribute("data-pack")||"支";status.innerHTML="每"+pack+" "+vial[id]+" ml · 当前 "+format(value/vial[id],value%vial[id]===0?0:1)+" "+pack+"（"+format(value,value%1===0?0:2)+" ml）";}else if(status.getAttribute("data-status")==="powder"){status.innerHTML="当前 "+format(value,value%1===0?0:1)+" 支；额外复溶水请另录入";}else if(status.getAttribute("data-status")==="kawen"){status.innerHTML="当前相当于 "+format(value/state.config.kawenVolume,2)+" 袋";}else{status.innerHTML=state.insulinOverride===null?"自动：葡萄糖÷10 后向下取最近偶数":'手动值 <button type="button" class="restore-auto">恢复自动</button>';restore=status.getElementsByClassName("restore-auto")[0];if(restore){restoreAuto=function(event){if(event&&event.preventDefault){event.preventDefault();}state.insulinOverride=null;if(document.activeElement&&document.activeElement.blur){document.activeElement.blur();}render();};restore.onclick=restoreAuto;}}}
-      for(j=0;j<products.length;j++){product=products[j];if(product[0]===id){group=product[3];if(value>0&&counts.hasOwnProperty(group)){counts[group]++;}break;}}
-    }for(group in counts){if(counts.hasOwnProperty(group)){byId("groups").querySelector('[data-active="'+group+'"]').innerHTML="已用 "+counts[group]+" 项";}}
+  function syncRows(){var rows=document.querySelectorAll(".dose-row"),counts={},i,id,value,input,status,restore,restoreAuto,product,j,group,pack;for(i=0;i<groupKeys.length;i++){counts[groupKeys[i]]=0;}for(i=0;i<rows.length;i++){id=rows[i].getAttribute("data-id");value=currentValue(id);rows[i].className=value>0?"dose-row active-dose":"dose-row";input=rows[i].getElementsByTagName("input")[0];if(document.activeElement!==input){input.value=value>0?value:"";}status=rows[i].getElementsByClassName("status")[0];if(status){if(status.getAttribute("data-status")==="vial"){pack=status.getAttribute("data-pack")||"支";status.innerHTML="每"+pack+" "+vial[id]+" ml · 当前 "+format(value/vial[id],value%vial[id]===0?0:1)+" "+pack+"（"+format(value,value%1===0?0:2)+" ml）";}else if(status.getAttribute("data-status")==="powder"){status.innerHTML="当前 "+format(value,value%1===0?0:1)+" 支";}else if(status.getAttribute("data-status")==="kawen"){status.innerHTML="当前相当于 "+format(value/state.config.kawenVolume,2)+" 袋";}else{status.innerHTML=state.insulinOverride===null?"自动：葡萄糖÷10 后向下取最近偶数":'手动值 <button type="button" class="restore-auto">恢复自动</button>';restore=status.getElementsByClassName("restore-auto")[0];if(restore){restoreAuto=function(event){if(event&&event.preventDefault){event.preventDefault();}state.insulinOverride=null;if(document.activeElement&&document.activeElement.blur){document.activeElement.blur();}render();};restore.onclick=restoreAuto;}}}
+      for(j=0;j<products.length;j++){product=products[j];if(product[0]===id){group=product[3]==="additive"?"vitamin":product[3];if(value>0&&counts.hasOwnProperty(group)){counts[group]++;}break;}}
+    }for(group in counts){if(counts.hasOwnProperty(group)){var groupMeta=byId("groups").querySelector('[data-active="'+group+'"]');if(groupMeta){groupMeta.innerHTML="已用 "+counts[group]+" 项";}}}
   }
   function configModifiedCount(){var count=0,key;for(key in defaultConfig){if(defaultConfig.hasOwnProperty(key)&&state.config[key]!==defaultConfig[key]){count++;}}return count;}
   function buildFormulaPanel(){
@@ -1632,7 +2075,7 @@ body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
   }
   function syncFormulaButton(){var open=byId("formulaContent").style.display==="block",count=configModifiedCount();byId("formulaButton").className=open?"formula-button active":"formula-button";byId("formulaButton").innerHTML=open?"收起公式与参数":"公式与参数"+(count?" · 已修改":"");}
   function syncKawenControls(){var row=byId("kawenRow").getElementsByClassName("dose-row")[0],buttons,copy,volume;if(row){buttons=row.querySelectorAll(".stepper button[data-delta]");copy=row.getElementsByClassName("dose-copy")[0].getElementsByTagName("small")[0];volume=state.config.kawenVolume;buttons[0].setAttribute("data-delta",-volume);buttons[buttons.length-1].setAttribute("data-delta",volume);copy.innerHTML="卡文 · 默认1袋 · "+decimalText(volume)+" ml · 华瑞分装";}row=byId("kaquanRow").getElementsByClassName("dose-row")[0];if(row){buttons=row.querySelectorAll(".stepper button[data-delta]");copy=row.getElementsByClassName("dose-copy")[0].getElementsByTagName("small")[0];volume=state.config.kaquanVolume;buttons[0].setAttribute("data-delta",-volume);buttons[buttons.length-1].setAttribute("data-delta",volume);copy.innerHTML="卡全 · 默认1袋 · "+decimalText(volume)+" ml · 费森尤斯卡比华瑞";}}
-  function makeReport(result){var items=[],i,p,value,digits,modeName=state.mode==="kawen"?"卡文":state.mode==="kaquan"?"卡全":"常规 TPN";if(state.mode==="kawen"&&n("kawenLiquid")>0){items.push("卡文："+format(n("kawenLiquid"),0)+" ml（"+format(result.bags,2)+" 袋）");}for(i=0;i<products.length;i++){p=products[i];if(p[0]==="kaquanLiquid"&&state.mode!=="kaquan"){continue;}value=p[0]==="insulin"?result.insulin:n(p[0]);if(value>0){digits=value%1===0?0:2;items.push(p[1]+"："+format(value,digits)+" "+p[5]);}}if(items.length===0){items.push("暂无非零用量");}for(i=0;i<items.length;i++){items[i]=(i+1)+". "+items[i];}return ["TPN简要报告","模式："+modeName,"年龄："+format(state.age,0)+" 岁","身高："+format(state.height,1)+" cm","体重："+format(state.weight,1)+" kg","理想体重："+format(result.ideal,1)+" kg","校正体重："+format(result.corrected,1)+" kg","BMI："+format(result.bmi,1)+" kg/m²","TPN推荐能量："+format(result.recommendedEnergy,0)+" kcal/d","TPN推荐液体量："+format(result.recommendedLiquid,0)+" ml/d","总能量："+format(result.energy,0)+" kcal","总液体量："+format(result.liquid,0)+" ml","估算渗透压："+format(result.osm,0)+" mOsm/L","非蛋白热量："+format(result.nonProtein,0)+" kcal","估算氮量："+format(result.nitrogen,2)+" gN","热氮比："+format(result.heatNitrogen,0),"糖脂比："+format(result.sugarFat,2),"葡萄糖限速时间："+format(result.time35,1)+" h（"+state.config.maxGlucoseRate+" mg/kg/min）；"+format(result.time4,1)+" h（4.0 mg/kg/min）；"+format(result.time5,1)+" h（5.0 mg/kg/min）","葡萄糖："+format(result.glucose,1)+" g；氨基酸："+format(result.amino,1)+" g；脂肪："+format(result.fat,1)+" g","","说明：限速时间仅按葡萄糖计算；渗透压为估算值。","具体配方：",items.join("\r\n")].join("\r\n");}
+  function makeReport(result){var items=[],i,p,value,digits,modeName=state.mode==="kawen"?"卡文":state.mode==="kaquan"?"卡全":"常规 TPN";if(state.mode==="kawen"&&n("kawenLiquid")>0){items.push("卡文："+format(n("kawenLiquid"),0)+" ml（"+format(result.bags,2)+" 袋）");}for(i=0;i<products.length;i++){p=products[i];if(p[0]==="kaquanLiquid"&&state.mode!=="kaquan"){continue;}value=p[0]==="insulin"?result.insulin:n(p[0]);if(value>0){digits=value%1===0?0:2;items.push(p[1]+"："+format(value,digits)+" "+p[5]);}}if(items.length===0){items.push("暂无非零用量");}for(i=0;i<items.length;i++){items[i]=(i+1)+". "+items[i];}return ["TPN简要报告","模式："+modeName,"年龄："+format(state.age,0)+" 岁","身高："+format(state.height,1)+" cm","体重："+format(state.weight,1)+" kg","理想体重："+format(result.ideal,1)+" kg","校正体重："+format(result.corrected,1)+" kg","BMI："+format(result.bmi,1)+" kg/m²","TPN推荐能量："+format(result.recommendedEnergy,0)+" kcal/d","TPN推荐液体量："+format(result.recommendedLiquid,0)+" ml/d","总能量："+format(result.energy,0)+" kcal","总液体量："+format(result.liquid,0)+" ml","估算渗透压："+format(result.osm,0)+" mOsm/L","非蛋白热量："+format(result.nonProtein,0)+" kcal","估算氮量："+format(result.nitrogen,2)+" gN","热氮比："+format(result.heatNitrogen,0),"糖脂比："+format(result.sugarFat,2),"葡萄糖输注时间："+format(result.time35,1)+" h（"+state.config.maxGlucoseRate+" mg/kg/min）；"+format(result.time4,1)+" h（4.0 mg/kg/min）；"+format(result.time5,1)+" h（5.0 mg/kg/min）","葡萄糖："+format(result.glucose,1)+" g；氨基酸："+format(result.amino,1)+" g；脂肪："+format(result.fat,1)+" g","","说明：输注时间仅按葡萄糖限速计算；渗透压为估算值。","具体配方：",items.join("\r\n")].join("\r\n");}
   function renderResults(){
     var r=calculate(),c=state.config,warnings=[],rows,html,i,reference;
     byId("idealWeight").innerHTML=format(r.ideal,1)+" kg";byId("correctedWeight").innerHTML=format(r.corrected,1)+" kg";byId("bmi").innerHTML=format(r.bmi,1);byId("recommendedEnergy").innerHTML=format(r.recommendedEnergy,0)+(r.recommendedEnergy===null?"":" kcal/d");byId("recommendedEnergyNote").innerHTML="25 kcal/kg；30 kcal/kg参考："+format(r.recommendedEnergy30,0)+" kcal/d";byId("recommendedLiquid").innerHTML=format(r.recommendedLiquid,0)+(r.recommendedLiquid===null?"":" ml/d");byId("recommendedLiquidNote").innerHTML=state.age>0?"分段公式；30–40 ml/kg："+format(r.fluid30,0)+"–"+format(r.fluid40,0)+" ml/d":"请填写年龄；30–40 ml/kg："+format(r.fluid30,0)+"–"+format(r.fluid40,0)+" ml/d";byId("energy").innerHTML=format(r.energy,0);byId("liquid").innerHTML=format(r.liquid,0);byId("osm").innerHTML=format(r.osm,0);byId("time35").innerHTML=format(r.time35,1);byId("time4").innerHTML=format(r.time4,1);byId("time5").innerHTML=format(r.time5,1);byId("rate35").innerHTML=format(c.maxGlucoseRate,1);byId("glucose").innerHTML=format(r.glucose,1)+" g";byId("amino").innerHTML=format(r.amino,1)+" g";byId("fat").innerHTML=format(r.fat,1)+" g";byId("carbShareSummary").innerHTML=format(r.carbShare===null?null:r.carbShare*100,1)+"%";byId("proteinShareSummary").innerHTML=format(r.proteinShare===null?null:r.proteinShare*100,1)+"%";byId("fatShareSummary").innerHTML=format(r.fatShare===null?null:r.fatShare*100,1)+"%";byId("nonProteinSummary").innerHTML=format(r.nonProtein,0)+" kcal";byId("heatNitrogenSummary").innerHTML=format(r.heatNitrogen,0);byId("sugarFatSummary").innerHTML=format(r.sugarFat,2);byId("heatNitrogenRange").innerHTML=decimalText(c.heatNitrogenMin)+"–"+decimalText(c.heatNitrogenMax);byId("sugarFatRange").innerHTML=decimalText(c.sugarFatMin)+"–"+decimalText(c.sugarFatMax);byId("osmCard").className=r.osm!==null&&r.osm>c.osmThreshold?"card danger":"card";
@@ -1676,7 +2119,7 @@ body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
     if(manual){root.setAttribute("data-theme-source","manual");try{localStorage.setItem("pn-appearance",theme);}catch(error){}}
     var label=theme==="dark"?"切换到日间模式":"切换到夜间模式";
     if(button){button.setAttribute("aria-label",label);button.setAttribute("title",label);button.setAttribute("aria-pressed",theme==="dark"?"true":"false");}
-    var meta=document.getElementById("appThemeColor");if(meta){meta.setAttribute("content",theme==="dark"?"#0f1722":"#f2f5fa");}
+    var meta=document.getElementById("appThemeColor");if(meta){meta.setAttribute("content",theme==="dark"?"#1e2926":"#a8c8bb");}
   }
   apply(root.getAttribute("data-theme")||"light",false);
   if(button){button.addEventListener("click",function(){apply(root.getAttribute("data-theme")==="dark"?"light":"dark",true);});}
@@ -1735,6 +2178,31 @@ body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
 
 </script>
 </body>
+<!--
+Looseleaf visual theme adaptation
+https://github.com/kevintngo/looseleaf
+MIT License
+
+Copyright (c) 2026 Looseleaf contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
 </html>
 
 
