@@ -1497,6 +1497,143 @@ html[data-input-modality="keyboard"] button::before{transition:none!important;tr
 }
 
 </style>
+<style id="results-layout-style">
+/* Results only: a paper record with one overview and aligned data rows. */
+html[data-theme] .app .result-pane .result-layout{position:static;min-width:0}
+html[data-theme] .app .result-pane .result-layout>.heading{margin:0 0 14px}
+html[data-theme] .app .result-pane .result-overview,
+html[data-theme] .app .result-pane .result-nutrition,
+html[data-theme] .app .result-pane .warning,
+html[data-theme] .app .result-pane .result-utilities{
+  min-width:0;background:var(--ll-paper);color:var(--ll-ink);
+  border:1px solid var(--ll-line);border-image:none;border-radius:8px;box-shadow:none;
+}
+html[data-theme] .app .result-pane .result-overview{padding:22px 0 0}
+html[data-theme] .app .result-pane .overview-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:0 12px 20px}
+html[data-theme] .app .result-pane .overview-stats>article{
+  display:block;min-width:0;min-height:0;margin:0;padding:0 10px;border:0;border-left:1px solid var(--ll-rule);
+  border-image:none;border-radius:0;background:transparent;color:var(--ll-ink);box-shadow:none;text-align:left;
+}
+html[data-theme] .app .result-pane .overview-stats>article:first-child{border-left:0}
+html[data-theme] .app .result-pane .overview-stats h3{margin:0 0 12px;font-size:.8125rem;line-height:1.5;font-weight:550;color:var(--ll-muted)}
+html[data-theme] .app .result-pane .overview-stats [data-metric="energy"] h3{display:inline-block;background:var(--ll-yellow);padding:0 4px;margin-left:-4px;border-radius:2px;color:var(--ll-ink)}
+html[data-theme] .app .result-pane .overview-stats strong{display:block;margin:0;font-size:clamp(1.5rem,2.5vw,2rem);line-height:1.15;font-weight:650;letter-spacing:-.04em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;color:inherit}
+html[data-theme] .app .result-pane .overview-stats>article>small{display:block;margin-top:7px;padding:0;font-size:.6875rem;line-height:1.4;font-weight:400;color:var(--ll-muted);white-space:nowrap}
+html[data-theme] .app .result-pane .overview-stats #osmCard.danger{background:transparent;color:var(--ll-red);border-color:var(--ll-rule)}
+html[data-theme] .app .result-pane .overview-stats #osmCard.danger h3,
+html[data-theme] .app .result-pane .overview-stats #osmCard.danger>small{color:var(--ll-red)}
+html[data-theme] .app .result-pane .overview-stats #osmCard.danger h3{text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px}
+
+html[data-theme] .app .result-pane .infusion-strip{padding:14px 20px 16px;border-top:1px dashed var(--ll-rule);background:var(--ll-slip);border-radius:0 0 8px 8px}
+html[data-theme] .app .result-pane .result-subheading{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:5px 12px;min-width:0}
+html[data-theme] .app .result-pane .result-subheading h3{margin:0;font-size:.875rem;line-height:1.5;font-weight:650;color:var(--ll-ink)}
+html[data-theme] .app .result-pane .result-subheading>span{font-size:.6875rem;line-height:1.5;color:var(--ll-muted)}
+html[data-theme] .app .result-pane .infusion-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:11px}
+html[data-theme] .app .result-pane .infusion-values>div{min-width:0;text-align:center;border-left:1px solid var(--ll-rule)}
+html[data-theme] .app .result-pane .infusion-values>div:first-child{border-left:0}
+html[data-theme] .app .result-pane .infusion-rate{display:block;color:var(--ll-muted);font-size:.6875rem;line-height:1.4;font-variant-numeric:tabular-nums}
+html[data-theme] .app .result-pane .infusion-values strong{display:flex;align-items:baseline;justify-content:center;gap:4px;min-width:0;margin-top:4px;font-size:1.1875rem;line-height:1.25;font-weight:600;letter-spacing:-.02em;color:var(--ll-ink);font-variant-numeric:tabular-nums}
+html[data-theme] .app .result-pane .infusion-values i{min-width:0;font-style:normal;overflow-wrap:anywhere}
+html[data-theme] .app .result-pane .infusion-values small{flex:none;font-size:.6875rem;line-height:1;font-weight:400;letter-spacing:0;color:var(--ll-muted)}
+
+html[data-theme] .app .result-pane .result-nutrition{margin-top:14px;padding:18px 20px 0}
+html[data-theme] .app .result-pane .nutrition-table{table-layout:fixed;width:100%;margin:12px 0 0;border-collapse:collapse}
+html[data-theme] .app .result-pane .nutrition-table th,
+html[data-theme] .app .result-pane .nutrition-table td{padding:12px 0;border:0;border-top:1px solid var(--ll-rule);text-align:right;vertical-align:middle;line-height:1.5;overflow-wrap:anywhere}
+html[data-theme] .app .result-pane .nutrition-table thead th{padding:0 0 8px;border:0;font-size:.6875rem;font-weight:400;color:var(--ll-muted)}
+html[data-theme] .app .result-pane .nutrition-table th:first-child{width:38%;text-align:left}
+html[data-theme] .app .result-pane .nutrition-table th:nth-child(2){width:32%}
+html[data-theme] .app .result-pane .nutrition-table th:nth-child(3){width:30%}
+html[data-theme] .app .result-pane .nutrition-table tbody th{padding-right:7px;color:var(--ll-ink);font-size:.875rem;font-weight:500}
+html[data-theme] .app .result-pane .nutrition-table tbody td{padding-left:8px;color:var(--ll-ink);font-size:1.0625rem;font-weight:600;letter-spacing:-.015em;font-variant-numeric:tabular-nums}
+html[data-theme] .app .result-pane .nutrition-table tbody td:last-child{color:var(--ll-muted);font-size:.8125rem;font-weight:450}
+html[data-theme] .app .result-pane .nutrient-dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:8px;vertical-align:2px;background:var(--ll-blue)}
+html[data-theme] .app .result-pane [data-nutrient="amino"] .nutrient-dot{background:var(--orange)}
+html[data-theme] .app .result-pane [data-nutrient="fat"] .nutrient-dot{background:var(--ll-green)}
+html[data-theme] .app .result-pane .nutrition-focus{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:0;margin:4px -20px 0;padding:16px 12px 17px;border-top:1px dashed var(--ll-rule)}
+html[data-theme] .app .result-pane .nutrition-focus>div{min-width:0;padding:0 8px;border-left:1px solid var(--ll-rule)}
+html[data-theme] .app .result-pane .nutrition-focus>div:first-child{border-left:0}
+html[data-theme] .app .result-pane .nutrition-focus dt{margin:0;color:var(--ll-muted);font-size:.75rem;line-height:1.5;font-weight:450}
+html[data-theme] .app .result-pane .nutrition-focus dd{margin:7px 0 0;color:var(--ll-ink);font-size:1.1875rem;line-height:1.35;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+html[data-theme] .app .result-pane .nutrition-focus>div:first-child dd{font-size:1.0625rem}
+html[data-theme] .app .result-pane .nutrition-focus small{display:block;margin-top:5px;color:var(--ll-muted);font-size:.6875rem;line-height:1.5;overflow-wrap:anywhere}
+
+/* Alerts stay visible; color belongs to the title, with no left stripe or shadow. */
+html[data-theme] .app .result-pane .warning{margin-top:14px;padding:17px 20px 4px}
+html[data-theme] .app .result-pane .warning>.section-title{padding:0 0 10px;margin:0;border:0}
+html[data-theme] .app .result-pane .warning .section-title h2{font-size:.875rem;line-height:1.5;font-weight:650;letter-spacing:0}
+html[data-theme] .app .result-pane .warning article{margin:0;padding:12px 0;border:0;border-top:1px solid var(--ll-rule);border-radius:0;background:transparent;box-shadow:none}
+html[data-theme] .app .result-pane .warning article strong{display:block;font-size:.8125rem;line-height:1.6;font-weight:600;overflow-wrap:anywhere}
+html[data-theme] .app .result-pane .warning article.alert strong{color:var(--ll-red)}
+html[data-theme] .app .result-pane .warning article.caution strong{color:var(--ll-caution)}
+html[data-theme] .app .result-pane .warning article strong::before{content:"";display:inline-block;width:5px;height:5px;margin-right:7px;border-radius:50%;background:currentColor;vertical-align:2px}
+html[data-theme] .app .result-pane .warning article p{margin:4px 0 0;color:var(--ll-muted);font-size:.75rem;line-height:1.75}
+
+html[data-theme] .app .result-pane .result-utilities{margin-top:14px;overflow:hidden}
+html[data-theme] .app .result-pane .result-utilities>details{margin:0;padding:0;border:0;border-top:1px solid var(--ll-rule);border-image:none;border-radius:0;background:transparent;box-shadow:none}
+html[data-theme] .app .result-pane .result-utilities>details:first-child{border-top:0}
+html[data-theme] .app .result-pane .result-utilities>details>summary{min-height:54px;padding:15px 20px;border-radius:0;font-size:.875rem;line-height:1.6}
+html[data-theme] .app .result-pane .result-utilities>details[open]>summary{background:var(--ll-slip);border-bottom:1px solid var(--ll-rule)}
+html[data-theme] .app .result-pane .result-utilities>details>summary:after{font-size:.6875rem}
+html[data-theme] .app .result-pane .result-utilities .collapsible-content{padding:4px 16px 16px}
+html[data-theme] .app .result-pane .metrics th{font-size:.6875rem;padding:11px 5px;color:var(--ll-muted)}
+html[data-theme] .app .result-pane .metrics td{font-size:.75rem;padding:12px 5px;line-height:1.65;border-top:1px solid var(--ll-rule)}
+html[data-theme] .app .result-pane .metrics td:nth-child(3){font-size:.6875rem}
+html[data-theme] .app .result-pane .metrics tbody tr:nth-child(even){background:transparent}
+html[data-theme] .app .result-pane .report-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+html[data-theme] .app .result-pane .copy-state{margin:0}
+html[data-theme] .app .result-pane .copy-button{margin-top:0;min-height:44px}
+html[data-theme] .app .result-pane .report-text{margin-top:12px}
+
+@media(hover:hover) and (pointer:fine){
+  html[data-theme] .app .result-pane .result-utilities>details>summary:hover{background:var(--ll-slip)}
+}
+@media screen and (max-width:680px), screen and (max-width:1000px) and (pointer:coarse){
+  html[data-theme] .app .result-pane .result-overview{padding-top:20px}
+  html[data-theme] .app .result-pane .overview-stats{padding:0 8px 18px}
+  html[data-theme] .app .result-pane .overview-stats>article{padding:0 9px}
+  html[data-theme] .app .result-pane .overview-stats h3{font-size:.75rem;margin-bottom:11px}
+  html[data-theme] .app .result-pane .overview-stats strong{font-size:clamp(1.375rem,6.5vw,1.875rem)}
+  html[data-theme] .app .result-pane .infusion-strip{padding:13px 16px 15px}
+  html[data-theme] .app .result-pane .result-nutrition{padding:17px 16px 0}
+  html[data-theme] .app .result-pane .nutrition-focus{margin-left:-16px;margin-right:-16px;padding:15px 8px}
+  html[data-theme] .app .result-pane .nutrition-focus dd{font-size:1.125rem}
+  html[data-theme] .app .result-pane .nutrition-focus>div:first-child dd{font-size:1rem}
+  html[data-theme] .app .result-pane .warning{padding:16px 16px 3px}
+  html[data-theme] .app .result-pane .result-utilities>details>summary{padding-left:16px;padding-right:16px}
+}
+@media(max-width:360px){
+  html[data-theme] .app .result-pane .overview-stats>article{padding-left:7px;padding-right:7px}
+  html[data-theme] .app .result-pane .overview-stats h3{font-size:.6875rem}
+  html[data-theme] .app .result-pane .overview-stats>article>small{font-size:.625rem}
+  html[data-theme] .app .result-pane .nutrition-focus>div{padding-left:7px;padding-right:7px}
+  html[data-theme] .app .result-pane .nutrition-focus dt{font-size:.6875rem}
+  html[data-theme] .app .result-pane .nutrition-focus small{font-size:.6875rem}
+}
+@media(prefers-contrast:more){
+  html[data-theme] .app .result-pane .overview-stats>article,
+  html[data-theme] .app .result-pane .nutrition-table th,
+  html[data-theme] .app .result-pane .nutrition-table td,
+  html[data-theme] .app .result-pane .warning article{border-color:var(--ll-line)}
+}
+@media(forced-colors:active){
+  html[data-theme] .app .result-pane .result-overview,
+  html[data-theme] .app .result-pane .result-nutrition,
+  html[data-theme] .app .result-pane .warning,
+  html[data-theme] .app .result-pane .result-utilities{background:Canvas!important;color:CanvasText!important;border-color:ButtonText!important}
+  html[data-theme] .app .result-pane .overview-stats #osmCard.danger{color:CanvasText;outline:2px solid Highlight;outline-offset:-2px}
+  html[data-theme] .app .result-pane .overview-stats [data-metric="energy"] h3{background:Canvas;color:CanvasText}
+  html[data-theme] .app .result-pane .nutrient-dot{background:CanvasText}
+}
+@media print{
+  html[data-theme] .app .result-pane{--ll-paper:#fff;--ll-slip:#fff;--ll-ink:#000;--ll-muted:#333;--ll-line:#777;--ll-rule:#ccc;--ll-yellow:#fff;--ll-red:#000;--ll-caution:#000}
+  html[data-theme] .app .result-pane .result-overview,
+  html[data-theme] .app .result-pane .result-nutrition,
+  html[data-theme] .app .result-pane .warning,
+  html[data-theme] .app .result-pane .result-utilities{background:#fff;color:#000;border-color:#777;box-shadow:none;break-inside:avoid}
+}
+
+</style>
 </head>
 <body>
 <main class="app">
@@ -1591,15 +1728,50 @@ html[data-input-modality="keyboard"] button::before{transition:none!important;tr
   <div class="catalog-empty" id="catalogEmpty" hidden>本类暂无可选产品。</div>
   </div>
     </div>
-    <div class="result-pane" id="mobileResults"><div class="result-stack">
-  <div class="heading"><h2>结果</h2><button class="back-to-cart" id="backToCart" type="button">返回配方</button></div>
-  <section class="cards"><article class="card primary"><span>总能量</span><strong id="energy">—</strong><small>kcal</small></article><article class="card"><span>总液体量</span><strong id="liquid">—</strong><small>ml</small></article><article id="osmCard" class="card"><span>估算渗透压</span><strong id="osm">—</strong><small>mOsm/L</small></article><article class="card"><span>葡萄糖输注时间</span><div class="times"><b><span class="time-value"><i id="time35">—</i> h</span><small id="rate35">3.5</small></b><b><span class="time-value"><i id="time4">—</i> h</span><small>4.0</small></b><b><span class="time-value"><i id="time5">—</i> h</span><small>5.0</small></b></div></article></section>
-  <section class="panel summary"><div class="section-title"><div><h2>营养构成</h2></div></div><div class="macro"><div><span>葡萄糖</span><b id="glucose">—</b><em>供能 <i id="carbShareSummary">—</i></em></div><div><span>氨基酸</span><b id="amino">—</b><em>供能 <i id="proteinShareSummary">—</i></em></div><div><span>脂肪</span><b id="fat">—</b><em>供能 <i id="fatShareSummary">—</i></em></div></div><div class="macro focus-macro"><div><span>非蛋白热量</span><b id="nonProteinSummary">—</b></div><div><span>热氮比</span><b id="heatNitrogenSummary">—</b><em>参考 <i id="heatNitrogenRange">—</i></em></div><div><span>糖脂比</span><b id="sugarFatSummary">—</b><em>参考 <i id="sugarFatRange">—</i></em></div></div></section>
-  <section id="warnings" class="warning"></section>
-  <details class="panel collapsible-panel"><summary>详细指标</summary><div class="collapsible-content"><table class="metrics"><thead><tr><th>指标</th><th>计算值</th><th>参考</th></tr></thead><tbody id="metrics"></tbody></table></div></details>
-  <details class="panel collapsible-panel"><summary>报告与复制</summary><div class="collapsible-content"><div><span id="copyState" class="copy-state"></span><button id="copyReport" class="copy-button" type="button">一键复制</button></div><textarea id="reportText" class="report-text" readonly></textarea></div></details>
+    <div class="result-pane" id="mobileResults"><div class="result-stack result-layout">
+      <div class="heading"><h2>结果</h2><button class="back-to-cart" id="backToCart" type="button">返回配方</button></div>
+
+      <section class="result-overview" aria-label="配方总览">
+        <div class="overview-stats">
+          <article data-metric="energy"><h3>总能量</h3><strong id="energy">—</strong><small>kcal</small></article>
+          <article data-metric="liquid"><h3>总液体量</h3><strong id="liquid">—</strong><small>ml</small></article>
+          <article id="osmCard" class="card" data-metric="osm"><h3>估算渗透压</h3><strong id="osm">—</strong><small>mOsm/L</small></article>
+        </div>
+        <div class="infusion-strip">
+          <div class="result-subheading"><h3>葡萄糖输注时间</h3><span>速率 mg/kg/min</span></div>
+          <div class="infusion-values">
+            <div><span class="infusion-rate" id="rate35">3.5</span><strong><i id="time35">—</i><small>h</small></strong></div>
+            <div><span class="infusion-rate">4.0</span><strong><i id="time4">—</i><small>h</small></strong></div>
+            <div><span class="infusion-rate">5.0</span><strong><i id="time5">—</i><small>h</small></strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="result-nutrition" aria-labelledby="nutritionTitle">
+        <div class="result-subheading"><h3 id="nutritionTitle">营养构成</h3></div>
+        <table class="nutrition-table">
+          <thead><tr><th scope="col">营养素</th><th scope="col">用量</th><th scope="col">供能占比</th></tr></thead>
+          <tbody>
+            <tr data-nutrient="glucose"><th scope="row"><span class="nutrient-dot" aria-hidden="true"></span>葡萄糖</th><td id="glucose">—</td><td id="carbShareSummary">—</td></tr>
+            <tr data-nutrient="amino"><th scope="row"><span class="nutrient-dot" aria-hidden="true"></span>氨基酸</th><td id="amino">—</td><td id="proteinShareSummary">—</td></tr>
+            <tr data-nutrient="fat"><th scope="row"><span class="nutrient-dot" aria-hidden="true"></span>脂肪</th><td id="fat">—</td><td id="fatShareSummary">—</td></tr>
+          </tbody>
+        </table>
+        <dl class="nutrition-focus">
+          <div><dt>非蛋白热量</dt><dd id="nonProteinSummary">—</dd></div>
+          <div><dt>热氮比</dt><dd id="heatNitrogenSummary">—</dd><small>参考 <span id="heatNitrogenRange">—</span></small></div>
+          <div><dt>糖脂比</dt><dd id="sugarFatSummary">—</dd><small>参考 <span id="sugarFatRange">—</span></small></div>
+        </dl>
+      </section>
+
+      <section id="warnings" class="warning"></section>
+      <div class="result-utilities">
+        <details class="panel collapsible-panel"><summary>详细指标</summary><div class="collapsible-content"><table class="metrics"><thead><tr><th>指标</th><th>计算值</th><th>参考</th></tr></thead><tbody id="metrics"></tbody></table></div></details>
+        <details class="panel collapsible-panel"><summary>报告与复制</summary><div class="collapsible-content"><div class="report-actions"><span id="copyState" class="copy-state"></span><button id="copyReport" class="copy-button" type="button">一键复制</button></div><textarea id="reportText" class="report-text" readonly></textarea></div></details>
+      </div>
     </div></div>
   </div>
+
 
   <section class="formula-wrap"><button id="formulaButton" class="formula-button" type="button">公式与参数</button><div id="formulaContent" class="formula-content"></div></section>
   <details class="catalog-reference catalog-evidence collapsible-panel"><summary>说明书与参数依据</summary><div class="collapsible-content">
