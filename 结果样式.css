@@ -1,0 +1,149 @@
+/* One result system: equal overview values, compact timing, aligned comparison rows. */
+html[data-huashu-direction="a"] .app .result-pane{
+  min-width:0;color:var(--ink);font-variant-numeric:tabular-nums lining-nums;
+  --result-number-size:28px;--result-value-size:16px;--result-label-size:14px;--result-note-size:12px;
+}
+html[data-huashu-direction="a"] .app .result-pane .result-layout{
+  position:static;display:flex;flex-direction:column;gap:0;margin:0;padding:22px;
+  border:1px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:none;min-width:0;
+}
+html[data-huashu-direction="a"] .app .result-pane .result-layout>.heading{
+  position:static;display:flex;align-items:center;gap:12px;min-height:32px;margin:0 0 18px;padding:0;
+}
+html[data-huashu-direction="a"] .app .result-pane .heading h2{margin:0;font-size:18px;font-weight:650;line-height:1.5;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .heading:after{display:none}
+html[data-huashu-direction="a"] .app .result-pane :is(.result-overview,.result-nutrition,.warning,.result-utilities){
+  min-width:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible;
+}
+/* Three metrics share one baseline and exactly the same size. */
+html[data-huashu-direction="a"] .app .result-pane .overview-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;align-items:start;margin:0;padding:0;
+}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats>article{
+  display:block;grid-column:auto;grid-row:auto;min-width:0;height:auto;margin:0;padding:0 10px;
+  border:0;border-left:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;text-align:left;
+}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats>article:first-child{padding-left:0;border-left:0}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats>article:last-child{padding-right:0}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats h3{
+  display:block;margin:0 0 6px;padding:0;font-size:var(--result-label-size);font-weight:500;line-height:1.5;color:var(--muted);letter-spacing:0;
+}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats strong{
+  display:block;min-width:0;margin:0;padding:0;font-size:var(--result-number-size);font-weight:650;line-height:1.2;
+  letter-spacing:-.025em;color:var(--deep);overflow-wrap:anywhere;
+}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats>article>small{
+  display:block;margin:5px 0 0;padding:0;font-size:var(--result-note-size);font-weight:400;line-height:1.5;white-space:nowrap;letter-spacing:0;color:var(--muted);
+}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats #osmCard.danger{background:transparent;border-color:var(--line);box-shadow:none}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats #osmCard.danger :is(h3,strong){color:var(--danger)}
+/* Timing is metadata, not another group of large KPI cards. */
+html[data-huashu-direction="a"] .app .result-pane .infusion-strip{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin:0;padding:10px 0 0;
+  border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;
+}
+html[data-huashu-direction="a"] .app .result-pane .infusion-strip .result-subheading{
+  display:flex;flex:0 1 auto;flex-wrap:wrap;align-items:baseline;justify-content:flex-start;gap:4px 6px;margin:0;padding:0;
+}
+html[data-huashu-direction="a"] .app .result-pane .infusion-strip .result-subheading h3,
+html[data-huashu-direction="a"] .app .result-pane .infusion-strip .result-subheading>span{
+  margin:0;padding:0;font-size:12px;line-height:1.5;font-weight:400;color:var(--muted);letter-spacing:0;
+}
+html[data-huashu-direction="a"] .app .result-pane .infusion-values{
+  display:flex;flex:1 1 184px;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:3px 10px;min-width:0;margin:0;padding:0;
+}
+html[data-huashu-direction="a"] .app .result-pane .infusion-values>div{
+  display:inline-flex;align-items:baseline;gap:4px;min-width:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;
+}
+html[data-huashu-direction="a"] .app .result-pane .infusion-rate{font-size:12px;line-height:1.5;color:var(--muted);font-weight:400;white-space:nowrap}
+html[data-huashu-direction="a"] .app .result-pane .infusion-rate:after{content:":";padding-left:2px}
+html[data-huashu-direction="a"] .app .result-pane .infusion-values strong{
+  display:inline-flex;flex-wrap:nowrap;align-items:baseline;gap:2px;min-width:0;margin:0;padding:0;font-size:14px;font-weight:600;line-height:1.5;letter-spacing:0;color:var(--ink);
+}
+html[data-huashu-direction="a"] .app .result-pane .infusion-values i{min-width:0;font-style:normal;overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .app .result-pane .infusion-values small{flex:0 0 auto;font-size:12px;font-weight:400;white-space:nowrap;color:var(--muted)}
+/* One three-column comparison grid for nutrient amounts and reference values. */
+html[data-huashu-direction="a"] .app .result-pane .result-nutrition{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+html[data-huashu-direction="a"] .app .result-pane .result-nutrition>.result-subheading{display:block;margin:0 0 10px;padding:0}
+html[data-huashu-direction="a"] .app .result-pane .result-nutrition>.result-subheading h3{margin:0;font-size:16px;font-weight:650;line-height:1.5;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table{width:100%;margin:0;border:0;border-collapse:collapse;table-layout:fixed;background:transparent}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table th:first-child{width:40%;text-align:left}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table th:nth-child(2){width:34%;text-align:right}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table th:nth-child(3){width:26%;text-align:right}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table thead th{
+  padding:0 0 7px;border:0;border-bottom:1px solid var(--line);font-size:12px;font-weight:400;line-height:1.5;color:var(--muted);
+}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table thead th:nth-child(2){padding-right:8px}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table tbody :is(th,td){
+  padding:10px 0;border:0;border-bottom:1px solid var(--line);vertical-align:baseline;line-height:1.5;overflow-wrap:anywhere;
+}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table tbody th{padding-right:8px;font-size:14px;font-weight:400;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table tbody td{font-size:var(--result-value-size);font-weight:600;text-align:right;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table tbody td:nth-child(2){padding-right:8px}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table tbody tr:last-child :is(th,td){border-bottom:0}
+html[data-huashu-direction="a"] .app .result-pane .nutrient-dot{display:none}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-focus{display:block;margin:0;padding:0;border:0;border-radius:0;background:transparent}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-focus>div{
+  display:grid;grid-template-columns:minmax(0,40fr) minmax(0,34fr) minmax(0,26fr);align-items:baseline;
+  gap:0;min-width:0;margin:0;padding:10px 0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;
+}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-focus dt{grid-column:1;grid-row:1;min-width:0;padding-right:8px;font-size:14px;font-weight:400;line-height:1.5;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-focus dd{
+  grid-column:2;grid-row:1;min-width:0;margin:0;padding:0 8px 0 0;font-size:var(--result-value-size);font-weight:600;line-height:1.5;text-align:right;color:var(--ink);overflow-wrap:anywhere;
+}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-focus small{
+  display:block;grid-column:3;grid-row:1;min-width:0;margin:0;padding:0;font-size:12px;font-weight:400;line-height:1.5;text-align:right;color:var(--muted);overflow-wrap:anywhere;
+}
+/* Alerts remain fully visible; secondary tools retain their original disclosure. */
+html[data-huashu-direction="a"] .app .result-pane .warning{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+html[data-huashu-direction="a"] .app .result-pane .warning>.section-title{margin:0;padding:0 0 8px;border:0}
+html[data-huashu-direction="a"] .app .result-pane .warning .section-title h2{margin:0;font-size:16px;font-weight:650;line-height:1.5;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .warning article{margin:0;padding:10px 0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none}
+html[data-huashu-direction="a"] .app .result-pane .warning article:first-of-type{border-top:0}
+html[data-huashu-direction="a"] .app .result-pane .warning article strong{display:block;font-size:14px;font-weight:600;line-height:1.6;color:var(--orange-ink)}
+html[data-huashu-direction="a"] .app .result-pane .warning article strong:before{display:none}
+html[data-huashu-direction="a"] .app .result-pane .warning article p{margin:4px 0 0;font-size:14px;font-weight:400;line-height:1.7;color:var(--muted);overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .app .result-pane .result-utilities{margin-top:10px;border-top:1px solid var(--line)}
+html[data-huashu-direction="a"] .app .result-pane .result-utilities>details{margin:0;padding:0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;overflow:visible}
+html[data-huashu-direction="a"] .app .result-pane .result-utilities>details:last-child{border-bottom:0}
+html[data-huashu-direction="a"] .app .result-pane .result-utilities>details>summary{min-height:48px;margin:0;padding:12px 0;font-size:14px;font-weight:600;line-height:1.6;color:var(--ink);border-radius:0;background:transparent}
+html[data-huashu-direction="a"] .app .result-pane .result-utilities>details>summary:after{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .app .result-pane .result-utilities>details[open]>summary{border-bottom:1px solid var(--line)}
+html[data-huashu-direction="a"] .app .result-pane .collapsible-content{padding:6px 0 14px;overflow:visible}
+html[data-huashu-direction="a"] .app .result-pane .metrics{width:100%;table-layout:fixed;border-collapse:collapse}
+html[data-huashu-direction="a"] .app .result-pane .metrics :is(th,td){padding:10px 4px;border-color:var(--line);font-size:14px;line-height:1.6;overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .app .result-pane .metrics th{font-size:12px;font-weight:500;color:var(--muted)}
+html[data-huashu-direction="a"] .app .result-pane .metrics td:nth-child(2){font-weight:600;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .metrics td:nth-child(3){font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .app .result-pane .copy-button{min-height:44px;font-size:14px}
+html[data-huashu-direction="a"] .app .result-pane .copy-state{font-size:12px;color:var(--blue)}
+html[data-huashu-direction="a"] .app .result-pane .report-text{font-size:14px;line-height:1.75;border-radius:8px;background:var(--blue-faint);color:var(--ink)}
+@media screen and (min-width:1001px){
+  html[data-huashu-direction="a"] .app .result-pane .result-layout{position:relative;margin-top:48px}
+  html[data-huashu-direction="a"] .app .result-pane .result-layout>.heading{position:absolute;left:0;top:-48px;width:100%;min-height:32px;margin:0}
+}
+@media screen and (max-width:680px),screen and (max-width:1000px) and (pointer:coarse){
+  html[data-huashu-direction="a"] .app .result-pane{--result-number-size:26px}
+  html[data-huashu-direction="a"] .app .result-pane .result-layout{padding:18px 16px}
+  html[data-huashu-direction="a"] .app .result-pane .result-layout>.heading{min-height:44px;margin-bottom:14px}
+  html[data-huashu-direction="a"] .app .result-pane .back-to-cart{min-height:44px;margin-left:auto;border-radius:8px;font-size:14px}
+  html[data-huashu-direction="a"] .app .result-pane .overview-stats>article{padding-left:8px;padding-right:8px}
+  html[data-huashu-direction="a"] .app .result-pane .overview-stats>article:first-child{padding-left:0}
+  html[data-huashu-direction="a"] .app .result-pane .overview-stats>article:last-child{padding-right:0}
+  html[data-huashu-direction="a"] .app .result-pane .infusion-strip{gap:3px;padding-top:8px}
+  html[data-huashu-direction="a"] .app .result-pane .infusion-values{flex-basis:100%;gap:3px 8px}
+  html[data-huashu-direction="a"] .app .result-pane .result-nutrition{margin-top:16px;padding-top:14px}
+  html[data-huashu-direction="a"] .app .result-pane .warning article p{font-size:16px}
+  html[data-huashu-direction="a"] .app .result-pane .warning article strong{font-size:16px}
+  html[data-huashu-direction="a"] .app .result-pane .report-text{font-size:16px}
+}
+@media screen and (max-width:360px){
+  html[data-huashu-direction="a"] .app .result-pane{--result-number-size:24px}
+  html[data-huashu-direction="a"] .app .result-pane .result-layout{padding:16px 12px}
+}
+@media print{
+  html[data-huashu-direction="a"] .app .result-pane{--result-number-size:22px}
+  html[data-huashu-direction="a"] .app .result-pane .result-layout{margin:16px 0 0;padding:16px;border-color:#999}
+  html[data-huashu-direction="a"] .app .result-pane :is(.overview-stats,.infusion-strip,.result-nutrition){break-inside:avoid}
+  html[data-huashu-direction="a"] .app .result-pane .warning article{break-inside:avoid}
+}

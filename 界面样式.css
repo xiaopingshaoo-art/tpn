@@ -1,0 +1,391 @@
+/* Direction A — parallel clinical workbench. Only presentation is changed. */
+html[data-huashu-direction="a"]{
+  --page:#eef1f3;--paper:#ffffff;--ink:#172c40;--muted:#536676;
+  --blue:#215fba;--deep:#123d70;--blue-soft:#eaf2ff;--blue-faint:#f5f7fa;
+  --orange:#b65d25;--orange-soft:#fff0e5;--orange-ink:#914416;
+  --line:#d4dde4;--control:#a7b7c5;--danger:#a4461e;--danger-soft:#fff0e7;
+  --caution:#924a20;--caution-soft:#fff3e9;--radius:14px;
+  --radius-card:14px;--radius-control:10px;--radius-small:8px;
+  --surface-muted:#f5f7f9;--hairline:#dce3e8;--focus-ring:#d9e7ff;
+  --chrome-muted:var(--muted);--selection-fill:#edf4ff;--glass-fill:var(--paper);
+  --glass-edge:var(--line);--glass-shadow:transparent;--glass-cursor:var(--blue);
+  --sheet-fill:var(--paper);--glass-blur:0px;--energy-fill:var(--blue-soft);
+  --liquid-fill:var(--paper);--macro-aa:#f4f6f8;--macro-fat:#eef1f5;
+  --ll-paper:var(--paper);--ll-ink:var(--ink);--ll-muted:var(--muted);
+  --ll-line:var(--line);--ll-rule:var(--hairline);--ll-slip:var(--surface-muted);
+  --ll-yellow:transparent;--ll-blue:var(--blue);--ll-green:#5f768d;
+  --ll-red:var(--danger);--ll-caution:var(--caution);
+  background:var(--page);font-size:16px;-webkit-text-size-adjust:100%;
+}
+html[data-huashu-direction="a"][data-theme="dark"]{
+  --page:#111c27;--paper:#1b2a38;--ink:#e8eff5;--muted:#b0c0ce;
+  --blue:#a6c8ff;--deep:#d2e3ff;--blue-soft:#263e59;--blue-faint:#172531;
+  --orange:#e8af80;--orange-soft:#412f24;--orange-ink:#f4c59c;
+  --line:#405464;--control:#6d8496;--danger:#f5b18a;--danger-soft:#432e25;
+  --caution:#f2bf95;--caution-soft:#3d2f26;--surface-muted:#223342;
+  --hairline:#354958;--focus-ring:#334d70;--selection-fill:#253d55;
+  --glass-cursor:#a6c8ff;--macro-aa:#263a4b;--macro-fat:#2c3c50;
+}
+html[data-huashu-direction="a"] body{
+  background:var(--page);background-image:none;color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:15px;line-height:1.65;font-variant-numeric:tabular-nums;letter-spacing:0;
+}
+html[data-huashu-direction="a"] .app{max-width:1480px;padding:34px 40px 48px}
+html[data-huashu-direction="a"] :is(input,textarea,select){color:var(--ink)}
+html[data-huashu-direction="a"] :is(input,textarea)::placeholder{color:var(--muted);opacity:1}
+html[data-huashu-direction="a"] :is(button,input,select,textarea,summary):focus{outline-color:var(--blue)}
+html[data-huashu-direction="a"] .topbar{gap:38px;margin-bottom:26px;align-items:center}
+html[data-huashu-direction="a"] .header{gap:24px}
+html[data-huashu-direction="a"] .brand{gap:13px}
+html[data-huashu-direction="a"] .brand-icon{width:44px;height:44px;flex-basis:44px;border-radius:12px;box-shadow:none}
+html[data-huashu-direction="a"] .header h1{font-size:27px;line-height:1.25;font-weight:700;letter-spacing:-.02em}
+html[data-huashu-direction="a"] .header h1 span{font-size:29px;letter-spacing:-.04em;margin-right:8px}
+html[data-huashu-direction="a"] .header .subtitle{margin-top:6px;font-size:12px;line-height:1.6;letter-spacing:0;color:var(--muted)}
+html[data-huashu-direction="a"] .theme-toggle{border-radius:10px;background:var(--paper);border-color:var(--control);color:var(--blue);box-shadow:none}
+html[data-huashu-direction="a"] .app .mode{
+  flex-basis:336px;width:336px;padding:4px;gap:4px;margin:0;
+  border:1px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:none;
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+html[data-huashu-direction="a"] .app .mode button{min-height:44px;border-radius:8px;color:var(--muted);font-size:14px;font-weight:600;letter-spacing:0;background:transparent;box-shadow:none}
+html[data-huashu-direction="a"] .app .mode button.active,
+html[data-huashu-direction="a"] .app .mode.glass-ready button.active{background:var(--blue);color:var(--paper);box-shadow:none}
+html[data-huashu-direction="a"][data-theme="dark"] .app .mode button.active{color:#15273b}
+html[data-huashu-direction="a"] .glass-cursor{display:none}
+html[data-huashu-direction="a"] :is(.panel,.group,.clinical-tool,.warning,.catalog-reference){border:1px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:none}
+html[data-huashu-direction="a"] .patient-panel{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,.8fr);gap:18px 28px;padding:23px 26px 26px}
+html[data-huashu-direction="a"] .patient-panel>.section-title{grid-column:1/-1;padding:0;border:0}
+html[data-huashu-direction="a"] .section-title h2{font-size:16px;font-weight:700;letter-spacing:0}
+html[data-huashu-direction="a"] .patient{grid-column:1;gap:12px}
+html[data-huashu-direction="a"] .field>span:first-child{font-size:12px;color:var(--muted);margin-bottom:8px}
+html[data-huashu-direction="a"] .app .field-box{height:52px;border:1px solid var(--control);border-radius:9px;background:var(--blue-faint);overflow:visible}
+html[data-huashu-direction="a"] .field-box input{padding:8px 0 8px 12px;height:50px;font-size:21px;font-weight:600}
+html[data-huashu-direction="a"] .field-box b{flex:0 0 30px;padding:0 6px 0 0;font-size:12px;line-height:1.3}
+html[data-huashu-direction="a"] .calc-weights{grid-column:2;align-self:stretch;align-items:center;gap:16px;padding:0 0 0 28px;border-color:var(--line);background:transparent;border-radius:0}
+html[data-huashu-direction="a"] .calc-weights span{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .calc-weights strong{font-size:21px;margin-top:9px;line-height:1.4;letter-spacing:-.02em;color:var(--ink);white-space:normal;overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .patient-reference{grid-column:3;align-self:stretch;align-content:center;display:grid;grid-template-columns:1fr;gap:10px;padding:0 0 0 28px;border:0;border-left:1px solid var(--line);font-size:12px}
+html[data-huashu-direction="a"] .patient-reference>span{min-width:0;overflow-wrap:anywhere;font-size:12px;line-height:1.55}
+html[data-huashu-direction="a"] .patient-reference b{margin-left:10px;color:var(--ink);font-size:14px;font-weight:600}
+html[data-huashu-direction="a"] .clinical-tools{gap:12px;margin-top:12px}
+html[data-huashu-direction="a"] .clinical-tool{border-radius:10px;overflow:visible}
+html[data-huashu-direction="a"] .clinical-tool>summary{min-height:52px;padding:14px 20px;color:var(--ink);border-radius:10px;font-size:14px}
+html[data-huashu-direction="a"] .clinical-tool>summary strong{font-size:14px;font-weight:600}
+html[data-huashu-direction="a"] .clinical-tool>summary:after{color:var(--blue)}
+html[data-huashu-direction="a"] .tool-body{padding:22px;background:var(--blue-faint);border-color:var(--line);border-radius:0 0 10px 10px}
+html[data-huashu-direction="a"] .tool-field span{font-size:12px}
+html[data-huashu-direction="a"] :is(.tool-field input,.tool-field select){height:48px;font-size:16px;border-radius:9px;background:var(--paper);border-color:var(--control)}
+html[data-huashu-direction="a"] .app :is(.tool-result>div,.cp-capture-card){border:1px solid var(--line);border-radius:10px;background:var(--blue-soft);color:var(--ink)}
+html[data-huashu-direction="a"] .tool-result strong{font-size:28px;color:var(--ink);overflow-wrap:anywhere}
+html[data-huashu-direction="a"] :is(.tool-result span,.tool-result small,.cp-capture-score span,.cp-capture-score small){font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .tool-reference{border:1px solid var(--line);border-radius:10px;background:var(--paper);overflow:visible}
+html[data-huashu-direction="a"] .tool-reference>summary{min-height:48px;font-size:14px;color:var(--blue)}
+html[data-huashu-direction="a"] .tool-reference>summary:after{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] :is(.tool-reference-content,.tool-note,.cp-prognosis){font-size:14px;color:var(--muted);line-height:1.8}
+html[data-huashu-direction="a"] .tool-note{background:var(--caution-soft);color:var(--caution);border-radius:8px}
+html[data-huashu-direction="a"] :is(.score-table th,.score-table td){font-size:14px;border-color:var(--line)}
+html[data-huashu-direction="a"] .score-table th{background:var(--surface-muted);color:var(--ink)}
+html[data-huashu-direction="a"] .app .cp-choice-title{background:var(--surface-muted);color:var(--ink);font-size:14px;border-radius:8px}
+html[data-huashu-direction="a"] .app .cp-option{min-height:52px;border-color:var(--line)}
+html[data-huashu-direction="a"] .app .cp-option span{font-size:14px}
+html[data-huashu-direction="a"] .cp-option:after{background:var(--paper);border-color:var(--control)}
+html[data-huashu-direction="a"] .app .cp-option.selected{background:var(--selection-fill);color:var(--ink)}
+html[data-huashu-direction="a"] .cp-option.selected:after{border-color:var(--blue)}
+html[data-huashu-direction="a"] .cp-capture-head{font-size:14px;color:var(--ink)}
+html[data-huashu-direction="a"] .app .cp-capture-score>div{background:var(--paper);color:var(--ink);border-radius:8px}
+html[data-huashu-direction="a"] .cp-screenshot-tip{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .cp-reset{min-height:44px;font-size:14px;background:var(--paper);color:var(--blue);border:1px solid var(--control);border-radius:8px}
+html[data-huashu-direction="a"] .workbench{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px;margin-top:32px;align-items:start}
+html[data-huashu-direction="a"] .heading{margin-bottom:16px;gap:16px;min-height:31px}
+html[data-huashu-direction="a"] .heading h2{font-size:22px;color:var(--ink);font-weight:700;letter-spacing:-.02em}
+html[data-huashu-direction="a"] .heading:after{background:var(--line)}
+html[data-huashu-direction="a"] .group{border-radius:12px;margin-top:14px;overflow:visible}
+html[data-huashu-direction="a"] .app .group-head{min-height:58px;padding:15px 42px 15px 22px;background:var(--paper);color:var(--ink);border-radius:12px}
+html[data-huashu-direction="a"] .app .group-head[aria-expanded="true"]{background:var(--surface-muted);border-radius:12px 12px 0 0}
+html[data-huashu-direction="a"] .group-head .group-name{font-size:16px;font-weight:650}
+html[data-huashu-direction="a"] .group-head .group-meta{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .group-head:after{border-color:var(--muted)}
+html[data-huashu-direction="a"] .group-body{border-color:var(--line)}
+html[data-huashu-direction="a"] .app .dose-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,.9fr);gap:22px;padding:23px 22px;border-color:var(--line);background:var(--paper);transition:none}
+html[data-huashu-direction="a"] .app .dose-row:last-child{border-radius:0 0 12px 12px}
+html[data-huashu-direction="a"] .app .dose-copy{padding:0}
+html[data-huashu-direction="a"] .app .dose-copy strong{color:var(--ink);font-size:16px;line-height:1.65;font-weight:600;overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .app .dose-copy small{font-size:12px;line-height:1.75;margin-top:5px;color:var(--muted);overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .app .dose-row.active-dose,
+html[data-huashu-direction="a"] .app .dose-row:focus-within{background:var(--selection-fill)}
+html[data-huashu-direction="a"] .app .dose-row.active-dose .dose-copy strong{color:var(--deep)}
+html[data-huashu-direction="a"] .app .dose-row.active-dose .dose-copy strong:before{display:none}
+html[data-huashu-direction="a"] :is(.risk-badge,.external-badge){font-size:12px;margin:3px 0 0 6px;padding:1px 5px;border-radius:4px;vertical-align:1px;white-space:normal;line-height:1.5}
+html[data-huashu-direction="a"] :is(.risk-a,.risk-b){background:var(--orange-soft);color:var(--orange-ink)}
+html[data-huashu-direction="a"] .external-badge{background:var(--surface-muted);color:var(--muted)}
+html[data-huashu-direction="a"] .app .stepper{grid-template-columns:46px minmax(0,1fr) 46px;height:50px;border:1px solid var(--control);border-radius:9px;background:var(--paper);overflow:visible}
+html[data-huashu-direction="a"] .app .stepper button{min-height:48px;height:48px;line-height:48px;font-size:22px;font-weight:400;background:var(--blue-faint);color:var(--blue);border-color:var(--line);border-radius:8px 0 0 8px}
+html[data-huashu-direction="a"] .app .stepper button:last-child{border-radius:0 8px 8px 0;background:var(--blue-soft);color:var(--blue);border-color:var(--line)}
+html[data-huashu-direction="a"] .app .stepper label{height:48px;padding:0 10px;gap:6px}
+html[data-huashu-direction="a"] .app .stepper input{height:46px;font-size:20px;font-weight:600;letter-spacing:-.02em}
+html[data-huashu-direction="a"] .app .stepper label span{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .app .quick{gap:6px;margin-top:8px}
+html[data-huashu-direction="a"] .app .quick button{min-height:44px;padding:8px 2px;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--muted);font-size:12px;font-weight:500;overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .app .quick button:nth-child(n+3){background:var(--blue-faint);color:var(--blue);border-color:var(--line)}
+html[data-huashu-direction="a"] .app .status{margin-top:8px;font-size:12px;color:var(--muted);line-height:1.7;text-align:right;overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .restore-auto{min-height:44px;font-size:12px;color:var(--blue);border:1px solid var(--control);background:var(--paper);border-radius:7px}
+html[data-huashu-direction="a"] .copy-button{border:1px solid var(--blue);border-radius:8px;background:var(--blue);color:var(--paper);font-size:14px;min-height:44px}
+html[data-huashu-direction="a"][data-theme="dark"] .copy-button{color:#15273b}
+html[data-huashu-direction="a"] .copy-state{font-size:12px;color:var(--blue)}
+html[data-huashu-direction="a"] .report-text{font-size:14px;background:var(--blue-faint);border:1px solid var(--control);border-radius:9px;color:var(--ink)}
+html[data-huashu-direction="a"] .formula-wrap{margin-top:26px}
+html[data-huashu-direction="a"] :is(.formula-button,.collapsible-panel>summary){min-height:56px;font-size:14px;color:var(--ink);border-radius:10px}
+html[data-huashu-direction="a"] .formula-button{background:var(--paper);border:1px solid var(--line)}
+html[data-huashu-direction="a"] .formula-button.active{background:var(--blue-soft);border-color:var(--control);color:var(--deep)}
+html[data-huashu-direction="a"] .formula-workbench{padding:24px;border:1px solid var(--line);border-radius:12px;background:var(--surface-muted)}
+html[data-huashu-direction="a"] .formula-intro{gap:24px}
+html[data-huashu-direction="a"] .formula-intro h2{font-size:20px;line-height:1.5;color:var(--ink)}
+html[data-huashu-direction="a"] .section-kicker{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .modified-badge{font-size:12px;border-radius:6px;background:var(--blue-soft);color:var(--deep)}
+html[data-huashu-direction="a"] .modified-badge.active{background:var(--orange-soft);color:var(--orange-ink)}
+html[data-huashu-direction="a"] .reset-all{min-height:44px;font-size:12px;color:var(--blue)}
+html[data-huashu-direction="a"] :is(.formula-card,.formula-card-head){background:var(--paper);border-color:var(--line);color:var(--ink);border-radius:10px}
+html[data-huashu-direction="a"] .formula-card{overflow:visible}
+html[data-huashu-direction="a"] .formula-card-head{min-height:64px}
+html[data-huashu-direction="a"] .formula-card-head strong{font-size:14px}
+html[data-huashu-direction="a"] :is(.formula-card-head small,.formula-card-head>span:last-child){font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] :is(.formula-card-body,.formula-row,.parameter-row){border-color:var(--line)}
+html[data-huashu-direction="a"] .formula-row strong,
+html[data-huashu-direction="a"] .parameter-row>span strong{font-size:14px;color:var(--ink)}
+html[data-huashu-direction="a"] .formula-row small,
+html[data-huashu-direction="a"] .parameter-row>span small{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .formula-row code{font-size:14px;color:var(--ink);overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .parameter-row.modified{background:var(--orange-soft)}
+html[data-huashu-direction="a"] .parameter-editor input{min-height:46px;background:var(--blue-faint);border:1px solid var(--control);border-radius:8px;font-size:16px;color:var(--ink)}
+html[data-huashu-direction="a"] .parameter-editor b{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .parameter-editor button{min-height:44px;min-width:48px;font-size:12px;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--blue)}
+html[data-huashu-direction="a"] .catalog-reference{border-radius:10px}
+html[data-huashu-direction="a"] .catalog-reference>summary:after{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .catalog-ref-item{padding:18px 4px;border-color:var(--line)}
+html[data-huashu-direction="a"] .catalog-ref-item strong{font-size:14px;color:var(--ink)}
+html[data-huashu-direction="a"] .catalog-ref-item span{font-size:14px;color:var(--muted);line-height:1.85}
+html[data-huashu-direction="a"] .catalog-ref-item small{font-size:12px;color:var(--muted);line-height:1.9}
+html[data-huashu-direction="a"] footer{margin-top:32px;padding-top:20px;border-color:var(--line);font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] :is(.theme-toggle,.copy-button,.mobile-status button,.sheet-heading button){transition:none;transform:none}
+html[data-huashu-direction="a"] :is(.theme-toggle,.copy-button,.mobile-status button,.sheet-heading button):active{transform:none}
+@media(min-width:1001px) and (max-width:1199px){
+  html[data-huashu-direction="a"] .app{padding-left:28px;padding-right:28px}
+  html[data-huashu-direction="a"] .workbench{gap:24px}
+  html[data-huashu-direction="a"] .patient-panel{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px 22px}
+  html[data-huashu-direction="a"] .patient-reference{grid-column:1/-1;display:flex;gap:12px 28px;padding:14px 0 0;border-left:0;border-top:1px solid var(--line)}
+  html[data-huashu-direction="a"] .app .dose-row{grid-template-columns:1fr;gap:15px}
+}
+@media(max-width:1000px){
+  html[data-huashu-direction="a"] .app{max-width:920px;padding:26px 24px 40px}
+  html[data-huashu-direction="a"] .topbar{display:block;margin-bottom:22px}
+  html[data-huashu-direction="a"] .app .mode{width:100%;margin-top:20px}
+  html[data-huashu-direction="a"] .patient-panel{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px 24px;padding:22px}
+  html[data-huashu-direction="a"] .patient-reference{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px 28px;padding:14px 0 0;border-left:0;border-top:1px solid var(--line)}
+  html[data-huashu-direction="a"] .calc-weights{padding-left:24px;gap:12px}
+  html[data-huashu-direction="a"] .workbench{grid-template-columns:minmax(0,1fr);gap:30px;margin-top:28px}
+  html[data-huashu-direction="a"] .app .dose-row{grid-template-columns:minmax(0,1fr) minmax(250px,.9fr)}
+}
+/* Keep the existing mobile category flow and selected prescription drawer. */
+@media screen and (max-width:680px),screen and (max-width:1000px) and (pointer:coarse){
+  html[data-huashu-direction="a"].mobile-enhanced{--mobile-status-height:104px;scroll-padding-top:calc(76px + env(safe-area-inset-top));scroll-padding-bottom:calc(var(--mobile-status-height) + 24px + env(safe-area-inset-bottom))}
+  html[data-huashu-direction="a"] body{font-size:16px}
+  html[data-huashu-direction="a"] .app{padding:22px 16px calc(var(--mobile-status-height) + 32px + env(safe-area-inset-bottom))}
+  html[data-huashu-direction="a"] .header{gap:14px}
+  html[data-huashu-direction="a"] .header h1{font-size:23px}
+  html[data-huashu-direction="a"] .header h1 span{font-size:26px;margin-right:6px}
+  html[data-huashu-direction="a"] .header .subtitle{font-size:12px}
+  html[data-huashu-direction="a"] .brand{gap:10px}
+  html[data-huashu-direction="a"] .brand-icon{width:40px;height:40px;flex-basis:40px}
+  html[data-huashu-direction="a"] .topbar{margin-bottom:20px}
+  html[data-huashu-direction="a"] .app .mode{margin-top:20px}
+  html[data-huashu-direction="a"] .patient-panel{grid-template-columns:minmax(0,1fr);gap:14px;padding:18px 16px}
+  html[data-huashu-direction="a"] .patient-panel>.section-title{grid-column:1}
+  html[data-huashu-direction="a"] .patient{grid-column:1;gap:10px}
+  html[data-huashu-direction="a"] .field-box input{font-size:20px;padding-left:10px}
+  html[data-huashu-direction="a"] .field-box b{flex-basis:26px;padding-right:5px;font-size:12px}
+  html[data-huashu-direction="a"] .calc-weights{grid-column:1;gap:14px;padding:14px 0 0;border:0;border-top:1px solid var(--line)}
+  html[data-huashu-direction="a"] .calc-weights strong{font-size:19px;margin-top:5px}
+  html[data-huashu-direction="a"] .patient-reference{grid-column:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding-top:14px}
+  html[data-huashu-direction="a"] .patient-reference b{display:block;margin:5px 0 0;font-size:14px;line-height:1.6}
+  html[data-huashu-direction="a"] .clinical-tools{grid-template-columns:1fr;gap:10px;margin-top:10px}
+  html[data-huashu-direction="a"] .clinical-tool>summary{padding:14px 16px}
+  html[data-huashu-direction="a"] .tool-body{padding:16px}
+  html[data-huashu-direction="a"] .tool-grid{grid-template-columns:1fr 1fr;gap:14px}
+  html[data-huashu-direction="a"] .tool-grid>.tool-field:last-child{grid-column:1/-1}
+  html[data-huashu-direction="a"] .tool-result{grid-template-columns:1fr}
+  html[data-huashu-direction="a"] :is(.tool-reference-content,.tool-note,.cp-prognosis){font-size:16px}
+  html[data-huashu-direction="a"] .app .cp-option span{font-size:16px}
+  html[data-huashu-direction="a"] :is(.score-table th,.score-table td){font-size:12px}
+  html[data-huashu-direction="a"] .workbench{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:26px}
+  html[data-huashu-direction="a"] .heading h2{font-size:21px}
+  html[data-huashu-direction="a"].mobile-enhanced .prescription-pane>.heading{margin-bottom:8px}
+  html[data-huashu-direction="a"] .app .mobile-category-bar{
+    top:0;top:env(safe-area-inset-top);padding:7px;gap:3px;margin:0 0 16px;
+    border:1px solid var(--line);border-radius:11px;background:var(--paper);box-shadow:none;
+    backdrop-filter:none;-webkit-backdrop-filter:none;
+  }
+  html[data-huashu-direction="a"] .app .mobile-category-bar button{min-height:46px;padding:10px 2px;border:0!important;border-radius:7px;background:transparent!important;color:var(--muted);font-size:13px;font-weight:600;box-shadow:none;letter-spacing:0}
+  html[data-huashu-direction="a"] .app .mobile-category-bar button[aria-selected="true"],
+html[data-huashu-direction="a"] .app .mobile-category-bar.glass-ready button[aria-selected="true"]{background:var(--blue)!important;color:var(--paper);box-shadow:none}
+  html[data-huashu-direction="a"][data-theme="dark"] .app .mobile-category-bar button[aria-selected="true"]{color:#15273b}
+  html[data-huashu-direction="a"].mobile-enhanced #groups{margin-top:0}
+  html[data-huashu-direction="a"].mobile-enhanced #groups .group{margin-top:0;border-radius:12px}
+  html[data-huashu-direction="a"] .app .dose-row{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:22px 18px;scroll-margin-top:84px}
+  html[data-huashu-direction="a"] .app .dose-copy{padding:0}
+  html[data-huashu-direction="a"] .app .dose-copy strong{font-size:16px;line-height:1.7}
+  html[data-huashu-direction="a"] .app .dose-copy small{font-size:12px;line-height:1.8}
+  html[data-huashu-direction="a"] .app .dose-row .stepper{grid-template-columns:48px minmax(0,1fr) 48px;height:52px;border-radius:9px}
+  html[data-huashu-direction="a"] .app .stepper button,
+html[data-huashu-direction="a"] .app .stepper label{height:50px;line-height:50px}
+  html[data-huashu-direction="a"] .app .stepper input{height:48px;font-size:21px}
+  html[data-huashu-direction="a"] .app .quick{gap:7px;margin-top:9px}
+  html[data-huashu-direction="a"] .app .quick button{min-height:46px;font-size:12px}
+  html[data-huashu-direction="a"] .app .status{font-size:12px;min-height:20px;text-align:left}
+  html[data-huashu-direction="a"].mobile-enhanced .back-to-cart{margin-left:auto;min-height:44px;border-radius:8px;background:var(--paper);border-color:var(--control);color:var(--blue);font-size:12px}
+  html[data-huashu-direction="a"] .mobile-status-host{width:calc(100% - 20px);bottom:calc(8px + env(safe-area-inset-bottom));border:1px solid var(--control);border-radius:13px;background:var(--paper);box-shadow:0 4px 22px #10233422;backdrop-filter:none;-webkit-backdrop-filter:none}
+  html[data-huashu-direction="a"] .mobile-status{grid-template-columns:repeat(3,minmax(0,1fr)) 68px;gap:8px;padding:13px 10px;background:var(--paper);border-radius:13px;color:var(--ink)}
+  html[data-huashu-direction="a"] .mobile-status>div{padding-left:0;border-left:0}
+  html[data-huashu-direction="a"] .mobile-status :is(span,small){font-size:12px;line-height:1.45;letter-spacing:0;color:var(--muted);overflow-wrap:anywhere}
+  html[data-huashu-direction="a"] .mobile-status strong{font-size:20px;margin:4px 0;color:var(--ink);font-weight:650;letter-spacing:-.035em;overflow-wrap:anywhere}
+  html[data-huashu-direction="a"] .mobile-status button{min-height:62px;padding:8px 3px;gap:6px;border:1px solid var(--blue);border-radius:9px;background:var(--blue);color:var(--paper);box-shadow:none;font-size:12px}
+  html[data-huashu-direction="a"] .mobile-status button span{font-size:12px;color:inherit}
+  html[data-huashu-direction="a"][data-theme="dark"] .mobile-status button{color:#15273b}
+  html[data-huashu-direction="a"] .mobile-status [data-alert="true"] :is(strong,span){color:var(--danger)}
+  html[data-huashu-direction="a"] .selected-sheet[open]{border:1px solid var(--control);border-radius:16px;background:var(--paper);box-shadow:0 12px 45px #0004;backdrop-filter:none;-webkit-backdrop-filter:none}
+  html[data-huashu-direction="a"] .sheet-heading{min-height:64px;padding:10px 18px;border-color:var(--line)}
+  html[data-huashu-direction="a"] .sheet-heading h2{font-size:18px;color:var(--ink)}
+  html[data-huashu-direction="a"] .sheet-heading button{min-height:44px;border-radius:8px;background:var(--blue-soft);color:var(--blue);font-size:14px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-items{padding:0 18px;scrollbar-gutter:auto}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line{grid-template-columns:minmax(0,1fr);gap:13px;padding:18px 0;border-color:var(--line)}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .dose-copy{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 8px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .dose-copy strong{grid-column:1;grid-row:1;font-size:16px;color:var(--ink)}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .dose-copy small{grid-column:1;grid-row:2;font-size:12px;max-width:none;display:block;color:var(--muted);margin:0}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .cart-remove{grid-column:2;grid-row:1/3;align-self:start;min-height:44px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .cart-auto{grid-column:2;grid-row:3}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper{width:100%;grid-template-columns:48px minmax(0,1fr) 48px;height:52px;background:var(--paper);border-color:var(--control);border-radius:9px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper :is(button,label){height:50px;line-height:50px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper button{font-size:22px;background:var(--blue-faint);color:var(--blue);border-color:var(--line)}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper button:last-child{background:var(--blue-soft)}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper label{padding:0 12px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper input{height:48px;font-size:21px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper label span{font-size:12px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line :is(.risk-badge,.external-badge){font-size:12px}
+  html[data-huashu-direction="a"] :is(.cart-remove,.cart-auto){min-height:44px;min-width:44px;font-size:12px;color:var(--blue)}
+  html[data-huashu-direction="a"] .cart-empty:not([hidden]){font-size:14px;color:var(--muted)}
+  html[data-huashu-direction="a"] .sheet-result{min-height:48px;font-size:14px;background:var(--paper);color:var(--blue);border-color:var(--line)}
+  html[data-huashu-direction="a"] #sheetStatusSlot{border-color:var(--line)}
+  html[data-huashu-direction="a"][data-sheet-compact="true"] .mobile-status{padding-top:8px;padding-bottom:8px}
+  html[data-huashu-direction="a"] .formula-workbench{padding:16px}
+  html[data-huashu-direction="a"] .formula-intro{display:block}
+  html[data-huashu-direction="a"] .formula-intro h2{font-size:18px}
+  html[data-huashu-direction="a"] .formula-intro>div+div{margin-top:12px}
+  html[data-huashu-direction="a"] .reset-all{margin-left:0}
+  html[data-huashu-direction="a"] :is(.formula-row,.parameter-row){display:block;padding:16px 14px}
+  html[data-huashu-direction="a"] .formula-row code{display:block;margin-top:8px}
+  html[data-huashu-direction="a"] .parameter-editor{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,auto) 48px;gap:8px;margin-top:12px}
+  html[data-huashu-direction="a"] .parameter-editor input{width:100%;min-width:0;font-size:16px}
+  html[data-huashu-direction="a"] .catalog-ref-item span{font-size:16px}
+}
+@media(max-width:360px){
+  html[data-huashu-direction="a"] .app{padding-left:12px;padding-right:12px}
+  html[data-huashu-direction="a"] .brand-icon{width:35px;height:35px;flex-basis:35px;border-radius:10px}
+  html[data-huashu-direction="a"] .brand{gap:8px}
+  html[data-huashu-direction="a"] .header{gap:8px}
+  html[data-huashu-direction="a"] .header h1{font-size:21px}
+  html[data-huashu-direction="a"] .header h1 span{font-size:24px;margin-right:5px}
+  html[data-huashu-direction="a"] .header .subtitle{font-size:12px}
+  html[data-huashu-direction="a"] .patient-panel{padding:18px 14px}
+  html[data-huashu-direction="a"] .patient{gap:8px}
+  html[data-huashu-direction="a"] .field-box input{font-size:18px;padding-left:7px}
+  html[data-huashu-direction="a"] .field-box b{flex-basis:23px;padding-right:4px}
+  html[data-huashu-direction="a"] .calc-weights{gap:8px}
+  html[data-huashu-direction="a"] .calc-weights strong{font-size:18px}
+  html[data-huashu-direction="a"] .app .mobile-category-bar{padding:5px;gap:2px}
+  html[data-huashu-direction="a"] .app .mobile-category-bar button{font-size:12px}
+  html[data-huashu-direction="a"] .app .dose-row{padding:21px 14px}
+  html[data-huashu-direction="a"] .app .quick{gap:5px}
+  html[data-huashu-direction="a"] .mobile-status{grid-template-columns:repeat(3,minmax(0,1fr)) 60px;gap:6px;padding:12px 8px}
+  html[data-huashu-direction="a"] .mobile-status strong{font-size:18px}
+  html[data-huashu-direction="a"] .mobile-status :is(span,small){font-size:12px}
+}
+@media(hover:hover) and (pointer:fine){
+  html[data-huashu-direction="a"] .app :is(.quick button,.group-head,.clinical-tool>summary,.formula-card-head):hover{background:var(--blue-soft);color:var(--ink)}
+  html[data-huashu-direction="a"] .app .mode button:not(.active):hover{background:var(--surface-muted)}
+}
+@media(prefers-reduced-transparency:reduce),(prefers-contrast:more){
+  html[data-huashu-direction="a"] :is(.mode,.mobile-category-bar,.mobile-status-host,.selected-sheet[open]){background:var(--paper)!important;border-color:var(--control)!important;box-shadow:none;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+}
+@media(forced-colors:active){
+  html[data-huashu-direction="a"] .app .mobile-category-bar button[aria-selected="true"],
+html[data-huashu-direction="a"] .app .mode button.active{background:Highlight!important;color:HighlightText!important;outline:1px solid Highlight}
+}
+@media print{
+  html[data-huashu-direction="a"]{--page:#fff;--paper:#fff;--ink:#000;--muted:#333;--deep:#000;--blue:#000;--surface-muted:#fff;--line:#aaa;--hairline:#ccc}
+  html[data-huashu-direction="a"] .app{max-width:none;padding:0}
+  html[data-huashu-direction="a"] .workbench{display:block}
+  html[data-huashu-direction="a"] :is(.mobile-status-host,.selected-sheet,.mobile-category-bar,.back-to-cart){display:none!important}
+}
+
+/* Round 1: compact reading hierarchy and coherent control geometry. */
+html[data-huashu-direction="a"] :is(.patient,.field,.field-box,.dose-copy,.dose-controls,.prescription-pane,.result-pane){min-width:0}
+html[data-huashu-direction="a"] .app .dose-controls{align-self:center}
+html[data-huashu-direction="a"] .app .field-box input{width:100%;min-width:0}
+html[data-huashu-direction="a"] .field-box b{align-self:center;white-space:nowrap;font-weight:500}
+html[data-huashu-direction="a"] .app .stepper label{min-width:0}
+html[data-huashu-direction="a"] .app .stepper label span{flex:0 0 auto;white-space:nowrap;font-weight:500}
+html[data-huashu-direction="a"] .app .stepper input{min-width:0;width:100%;font-variant-numeric:tabular-nums}
+@media screen and (max-width:680px),screen and (max-width:1000px) and (pointer:coarse){
+  html[data-huashu-direction="a"].mobile-enhanced #groups .group{overflow:hidden}
+  html[data-huashu-direction="a"] .app .dose-row{padding-top:18px;padding-bottom:18px;gap:12px}
+  html[data-huashu-direction="a"] .app .dose-row .stepper{height:52px}
+  html[data-huashu-direction="a"] .app .quick button{min-height:46px}
+  html[data-huashu-direction="a"] :is(.score-table th,.score-table td){font-size:14px;line-height:1.7}
+}
+
+/* Round 2: keyboard clarity, readable secondary content and print contrast. */
+html[data-huashu-direction="a"] :is(button,summary,a):focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+html[data-huashu-direction="a"] .app :is(.field-box,.stepper):focus-within{border-color:var(--blue);box-shadow:0 0 0 3px var(--focus-ring)}
+html[data-huashu-direction="a"] :is(.report-text,.formula-row code){line-height:1.75}
+html[data-huashu-direction="a"] .selected-sheet .cart-line .dose-copy{min-width:0}
+html[data-huashu-direction="a"] .selected-sheet .cart-line .dose-copy strong{overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .auto-rule-note{border-color:var(--line);border-radius:10px;background:var(--blue-soft);color:var(--ink)}
+html[data-huashu-direction="a"] .auto-rule-note strong{font-size:14px;color:var(--ink)}
+html[data-huashu-direction="a"] .auto-rule-note span{font-size:14px;color:var(--muted);line-height:1.75}
+@media screen and (max-width:680px),screen and (max-width:1000px) and (pointer:coarse){
+  html[data-huashu-direction="a"] .auto-rule-note span{font-size:16px}
+  html[data-huashu-direction="a"] .formula-row code{font-size:16px;overflow-wrap:anywhere}
+}
+@media(forced-colors:active){
+  html[data-huashu-direction="a"] :is(button,summary,a):focus-visible{outline-color:Highlight}
+  html[data-huashu-direction="a"] .app :is(.field-box,.stepper):focus-within{border-color:Highlight;box-shadow:none}
+}
+@media print{
+  html[data-huashu-direction="a"][data-theme]{
+    --page:#fff;--paper:#fff;--ink:#000;--muted:#333;--deep:#000;--blue:#000;
+    --blue-soft:#fff;--blue-faint:#fff;--surface-muted:#fff;--line:#999;--hairline:#ccc;
+    --control:#777;--orange:#555;--orange-ink:#222;--orange-soft:#fff;
+    --danger:#000;--danger-soft:#fff;--caution:#333;--caution-soft:#fff;--selection-fill:#fff;
+  }
+}
+
+/* Keep the chosen A appearance; reuse a small set of type roles across modules. */
+html[data-huashu-direction="a"]{--ui-title-size:24px;--ui-section-size:18px;--ui-subsection-size:16px;--ui-label-size:14px;--ui-note-size:12px;--ui-input-size:20px}
+html[data-huashu-direction="a"] body{font-variant-numeric:tabular-nums lining-nums}
+html[data-huashu-direction="a"] .app .header h1{font-size:var(--ui-title-size);font-weight:700;line-height:1.3;letter-spacing:-.02em}
+html[data-huashu-direction="a"] .app .header h1 span{font-size:inherit;font-weight:inherit;letter-spacing:inherit}
+html[data-huashu-direction="a"] .app :is(.section-title h2,.heading h2){font-size:var(--ui-section-size);font-weight:650;line-height:1.5}
+html[data-huashu-direction="a"] .app .prescription-pane>.heading{min-height:32px;margin-bottom:16px}
+html[data-huashu-direction="a"] .app :is(.group-name,.clinical-tool>summary strong){font-size:var(--ui-subsection-size);font-weight:600;line-height:1.5}
+html[data-huashu-direction="a"] .app :is(.mode button,.quick button,.reset-all,.formula-button){font-size:var(--ui-label-size)}
+html[data-huashu-direction="a"] .app :is(.field-box input,.stepper input){font-size:var(--ui-input-size);font-weight:600;letter-spacing:0}
+html[data-huashu-direction="a"] .app :is(.field-box b,.stepper label span,.status,.group-meta){font-size:var(--ui-note-size);line-height:1.5}
+html[data-huashu-direction="a"] .app .group-head{padding-top:14px;padding-bottom:14px}
+html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper input{font-size:var(--ui-input-size);font-weight:600;letter-spacing:0}
+@media screen and (max-width:680px),screen and (max-width:1000px) and (pointer:coarse){
+  html[data-huashu-direction="a"]{--ui-title-size:22px}
+  html[data-huashu-direction="a"].mobile-enhanced .app .prescription-pane>.heading{margin-bottom:8px}
+}
+@media print{
+  html[data-huashu-direction="a"]{--ui-title-size:22px}
+}

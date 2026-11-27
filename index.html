@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- saved from url=(0014)about:internet -->
-<html lang="zh-CN">
+<html lang="zh-CN" data-huashu-direction="a">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -1054,583 +1054,551 @@ body{font-size:.9375rem;letter-spacing:0;line-height:1.6}
 }
 
 </style>
-<style id="looseleaf-style">
-/* Looseleaf theme adaptation. MIT © 2026 Looseleaf contributors.
-   Full notice: LICENSE-Looseleaf.txt. Geometry and interactions remain local. */
-:root{
-  --ll-desk:#a8c8bb;--ll-paper:#f8f5ee;--ll-slip:#fbf8f1;--ll-pad:#f8f2de;
-  --ll-ink:#2a2420;--ll-muted:#4a433c;--ll-line:#787168;--ll-rule:#d0c8b9;
-  --ll-blue:#2c4f9e;--ll-yellow:#f7e38a;--ll-note-blue:#bcd8f0;--ll-note-green:#cfe6a8;
-  --ll-note-orange:#f7c08e;--ll-checked:#eaf0dc;--ll-white:#fffdf6;
-  --ll-green:#326342;--ll-green-soft:#e0eadc;--ll-red:#a63325;--ll-red-soft:#f9e3da;
-  --ll-caution:#765115;--ll-caution-soft:#f7edc7;--ll-focus-soft:#dbe5f5;
-  --ll-shadow:rgba(58,44,30,.16);--ll-scrim:rgba(42,36,32,.4);
-  --page:var(--ll-desk);--paper:var(--ll-paper);--ink:var(--ll-ink);--muted:var(--ll-muted);
-  --blue:var(--ll-blue);--deep:var(--ll-ink);--blue-soft:var(--ll-note-blue);--blue-faint:var(--ll-slip);
-  --orange:#b45d28;--orange-soft:var(--ll-note-orange);--orange-ink:var(--ll-ink);
-  --line:var(--ll-rule);--control:var(--ll-line);--hairline:var(--ll-rule);
-  --danger:var(--ll-red);--danger-soft:var(--ll-red-soft);--caution:var(--ll-caution);--caution-soft:var(--ll-caution-soft);
-  --chrome-muted:var(--ll-muted);--selection-fill:var(--ll-checked);--surface-muted:var(--ll-slip);
-  --energy-fill:var(--ll-yellow);--liquid-fill:var(--ll-note-blue);--macro-aa:var(--ll-note-orange);--macro-fat:var(--ll-note-green);
-  --glass-fill:var(--ll-paper);--glass-cursor:var(--ll-yellow);--glass-edge:var(--ll-line);
-  --glass-shadow:var(--ll-shadow);--sheet-fill:var(--ll-paper);--focus-ring:var(--ll-focus-soft);
-  --radius:8px;--radius-card:8px;--radius-control:7px;--radius-small:5px;
-  --ll-frame:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%3E%3Cpath%20d%3D%22M9%202.8%20C31%201.5%2082%203.1%20110%202.4%20Q117.8%202%20117.2%2011%20C118%2040%20116.8%2080%20117.5%20109%20Q118%20117%20109%20117.1%20C81%20118.1%2039%20116.9%2010%20117.5%20Q2.4%20117.9%202.7%20109%20C1.8%2080%203.1%2040%202.4%2011%20Q2%202.5%209%202.8%20Z%22%20fill%3D%22none%22%20stroke%3D%22%23787168%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");--ll-underline:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%227%22%20viewBox%3D%220%200%20100%207%22%3E%3Cpath%20d%3D%22M2%204%20Q24%201%2048%203%20T97%202.5%22%20fill%3D%22none%22%20stroke%3D%22%232c4f9e%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E");
-}
-:root[data-theme="dark"]{
-  --ll-desk:#1e2926;--ll-paper:#2b2c29;--ll-slip:#30312d;--ll-pad:#363427;
-  --ll-ink:#f1eadf;--ll-muted:#ccc2b4;--ll-line:#a59a88;--ll-rule:#56564c;
-  --ll-blue:#b0cbff;--ll-yellow:#4b4128;--ll-note-blue:#2d414f;--ll-note-green:#334632;
-  --ll-note-orange:#4d392b;--ll-checked:#343e2e;--ll-white:#252723;
-  --ll-green:#c3e6a9;--ll-green-soft:#334632;--ll-red:#ffc0b0;--ll-red-soft:#4b302b;
-  --ll-caution:#f2d796;--ll-caution-soft:#473d28;--ll-focus-soft:#384b67;
-  --ll-shadow:rgba(0,0,0,.3);--ll-scrim:rgba(0,0,0,.6);
-  --page:var(--ll-desk);--paper:var(--ll-paper);--ink:var(--ll-ink);--muted:var(--ll-muted);
-  --blue:var(--ll-blue);--deep:var(--ll-ink);--blue-soft:var(--ll-note-blue);--blue-faint:var(--ll-slip);
-  --orange:#efb584;--orange-soft:var(--ll-note-orange);--orange-ink:var(--ll-ink);
-  --line:var(--ll-rule);--control:var(--ll-line);--hairline:var(--ll-rule);
-  --danger:var(--ll-red);--danger-soft:var(--ll-red-soft);--caution:var(--ll-caution);--caution-soft:var(--ll-caution-soft);
-  --chrome-muted:var(--ll-muted);--selection-fill:var(--ll-checked);--surface-muted:var(--ll-slip);
-  --energy-fill:var(--ll-yellow);--liquid-fill:var(--ll-note-blue);--macro-aa:var(--ll-note-orange);--macro-fat:var(--ll-note-green);
-  --glass-fill:var(--ll-paper);--glass-cursor:var(--ll-yellow);--glass-edge:var(--ll-line);
-  --glass-shadow:var(--ll-shadow);--sheet-fill:var(--ll-paper);--focus-ring:var(--ll-focus-soft);
-  --ll-frame:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%3E%3Cpath%20d%3D%22M9%202.8%20C31%201.5%2082%203.1%20110%202.4%20Q117.8%202%20117.2%2011%20C118%2040%20116.8%2080%20117.5%20109%20Q118%20117%20109%20117.1%20C81%20118.1%2039%20116.9%2010%20117.5%20Q2.4%20117.9%202.7%20109%20C1.8%2080%203.1%2040%202.4%2011%20Q2%202.5%209%202.8%20Z%22%20fill%3D%22none%22%20stroke%3D%22%23a59a88%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");--ll-underline:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%227%22%20viewBox%3D%220%200%20100%207%22%3E%3Cpath%20d%3D%22M2%204%20Q24%201%2048%203%20T97%202.5%22%20fill%3D%22none%22%20stroke%3D%22%23b0cbff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E");
-}
-html[data-theme] body{
-  background:var(--ll-desk);color:var(--ll-ink);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-  font-size:.9375rem;line-height:1.6;letter-spacing:0;
-}
-html[data-theme] .app{max-width:1280px;padding-top:30px}
-html[data-theme] .app .topbar{margin-bottom:24px;gap:30px}
-html[data-theme] .app .header h1{font-size:1.625rem;line-height:1.3;font-weight:700;letter-spacing:-.02em;color:var(--ll-ink)}
-html[data-theme] .app .header h1 span{
-  font-size:2rem;font-weight:750;letter-spacing:-.045em;margin-right:10px;
-  padding:0 3px 5px;background:var(--ll-underline) left bottom/100% 7px no-repeat;
-}
-html[data-theme] .app .subtitle{color:var(--ll-muted);font-size:.75rem;line-height:1.5;margin-top:5px}
-html[data-theme] .app .brand-icon{border-radius:10px;box-shadow:1px 2px 0 var(--ll-shadow)}
-html[data-theme] .app .theme-toggle{border:1.3px solid var(--ll-line);border-radius:50%;background:var(--ll-paper);color:var(--ll-ink);box-shadow:1px 2px 0 var(--ll-shadow)}
-html[data-theme] .app .heading{gap:15px;margin-bottom:14px}
-html[data-theme] .app .heading h2{font-size:1.1875rem;font-weight:700;letter-spacing:.02em;color:var(--ll-ink)}
-html[data-theme] .app .heading:after{height:1px;background:var(--ll-line);opacity:.6}
-html[data-theme] .app .section-title{border-color:var(--ll-rule)}
-html[data-theme] .app .section-title h2{color:var(--ll-ink);font-size:1rem;letter-spacing:.015em;font-weight:650}
-html[data-theme] .app .panel,html[data-theme] .app .group,html[data-theme] .app .clinical-tool,html[data-theme] .app .warning,html[data-theme] .app .catalog-reference{
-  background:var(--ll-paper);color:var(--ll-ink);border:1.3px solid var(--ll-line);
-  border-radius:7px 9px 7px 8px / 8px 6px 9px 7px;
-  box-shadow:0 1px 1px var(--ll-shadow),0 5px 10px -7px var(--ll-shadow);
-}
-html[data-theme] .app .patient-panel,html[data-theme] .app .cards .card,html[data-theme] .app .summary{
-  border-image-source:var(--ll-frame);border-image-slice:12;border-image-width:9px;border-image-repeat:stretch;
-}
-html[data-theme] .app .patient-panel{padding:22px 24px;gap:17px 26px;background:var(--ll-slip)}
-html[data-theme] .app .patient-panel>.section-title{padding-bottom:10px;border-bottom:1px solid var(--ll-rule)}
-html[data-theme] .app .field>span:first-child{color:var(--ll-muted);font-size:.8125rem}
-html[data-theme] .app .field-box{border:1.2px solid var(--ll-line);border-radius:6px 8px 6px 7px;background:var(--ll-white);height:52px;min-height:52px;box-shadow:none}
-html[data-theme] .app .field-box input{color:var(--ll-blue);font-size:1.3125rem;letter-spacing:0;font-weight:650;height:100%;padding:0 0 0 12px}
-html[data-theme] .app .field-box b{color:var(--ll-muted);flex:0 0 2.6em;padding:0 7px 0 0;font-size:.75rem;line-height:1;text-align:right;white-space:nowrap}
-html[data-theme] .app .calc-weights{border-color:var(--ll-rule);background:transparent;border-radius:0}
-html[data-theme] .app .calc-weights span{color:var(--ll-muted)}
-html[data-theme] .app .calc-weights strong{color:var(--ll-ink);letter-spacing:0;font-weight:650}
-html[data-theme] .app .patient-reference{border-color:var(--ll-rule);padding-top:12px;color:var(--ll-muted)}
-html[data-theme] .app .patient-reference b{color:var(--ll-blue);font-weight:600}
 
-/* Paper index tabs: retain the existing measured, noninteractive indicator. */
-html[data-theme] .app .mode,html[data-theme] .app .mobile-category-bar{
-  background:var(--ll-paper);border:1.3px solid var(--ll-line);border-radius:7px 9px 6px 8px;
-  box-shadow:1px 3px 0 var(--ll-shadow);-webkit-backdrop-filter:none;backdrop-filter:none;
-}
-html[data-theme] .app .mode{padding:6px;gap:4px}
-html[data-theme] .app .mode button{color:var(--ll-muted);font-weight:600;border-radius:4px 6px 4px 5px;min-height:44px}
-html[data-theme] .app .mode button.active{color:var(--ll-ink);background:var(--ll-yellow);box-shadow:none}
-html[data-theme] .app .mode.glass-ready button.active{background:transparent}
-html[data-theme] .glass-cursor{background:var(--ll-yellow);border:1px solid var(--ll-line);border-radius:4px 6px 4px 5px;box-shadow:1px 1px 0 var(--ll-shadow)}
-html[data-theme] .app .mobile-category-bar button{color:var(--ll-muted);font-weight:600;border-radius:4px 6px 4px 5px}
-html[data-theme] .app .mobile-category-bar button[aria-selected="true"]{color:var(--ll-ink);background:var(--ll-yellow)!important;box-shadow:none}
-html[data-theme] .app .mobile-category-bar.glass-ready button[aria-selected="true"]{background:transparent!important}
 
-/* Ruled prescription list; no rotation, animated dose, or extra row badges. */
-html[data-theme] .app .group-head,html[data-theme] .app .group-head[aria-expanded="true"]{background:var(--ll-pad);color:var(--ll-ink)}
-html[data-theme] .app .group-head:after{border-color:var(--ll-muted)}
-html[data-theme] .app .group-body{border-color:var(--ll-rule)}
-html[data-theme] .app .dose-row{background:var(--ll-paper);border-color:var(--ll-rule);padding:18px;gap:18px}
-html[data-theme] .app .dose-row.active-dose,html[data-theme] .app .dose-row:focus-within{background:var(--ll-checked)}
-html[data-theme] .app .dose-copy strong{color:var(--ll-ink);font-size:.9375rem;font-weight:600;line-height:1.6}
-html[data-theme] .app .dose-copy small{color:var(--ll-muted);font-size:.75rem;line-height:1.65}
-html[data-theme] .app .dose-row.active-dose .dose-copy strong{color:var(--ll-green)}
-html[data-theme] .app .dose-row.active-dose .dose-copy strong:before{background:var(--ll-green);width:6px;height:6px;border-radius:2px;top:.5em}
-html[data-theme] .app .stepper,html[data-theme] .selected-sheet .stepper{
-  height:48px;grid-template-columns:46px minmax(0,1fr) 46px;border:1.2px solid var(--ll-line);border-radius:6px 8px 6px 7px;
-  background:var(--ll-white);box-shadow:none;
-}
-html[data-theme] .app .stepper button,html[data-theme] .selected-sheet .stepper button{height:46px;line-height:46px;color:var(--ll-muted);background:var(--ll-slip);border-color:var(--ll-rule);border-radius:0;font-size:1.375rem;font-weight:400}
-html[data-theme] .app .stepper button:last-child,html[data-theme] .selected-sheet .stepper button:last-child{background:var(--ll-note-blue);color:var(--ll-ink);border-color:var(--ll-rule)}
-html[data-theme] .app .stepper input,html[data-theme] .selected-sheet .stepper input{color:var(--ll-blue);font-size:1.1875rem;font-weight:650;letter-spacing:0}
-html[data-theme] .app .stepper label span,html[data-theme] .selected-sheet .stepper label span{color:var(--ll-muted);font-size:.75rem}
-html[data-theme] .app .dose-row.active-dose .stepper{border-color:var(--ll-green)}
-html[data-theme] .app .quick{gap:8px;margin-top:9px}
-html[data-theme] .app .quick button{background:var(--ll-slip);border:1px solid var(--ll-line);border-radius:4px 6px 4px 5px;color:var(--ll-muted);min-height:44px;font-size:.75rem;box-shadow:0 1px 0 var(--ll-shadow)}
-html[data-theme] .app .quick button:nth-child(n+3){background:var(--ll-note-blue);color:var(--ll-ink);border-color:var(--ll-line)}
-html[data-theme] .app .quick button:active,html[data-theme] .app .stepper button:active,html[data-theme] .selected-sheet .stepper button:active{background:var(--ll-checked);color:var(--ll-ink);transform:none;box-shadow:none}
-html[data-theme] .app .status{color:var(--ll-muted)}
-html[data-theme] .app .restore-auto{color:var(--ll-blue);background:var(--ll-slip);border-color:var(--ll-line);border-radius:5px}
-html[data-theme] .risk-a{color:var(--ll-red);background:var(--ll-red-soft)}
-html[data-theme] .risk-b{color:var(--ll-caution);background:var(--ll-caution-soft)}
-html[data-theme] .external-badge{color:var(--ll-muted);background:var(--ll-slip);border:1px solid var(--ll-rule)}
-
-/* A restrained paper record, with a yellow energy note as its visual anchor. */
-html[data-theme] .app .cards{gap:12px}
-html[data-theme] .app .cards .card{background:var(--ll-paper);color:var(--ll-ink);border:1.3px solid var(--ll-line);border-image:var(--ll-frame) 12 / 9px stretch;border-radius:7px 9px 6px 8px;box-shadow:0 2px 2px -1px var(--ll-shadow);padding:20px}
-html[data-theme] .app .cards .card>span{color:var(--ll-muted);font-size:.8125rem}
-html[data-theme] .app .cards .card strong{color:var(--ll-ink);font-weight:650;letter-spacing:-.035em}
-html[data-theme] .app .cards .card>small{color:var(--ll-muted);font-size:.75rem}
-html[data-theme] .app .cards .card.primary{background:var(--ll-yellow);border-color:var(--ll-line);color:var(--ll-ink);box-shadow:0 2px 1px -1px var(--ll-shadow),0 6px 8px -7px var(--ll-shadow);min-height:114px;padding:22px}
-html[data-theme] .app .cards .card.primary>span,html[data-theme] .app .cards .card.primary strong,html[data-theme] .app .cards .card.primary>small{color:var(--ll-ink)}
-html[data-theme] .app .cards>.card:nth-child(2){background:var(--ll-note-blue)}
-html[data-theme] .app .cards #osmCard{background:var(--ll-paper)}
-html[data-theme] .app .cards #osmCard.danger{background:var(--ll-red-soft);border-image:none;border-color:var(--ll-red)}
-html[data-theme] .app .cards #osmCard.danger strong,html[data-theme] .app .cards #osmCard.danger>span,html[data-theme] .app .cards #osmCard.danger>small{color:var(--ll-red)}
-html[data-theme] .app .times{gap:8px}
-html[data-theme] .app .times b{border-color:var(--ll-rule);padding:0 6px;gap:6px}
-html[data-theme] .app .times .time-value{color:var(--ll-ink);font-size:1.0625rem;font-weight:650;white-space:nowrap}
-html[data-theme] .app .times small{background:var(--ll-pad);color:var(--ll-muted);border-radius:3px;padding:4px 5px}
-html[data-theme] .app .summary{padding:20px;background:var(--ll-slip)}
-html[data-theme] .app .macro:not(.focus-macro)>div{border:1px solid var(--ll-rule);border-radius:5px 7px 4px 6px;background:var(--ll-note-blue);box-shadow:none}
-html[data-theme] .app .macro:not(.focus-macro)>div:nth-child(2){background:var(--ll-note-orange)}
-html[data-theme] .app .macro:not(.focus-macro)>div:nth-child(3){background:var(--ll-note-green)}
-html[data-theme] .app .macro span,html[data-theme] .app .macro em{color:var(--ll-muted)}
-html[data-theme] .app .macro b{color:var(--ll-ink);font-weight:650}
-html[data-theme] .app .focus-macro{border:0;padding-top:0;margin-top:9px;gap:9px}
-html[data-theme] .app .focus-macro>div,html[data-theme] .app .focus-macro>div:nth-child(n){background:var(--ll-paper);border:1px solid var(--ll-rule);border-radius:5px 6px 4px 6px;padding:12px 10px}
-html[data-theme] .app .warning article{border:0;border-radius:5px;box-shadow:none}
-html[data-theme] .app .warning .section-title h2{color:var(--ll-ink)}
-html[data-theme] .app .warning article.alert{background:var(--ll-red-soft);color:var(--ll-red)}
-html[data-theme] .app .warning article.caution{background:var(--ll-caution-soft);color:var(--ll-caution)}
-
-/* The same paper and ink system extends to clinical tools and parameter editing. */
-html[data-theme] .app .clinical-tool>summary:after{color:var(--ll-blue)}
-html[data-theme] .app .tool-body{background:var(--ll-slip);border-color:var(--ll-rule)}
-html[data-theme] .app .tool-field input,html[data-theme] .app .tool-field select,html[data-theme] .app .parameter-editor input{background:var(--ll-white);color:var(--ll-blue);border-color:var(--ll-line);border-radius:6px}
-html[data-theme] .app .tool-result>div,html[data-theme] .app .cp-capture-card{background:var(--ll-note-blue);border:1px solid var(--ll-line);border-radius:6px}
-html[data-theme] .app .tool-result strong{color:var(--ll-ink)}
-html[data-theme] .app .tool-result span,html[data-theme] .app .tool-result small,html[data-theme] .app .cp-prognosis{color:var(--ll-muted)}
-html[data-theme] .app .cp-capture-head{color:var(--ll-ink)}
-html[data-theme] .app .cp-capture-score>div{background:var(--ll-paper);border-radius:4px;color:var(--ll-ink)}
-html[data-theme] .app .cp-choice-title{background:var(--ll-pad);color:var(--ll-ink);border:1px solid var(--ll-rule);border-radius:4px}
-html[data-theme] .app .cp-option{color:var(--ll-ink);border-color:var(--ll-rule)}
-html[data-theme] .app .cp-option:after{background:var(--ll-white);border-color:var(--ll-line)}
-html[data-theme] .app .cp-option.selected{background:var(--ll-checked);color:var(--ll-green);border-radius:5px}
-html[data-theme] .app .cp-option.selected:after{border-color:var(--ll-green)}
-html[data-theme] .app .tool-reference{background:var(--ll-paper);border-color:var(--ll-rule);border-radius:6px}
-html[data-theme] .app .score-table th{background:var(--ll-pad);color:var(--ll-ink)}
-html[data-theme] .app .score-table td,html[data-theme] .app .score-table th{border-color:var(--ll-rule)}
-html[data-theme] .app .cp-reset,html[data-theme] .app .back-to-cart{background:var(--ll-paper);color:var(--ll-blue);border-color:var(--ll-line);border-radius:5px}
-html[data-theme] .app .collapsible-panel>summary{border-radius:6px;color:var(--ll-ink)}
-html[data-theme] .app .collapsible-panel>summary:after{color:var(--ll-muted)}
-html[data-theme] .app .metrics td{border-color:var(--ll-rule)}
-html[data-theme] .app .metrics td:nth-child(2){color:var(--ll-ink)}
-html[data-theme] .app .metrics tbody tr:nth-child(even){background:var(--ll-slip)}
-html[data-theme] .app .copy-button{background:var(--ll-note-blue);color:var(--ll-ink);border:1px solid var(--ll-line);border-radius:5px;box-shadow:1px 2px 0 var(--ll-shadow);min-height:44px}
-html[data-theme] .app .report-text{background:var(--ll-slip);color:var(--ll-ink);border-color:var(--ll-line);border-radius:6px}
-html[data-theme] .app .formula-button{background:var(--ll-paper);color:var(--ll-ink);border-color:var(--ll-line);border-radius:6px}
-html[data-theme] .app .formula-button.active{background:var(--ll-pad);color:var(--ll-ink);border-color:var(--ll-line)}
-html[data-theme] .app .formula-workbench{background:var(--ll-slip);border-color:var(--ll-line);border-radius:7px}
-html[data-theme] .app .formula-intro h2{color:var(--ll-ink)}
-html[data-theme] .app .formula-card,html[data-theme] .app .formula-card-head{background:var(--ll-paper);border-color:var(--ll-rule);color:var(--ll-ink);border-radius:5px}
-html[data-theme] .app .formula-card-body,html[data-theme] .app .formula-row,html[data-theme] .app .parameter-row{border-color:var(--ll-rule)}
-html[data-theme] .app .formula-row code{color:var(--ll-blue)}
-html[data-theme] .app .parameter-row.modified{background:var(--ll-pad)}
-html[data-theme] .app .parameter-editor button,html[data-theme] .app .modified-badge.active{background:var(--ll-note-orange);color:var(--ll-ink);border-radius:4px}
-html[data-theme] .app .modified-badge{background:var(--ll-pad);color:var(--ll-muted);border-radius:4px}
-html[data-theme] .app .catalog-ref-item{border-color:var(--ll-rule)}
-html[data-theme] .app footer{border-color:var(--ll-line);color:var(--ll-muted)}
-html[data-theme] input::placeholder,html[data-theme] textarea::placeholder{color:var(--ll-muted);opacity:1}
-html[data-theme] .app .field-box:focus-within,html[data-theme] .app .stepper:focus-within,html[data-theme] .selected-sheet .stepper:focus-within{border-color:var(--ll-blue);box-shadow:0 0 0 3px var(--ll-focus-soft)}
-html[data-theme] button:focus,html[data-theme] input:focus,html[data-theme] select:focus,html[data-theme] textarea:focus,html[data-theme] summary:focus,html[data-theme] .app .cp-option:focus-within{outline-color:var(--ll-blue)}
-html[data-theme] ::selection{background:var(--ll-yellow);color:var(--ll-ink)}
-
-/* Bottom paper strip and selected sheet: preserve positioning and WAAPI transforms. */
-html[data-theme] .mobile-status-host{
-  background:var(--ll-paper);border:1.3px solid var(--ll-line);border-radius:8px 10px 7px 9px;
-  box-shadow:0 2px 2px var(--ll-shadow),0 8px 20px -8px var(--ll-shadow);-webkit-backdrop-filter:none;backdrop-filter:none;
-}
-html[data-theme] .mobile-status{background:transparent;border-radius:0}
-html[data-theme] .mobile-status>div{border-color:var(--ll-rule)}
-html[data-theme] .mobile-status span,html[data-theme] .mobile-status small{color:var(--ll-muted)}
-html[data-theme] .mobile-status strong{color:var(--ll-ink);letter-spacing:-.02em}
-html[data-theme] .mobile-status button{background:var(--ll-yellow);color:var(--ll-ink);border:1px solid var(--ll-line);border-radius:5px 7px 4px 6px;box-shadow:1px 1px 0 var(--ll-shadow)}
-html[data-theme] .mobile-status button span{color:inherit}
-html[data-theme] .mobile-status [data-alert="true"] span,html[data-theme] .mobile-status [data-alert="true"] strong{color:var(--ll-red)}
-html[data-theme] .selected-sheet[open]{background:var(--ll-paper);color:var(--ll-ink);border:1.3px solid var(--ll-line);border-radius:12px 14px 8px 10px;box-shadow:0 14px 36px var(--ll-shadow);-webkit-backdrop-filter:none;backdrop-filter:none}
-html[data-theme] .sheet-heading{background:var(--ll-pad);border-color:var(--ll-rule)}
-html[data-theme] .sheet-heading h2{color:var(--ll-ink)}
-html[data-theme] .sheet-heading button{background:var(--ll-paper);color:var(--ll-blue);border:1px solid var(--ll-line);border-radius:5px;box-shadow:none}
-html[data-theme] .selected-sheet .cart-line{border-color:var(--ll-rule)}
-html[data-theme] .selected-sheet .dose-copy strong{color:var(--ll-ink)}
-html[data-theme] .selected-sheet .dose-copy small{color:var(--ll-muted)}
-html[data-theme] .cart-remove,html[data-theme] .cart-auto{color:var(--ll-blue);border-radius:4px}
-html[data-theme] .sheet-result{background:var(--ll-slip);color:var(--ll-blue);border-color:var(--ll-rule)}
-html[data-theme] #sheetStatusSlot{border-color:var(--ll-rule)}
-html[data-theme] .selected-sheet::backdrop,html[data-theme] .sheet-scrim:not([hidden]){background:var(--ll-scrim);-webkit-backdrop-filter:none;backdrop-filter:none}
-
-@media(hover:hover) and (pointer:fine){
-  html[data-theme] .app .mode button:not(.active):hover,html[data-theme] .app .group-head:hover,
-  html[data-theme] .app .collapsible-panel>summary:hover,html[data-theme] .app .clinical-tool>summary:hover,
-  html[data-theme] .app .formula-card-head:hover{background:var(--ll-pad)}
-  html[data-theme] .app .quick button:hover,html[data-theme] .app .quick button:nth-child(n+3):hover{background:var(--ll-checked);border-color:var(--ll-blue);color:var(--ll-ink)}
-  html[data-theme] .cart-remove:hover,html[data-theme] .cart-auto:hover{background:var(--ll-note-blue)}
-}
-@media screen and (max-width:680px), screen and (max-width:1000px) and (pointer:coarse){
-  html[data-theme] .app{padding-top:20px;padding-left:14px;padding-right:14px}
-  html[data-theme] .app .topbar{margin-bottom:18px}
-  html[data-theme] .app .header h1{font-size:1.4375rem}
-  html[data-theme] .app .header h1 span{font-size:1.8125rem;margin-right:8px}
-  html[data-theme] .app .subtitle{font-size:.6875rem}
-  html[data-theme] .app .patient-panel{padding:18px 16px;gap:15px}
-  html[data-theme] .app .patient{gap:10px}
-  html[data-theme] .app .field-box{height:52px}
-  html[data-theme] .app .field-box input{font-size:1.25rem;padding-left:10px}
-  html[data-theme] .app .field-box b{font-size:.6875rem;flex-basis:2.4em;padding-right:6px}
-  html[data-theme] .app .calc-weights{padding:13px 0;border:0;border-top:1px solid var(--ll-rule);border-bottom:1px solid var(--ll-rule);background:transparent;border-radius:0}
-  html[data-theme] .app .patient-reference{border:0;padding-top:0}
-  html[data-theme] .app .mobile-category-bar{padding:5px;gap:3px;margin-bottom:12px;top:max(8px,env(safe-area-inset-top))}
-  html[data-theme] .app .mobile-category-bar button{font-size:.8125rem;min-height:44px;padding:9px 2px}
-  html[data-theme] .app #groups .group{border-radius:6px 8px 5px 7px}
-  html[data-theme] .app .dose-row{padding:17px 14px}
-  html[data-theme] .app .dose-row .stepper,html[data-theme] .selected-sheet .cart-line .stepper{grid-template-columns:48px minmax(0,1fr) 48px}
-  html[data-theme] .app .dose-copy{padding-bottom:10px}
-  html[data-theme] .app .dose-copy strong{font-size:.9375rem}
-  html[data-theme] .app .cards .card{padding:18px}
-  html[data-theme] .app .cards .card.primary{padding:20px}
-  html[data-theme] .app .summary{padding:17px}
-  html[data-theme] .app .focus-macro>div,html[data-theme] .app .focus-macro>div:nth-child(n){padding:11px 8px}
-  html[data-theme] .app .times b{flex-direction:column;gap:5px;padding:0 3px}
-  html[data-theme] .app .times small{font-size:.6875rem}
-  html[data-theme] .mobile-status-host{width:calc(100% - 20px)}
-  html[data-theme] .mobile-status strong{font-size:1.1875rem}
-  html[data-theme] .selected-sheet .cart-line .stepper input{font-size:1.1875rem}
-}
-@media(max-width:360px){
-  html[data-theme] .app .header h1{font-size:1.3125rem}
-  html[data-theme] .app .header h1 span{font-size:1.625rem}
-  html[data-theme] .app .subtitle{font-size:.625rem}
-  html[data-theme] .app .mobile-category-bar button{font-size:.75rem}
-  html[data-theme] .app .patient{gap:8px}
-  html[data-theme] .app .field-box input{padding-left:8px;font-size:1.125rem}
-  html[data-theme] .mobile-status strong{font-size:1.0625rem}
-}
-@media(display-mode:standalone){html[data-theme] .app{padding-top:calc(20px + env(safe-area-inset-top))}}
-@media(prefers-reduced-transparency:reduce),(prefers-contrast:more){
-  html[data-theme] .app .mode,html[data-theme] .app .mobile-category-bar,html[data-theme] .mobile-status-host,html[data-theme] .selected-sheet[open]{background:var(--ll-paper)!important;border-color:var(--ll-line)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
-  html[data-theme] .app .patient-panel,html[data-theme] .app .cards .card,html[data-theme] .app .summary{border-image:none;border-color:var(--ll-line)}
-}
-@media(forced-colors:active){
-  html[data-theme] body,html[data-theme] .app .panel,html[data-theme] .app .group,html[data-theme] .app .cards .card,
-  html[data-theme] .app .mode,html[data-theme] .app .mobile-category-bar,html[data-theme] .mobile-status-host,html[data-theme] .selected-sheet[open],html[data-theme] .glass-cursor{background:Canvas!important;color:CanvasText!important;border:1px solid ButtonText!important;border-image:none!important;box-shadow:none!important}
-  html[data-theme] .glass-cursor{outline:2px solid Highlight}
-  html[data-theme] .app .header h1 span{background:none}
-}
-@media print{
-  html[data-theme],html[data-theme] body{background:#fff;color:#000}
-  html[data-theme] .app{padding:0;max-width:none}
-  html[data-theme] .app .panel,html[data-theme] .app .cards .card,html[data-theme] .app .group{background:#fff;color:#000;border:1px solid #777;border-image:none;box-shadow:none}
-  html[data-theme] .mobile-status-host,html[data-theme] .selected-sheet{display:none!important}
-}
-
-</style>
-<style id="looseleaf-finish">
-/* Second pass: paper stocks, pencil rules and state ink, adapted from
-   Looseleaf Paper / Button / card-rule recipes. MIT notice accompanies HTML. */
-:root{
-  --ll-fibre:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22144%22%20height%3D%22144%22%20viewBox%3D%220%200%20144%20144%22%3E%3Cpath%20d%3D%22M59%20135l2%200%20M69%2035l2%200%20M96%2051l3%201%20M59%2065l3%200%20M117%2012l4%200%20M29%2069l4%20-1%20M93%2010l2%201%20M89%2054l3%200%20M81%2018l2%200%20M77%2049l3%20-1%20M57%2025l3%201%20M111%2073l2%200%20M62%2039l4%20-1%20M37%2067l4%200%20M123%20127l4%20-1%20M115%2042l3%201%20M33%2022l3%20-1%20M126%2039l2%201%20M128%2050l4%20-1%20M31%2025l4%201%20M43%2012l2%200%20M85%20121l3%20-1%20M113%2014l3%20-1%20M65%2017l2%201%20M27%2093l3%200%20M84%2093l4%201%20M121%2018l4%20-1%20M129%2042l4%20-1%20M60%2073l3%200%20M97%2095l4%200%20M43%2016l4%200%20M84%2047l4%20-1%22%20stroke%3D%22%232a2420%22%20stroke-opacity%3D%22.027%22%20stroke-width%3D%22.75%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E");--ll-pencil-rule:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22180%22%20height%3D%225%22%20viewBox%3D%220%200%20180%205%22%3E%3Cpath%20d%3D%22M1%202.6%20Q26%201.7%2053%202.4%20T106%202.2%20T150%202.5%20L179%202.1%22%20fill%3D%22none%22%20stroke%3D%22%23787168%22%20stroke-width%3D%221%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%2212%204%2017%203%2010%204%22%2F%3E%3C%2Fsvg%3E");
-  --ll-tick:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.4%208.3%20Q4.3%2010%206%2012%20L13.7%203.7%22%20fill%3D%22none%22%20stroke%3D%22%23326342%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");--ll-button-edge:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%3E%3Cpath%20d%3D%22M7%202.8%20C38%201.6%2081%203%20112%202.1%20Q117.6%202.1%20117.1%208%20C118%2038%20116.7%2080%20117.5%20111%20Q118%20117.7%20111%20117.1%20C82%20118%2040%20116.9%209%20117.4%20Q2.3%20118%202.6%20111%20C1.8%2080%203.2%2038%202.4%209%20Q2%202.6%207%202.8Z%22%20fill%3D%22none%22%20stroke%3D%22%23787168%22%20stroke-width%3D%221.55%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
-  --ll-vitamin-ink:#8b680e;--ll-pressed:var(--ll-checked);
-}
-:root[data-theme="dark"]{
-  --ll-fibre:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22144%22%20height%3D%22144%22%20viewBox%3D%220%200%20144%20144%22%3E%3Cpath%20d%3D%22M59%20135l2%200%20M69%2035l2%200%20M96%2051l3%201%20M59%2065l3%200%20M117%2012l4%200%20M29%2069l4%20-1%20M93%2010l2%201%20M89%2054l3%200%20M81%2018l2%200%20M77%2049l3%20-1%20M57%2025l3%201%20M111%2073l2%200%20M62%2039l4%20-1%20M37%2067l4%200%20M123%20127l4%20-1%20M115%2042l3%201%20M33%2022l3%20-1%20M126%2039l2%201%20M128%2050l4%20-1%20M31%2025l4%201%20M43%2012l2%200%20M85%20121l3%20-1%20M113%2014l3%20-1%20M65%2017l2%201%20M27%2093l3%200%20M84%2093l4%201%20M121%2018l4%20-1%20M129%2042l4%20-1%20M60%2073l3%200%20M97%2095l4%200%20M43%2016l4%200%20M84%2047l4%20-1%22%20stroke%3D%22%23f1eadf%22%20stroke-opacity%3D%22.03%22%20stroke-width%3D%22.75%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E");--ll-pencil-rule:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22180%22%20height%3D%225%22%20viewBox%3D%220%200%20180%205%22%3E%3Cpath%20d%3D%22M1%202.6%20Q26%201.7%2053%202.4%20T106%202.2%20T150%202.5%20L179%202.1%22%20fill%3D%22none%22%20stroke%3D%22%23a59a88%22%20stroke-width%3D%221%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%2212%204%2017%203%2010%204%22%2F%3E%3C%2Fsvg%3E");
-  --ll-tick:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.4%208.3%20Q4.3%2010%206%2012%20L13.7%203.7%22%20fill%3D%22none%22%20stroke%3D%22%23c3e6a9%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");--ll-button-edge:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%3E%3Cpath%20d%3D%22M7%202.8%20C38%201.6%2081%203%20112%202.1%20Q117.6%202.1%20117.1%208%20C118%2038%20116.7%2080%20117.5%20111%20Q118%20117.7%20111%20117.1%20C82%20118%2040%20116.9%209%20117.4%20Q2.3%20118%202.6%20111%20C1.8%2080%203.2%2038%202.4%209%20Q2%202.6%207%202.8Z%22%20fill%3D%22none%22%20stroke%3D%22%23a59a88%22%20stroke-width%3D%221.55%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
-  --ll-vitamin-ink:#e1c66c;--ll-pressed:var(--ll-checked);
-}
-
-/* Prebaked fibres: no filters, animated noise or extra document nodes. */
-html[data-theme] .app .patient-panel,html[data-theme] .app .summary,html[data-theme] .app .formula-workbench{
-  background-image:var(--ll-fibre);background-size:144px 144px;background-repeat:repeat;
-}
-html[data-theme] .app .patient-panel{
-  box-shadow:0 1px 1px var(--ll-shadow),2px 3px 0 -1px var(--ll-slip),2px 3px 0 0 var(--ll-rule),0 8px 14px -10px var(--ll-shadow);
-}
-html[data-theme] .app .heading:after{
-  height:5px;background:var(--ll-pencil-rule) left center/180px 5px repeat-x;opacity:.7;
-}
-html[data-theme] .app .section-title h2{font-weight:650;letter-spacing:.025em}
-html[data-theme] .app .group-head{letter-spacing:.01em}
-html[data-theme] .app .group-body{border-top-style:dashed}
-html[data-theme] .app .dose-row{border-bottom-style:dashed}
-html[data-theme] .app .dose-row .dose-copy{padding-left:20px}
-html[data-theme] .app .dose-row.active-dose .dose-copy strong:before{
-  width:13px;height:13px;top:.38em;border:0;border-radius:0;
-  background:var(--ll-tick) center/contain no-repeat;
-}
-html[data-theme] .app .dose-copy small{margin-top:5px;line-height:1.7}
-html[data-theme] .app .status{line-height:1.7}
-html[data-theme] .selected-sheet .cart-line{border-bottom-style:dashed}
-
-/* Native labels and touch boxes stay fixed; only the prepainted wash responds. */
-html[data-theme] .app .quick button,
-html[data-theme] .app .copy-button,
-html[data-theme] .app .restore-auto,
-html[data-theme] .app .back-to-cart,
-html[data-theme] .sheet-heading button,
-html[data-theme] .mobile-status button{
-  position:relative;isolation:isolate;transform:none;
-  transition:none;border-image-source:var(--ll-button-edge);border-image-slice:10;border-image-width:7px;border-image-repeat:stretch;
-  box-shadow:1px 2px 0 var(--ll-shadow);
-}
-html[data-theme] .app .quick button::before,
-html[data-theme] .app .copy-button::before,
-html[data-theme] .app .restore-auto::before,
-html[data-theme] .app .back-to-cart::before,
-html[data-theme] .sheet-heading button::before,
-html[data-theme] .mobile-status button::before{
-  content:"";position:absolute;inset:1px;z-index:-1;border-radius:4px 6px 3px 5px;
-  pointer-events:none;background:var(--ll-pressed);opacity:0;
-  transform:translate3d(0,0,0);transition:opacity 90ms cubic-bezier(0.23,1,0.32,1),transform 90ms cubic-bezier(0.23,1,0.32,1);
-}
-html[data-theme] .app .quick button:active,
-html[data-theme] .app .copy-button:active,
-html[data-theme] .app .restore-auto:active,
-html[data-theme] .app .back-to-cart:active,
-html[data-theme] .sheet-heading button:active,
-html[data-theme] .mobile-status button:active{transform:none;box-shadow:none}
-html[data-theme] .app .quick button:active::before,
-html[data-theme] .app .copy-button:active::before,
-html[data-theme] .app .restore-auto:active::before,
-html[data-theme] .app .back-to-cart:active::before,
-html[data-theme] .sheet-heading button:active::before,
-html[data-theme] .mobile-status button:active::before{opacity:1;transform:translate3d(0,1px,0);transition-duration:50ms}
-html[data-theme] button:disabled::before{opacity:0!important}
-html[data-theme] .app .stepper button{font-weight:450}
-
-/* Quiet index marks: color supplements the words, never replaces selection. */
-html[data-theme] .app .mobile-category-bar button{--tab-ink:var(--ll-blue)}
-html[data-theme] .app .mobile-category-bar button[data-dose-tab="amino"]{--tab-ink:var(--orange)}
-html[data-theme] .app .mobile-category-bar button[data-dose-tab="fat"]{--tab-ink:var(--ll-green)}
-html[data-theme] .app .mobile-category-bar button[data-dose-tab="electrolyte"]{--tab-ink:var(--ll-muted)}
-html[data-theme] .app .mobile-category-bar button[data-dose-tab="additive"]{--tab-ink:var(--ll-vitamin-ink)}
-html[data-theme] .app .mobile-category-bar button::after{
-  content:"";position:absolute;bottom:5px;left:calc(50% - 8px);width:16px;height:2px;
-  border-radius:2px 4px 2px 3px;background:var(--tab-ink);opacity:.6;pointer-events:none;
-}
-html[data-theme] .app .mobile-category-bar button[aria-selected="true"]{font-weight:700}
-html[data-theme] .app .mobile-category-bar button[aria-selected="true"]::after{opacity:1;background:var(--ll-blue);height:3px}
-html[data-theme] .app .mode button.active{font-weight:700}
-
-/* A single folded energy note; no repeated clips, tape, or rotating content. */
-html[data-theme] .app .cards .card.primary{position:relative;overflow:hidden}
-html[data-theme] .app .cards .card.primary::after{
-  content:"";position:absolute;right:5px;bottom:5px;width:15px;height:15px;pointer-events:none;
-  background:linear-gradient(135deg,transparent 45%,var(--ll-line) 47%,var(--ll-line) 50%,var(--ll-paper) 53%);
-  border-radius:0 0 3px 0;opacity:.75;
-}
-html[data-theme] .app .cards .card.primary>span{font-weight:600;letter-spacing:.015em}
-html[data-theme] .app .cards .card>small{font-variant-numeric:tabular-nums}
-html[data-theme] .app .macro:not(.focus-macro)>div{box-shadow:0 1px 0 var(--ll-shadow)}
-html[data-theme] .app .macro span{font-weight:550;letter-spacing:.01em}
-html[data-theme] .app .macro em{line-height:1.65}
-html[data-theme] .app .times small{min-width:2.4em;text-align:center;border:1px dashed var(--ll-rule)}
-html[data-theme] .app .metrics thead{border-bottom:1.3px solid var(--ll-line)}
-html[data-theme] .app .metrics th{font-weight:600;color:var(--ll-muted)}
-html[data-theme] .app .metrics td{border-top-style:dashed}
-html[data-theme] .app .formula-card-head strong{font-weight:650;line-height:1.6}
-html[data-theme] .sheet-heading{border-bottom-style:dashed}
-
-/* Compact glucose infusion time, with the unit kept on the same value line. */
-html[data-theme] .app .cards>.card:last-child{min-height:0;padding:12px 16px}
-html[data-theme] .app .cards>.card:last-child>span{font-size:.8125rem;line-height:1.45}
-html[data-theme] .app .cards>.card:last-child .times{margin-top:7px;gap:6px}
-html[data-theme] .app .cards>.card:last-child .times b{flex-direction:row;gap:4px;padding:0 4px}
-html[data-theme] .app .cards>.card:last-child .time-value{font-size:1rem;line-height:1.3;white-space:nowrap}
-html[data-theme] .app .cards>.card:last-child .times small{font-size:.625rem;padding:2px 4px}
-
-@media(hover:hover) and (pointer:fine){
-  html[data-theme] .app .quick button:hover::before,
-  html[data-theme] .app .copy-button:hover::before,
-  html[data-theme] .app .restore-auto:hover::before,
-  html[data-theme] .app .back-to-cart:hover::before,
-  html[data-theme] .sheet-heading button:hover::before,
-  html[data-theme] .mobile-status button:hover::before{opacity:.55}
-  html[data-theme] .app .quick button:active::before,
-  html[data-theme] .app .copy-button:active::before,
-  html[data-theme] .app .restore-auto:active::before,
-  html[data-theme] .app .back-to-cart:active::before,
-  html[data-theme] .sheet-heading button:active::before,
-  html[data-theme] .mobile-status button:active::before{opacity:1}
-}
-@media screen and (max-width:680px), screen and (max-width:1000px) and (pointer:coarse){
-  html[data-theme] .app .dose-row .dose-copy{padding-left:18px}
-  html[data-theme] .app .patient-panel{box-shadow:0 1px 1px var(--ll-shadow),1px 2px 0 -1px var(--ll-slip),1px 2px 0 0 var(--ll-rule)}
-  html[data-theme] .app .macro em{font-size:.6875rem}
-  html[data-theme] .app .dose-copy small{line-height:1.65}
-  html[data-theme] .app .cards>.card:last-child{padding:11px 14px}
-  html[data-theme] .app .cards>.card:last-child .times b{flex-direction:column;gap:3px}
-}
-@media(prefers-reduced-motion:reduce){
-  html[data-theme] button::before{transition:none!important;transform:none!important}
-}
-html[data-input-modality="keyboard"] button::before{transition:none!important;transform:none!important}
-@media(prefers-contrast:more),(prefers-reduced-transparency:reduce){
-  html[data-theme] .app .patient-panel,html[data-theme] .app .summary,html[data-theme] .app .formula-workbench{background-image:none;box-shadow:none}
-  html[data-theme] .app .quick button,html[data-theme] .app .copy-button,html[data-theme] .app .restore-auto,html[data-theme] .app .back-to-cart,html[data-theme] .sheet-heading button,html[data-theme] .mobile-status button{border-image:none}
-}
-@media(forced-colors:active){
-  html[data-theme] .app .patient-panel,html[data-theme] .app .summary,html[data-theme] .app .formula-workbench{background-image:none!important;box-shadow:none!important}
-  html[data-theme] .app .quick button,html[data-theme] .app .copy-button,html[data-theme] .app .restore-auto,html[data-theme] .app .back-to-cart,html[data-theme] .sheet-heading button,html[data-theme] .mobile-status button{border:1px solid ButtonText!important;border-image:none!important;box-shadow:none!important}
-  html[data-theme] .app .dose-row.active-dose .dose-copy strong:before{background:none;border:2px solid Highlight;border-radius:2px;width:7px;height:7px}
-  html[data-theme] .app .heading:after{height:1px;background:ButtonText}
-  html[data-theme] .app .mobile-category-bar button::after{background:ButtonText}
-  html[data-theme] .app .cards .card.primary::after,html[data-theme] button::before{display:none}
-}
-@media print{
-  html[data-theme] .app .patient-panel,html[data-theme] .app .summary,html[data-theme] .app .formula-workbench{background-image:none;box-shadow:none}
-  html[data-theme] .app .cards .card.primary::after{display:none}
-}
-
-</style>
 <style id="results-layout-style">
-/* Results only: a paper record with one overview and aligned data rows. */
-html[data-theme] .app .result-pane .result-layout{position:static;min-width:0}
-html[data-theme] .app .result-pane .result-layout>.heading{margin:0 0 14px}
-html[data-theme] .app .result-pane .result-overview,
-html[data-theme] .app .result-pane .result-nutrition,
-html[data-theme] .app .result-pane .warning,
-html[data-theme] .app .result-pane .result-utilities{
-  min-width:0;background:var(--ll-paper);color:var(--ll-ink);
-  border:1px solid var(--ll-line);border-image:none;border-radius:8px;box-shadow:none;
+/* One result system: equal overview values, compact timing, aligned comparison rows. */
+html[data-huashu-direction="a"] .app .result-pane{
+  min-width:0;color:var(--ink);font-variant-numeric:tabular-nums lining-nums;
+  --result-number-size:28px;--result-value-size:16px;--result-label-size:14px;--result-note-size:12px;
 }
-html[data-theme] .app .result-pane .result-overview{padding:22px 0 0}
-html[data-theme] .app .result-pane .overview-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:0 12px 20px}
-html[data-theme] .app .result-pane .overview-stats>article{
-  display:block;min-width:0;min-height:0;margin:0;padding:0 10px;border:0;border-left:1px solid var(--ll-rule);
-  border-image:none;border-radius:0;background:transparent;color:var(--ll-ink);box-shadow:none;text-align:left;
+html[data-huashu-direction="a"] .app .result-pane .result-layout{
+  position:static;display:flex;flex-direction:column;gap:0;margin:0;padding:22px;
+  border:1px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:none;min-width:0;
 }
-html[data-theme] .app .result-pane .overview-stats>article:first-child{border-left:0}
-html[data-theme] .app .result-pane .overview-stats h3{margin:0 0 12px;font-size:.8125rem;line-height:1.5;font-weight:550;color:var(--ll-muted)}
-html[data-theme] .app .result-pane .overview-stats [data-metric="energy"] h3{display:inline-block;background:var(--ll-yellow);padding:0 4px;margin-left:-4px;border-radius:2px;color:var(--ll-ink)}
-html[data-theme] .app .result-pane .overview-stats strong{display:block;margin:0;font-size:clamp(1.5rem,2.5vw,2rem);line-height:1.15;font-weight:650;letter-spacing:-.04em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;color:inherit}
-html[data-theme] .app .result-pane .overview-stats>article>small{display:block;margin-top:7px;padding:0;font-size:.6875rem;line-height:1.4;font-weight:400;color:var(--ll-muted);white-space:nowrap}
-html[data-theme] .app .result-pane .overview-stats #osmCard.danger{background:transparent;color:var(--ll-red);border-color:var(--ll-rule)}
-html[data-theme] .app .result-pane .overview-stats #osmCard.danger h3,
-html[data-theme] .app .result-pane .overview-stats #osmCard.danger>small{color:var(--ll-red)}
-html[data-theme] .app .result-pane .overview-stats #osmCard.danger h3{text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px}
-
-html[data-theme] .app .result-pane .infusion-strip{padding:14px 20px 16px;border-top:1px dashed var(--ll-rule);background:var(--ll-slip);border-radius:0 0 8px 8px}
-html[data-theme] .app .result-pane .result-subheading{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:5px 12px;min-width:0}
-html[data-theme] .app .result-pane .result-subheading h3{margin:0;font-size:.875rem;line-height:1.5;font-weight:650;color:var(--ll-ink)}
-html[data-theme] .app .result-pane .result-subheading>span{font-size:.6875rem;line-height:1.5;color:var(--ll-muted)}
-html[data-theme] .app .result-pane .infusion-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:11px}
-html[data-theme] .app .result-pane .infusion-values>div{min-width:0;text-align:center;border-left:1px solid var(--ll-rule)}
-html[data-theme] .app .result-pane .infusion-values>div:first-child{border-left:0}
-html[data-theme] .app .result-pane .infusion-rate{display:block;color:var(--ll-muted);font-size:.6875rem;line-height:1.4;font-variant-numeric:tabular-nums}
-html[data-theme] .app .result-pane .infusion-values strong{display:flex;align-items:baseline;justify-content:center;gap:4px;min-width:0;margin-top:4px;font-size:1.1875rem;line-height:1.25;font-weight:600;letter-spacing:-.02em;color:var(--ll-ink);font-variant-numeric:tabular-nums}
-html[data-theme] .app .result-pane .infusion-values i{min-width:0;font-style:normal;overflow-wrap:anywhere}
-html[data-theme] .app .result-pane .infusion-values small{flex:none;font-size:.6875rem;line-height:1;font-weight:400;letter-spacing:0;color:var(--ll-muted)}
-
-html[data-theme] .app .result-pane .result-nutrition{margin-top:14px;padding:18px 20px 0}
-html[data-theme] .app .result-pane .nutrition-table{table-layout:fixed;width:100%;margin:12px 0 0;border-collapse:collapse}
-html[data-theme] .app .result-pane .nutrition-table th,
-html[data-theme] .app .result-pane .nutrition-table td{padding:12px 0;border:0;border-top:1px solid var(--ll-rule);text-align:right;vertical-align:middle;line-height:1.5;overflow-wrap:anywhere}
-html[data-theme] .app .result-pane .nutrition-table thead th{padding:0 0 8px;border:0;font-size:.6875rem;font-weight:400;color:var(--ll-muted)}
-html[data-theme] .app .result-pane .nutrition-table th:first-child{width:38%;text-align:left}
-html[data-theme] .app .result-pane .nutrition-table th:nth-child(2){width:32%}
-html[data-theme] .app .result-pane .nutrition-table th:nth-child(3){width:30%}
-html[data-theme] .app .result-pane .nutrition-table tbody th{padding-right:7px;color:var(--ll-ink);font-size:.875rem;font-weight:500}
-html[data-theme] .app .result-pane .nutrition-table tbody td{padding-left:8px;color:var(--ll-ink);font-size:1.0625rem;font-weight:600;letter-spacing:-.015em;font-variant-numeric:tabular-nums}
-html[data-theme] .app .result-pane .nutrition-table tbody td:last-child{color:var(--ll-muted);font-size:.8125rem;font-weight:450}
-html[data-theme] .app .result-pane .nutrient-dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:8px;vertical-align:2px;background:var(--ll-blue)}
-html[data-theme] .app .result-pane [data-nutrient="amino"] .nutrient-dot{background:var(--orange)}
-html[data-theme] .app .result-pane [data-nutrient="fat"] .nutrient-dot{background:var(--ll-green)}
-html[data-theme] .app .result-pane .nutrition-focus{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:0;margin:4px -20px 0;padding:16px 12px 17px;border-top:1px dashed var(--ll-rule)}
-html[data-theme] .app .result-pane .nutrition-focus>div{min-width:0;padding:0 8px;border-left:1px solid var(--ll-rule)}
-html[data-theme] .app .result-pane .nutrition-focus>div:first-child{border-left:0}
-html[data-theme] .app .result-pane .nutrition-focus dt{margin:0;color:var(--ll-muted);font-size:.75rem;line-height:1.5;font-weight:450}
-html[data-theme] .app .result-pane .nutrition-focus dd{margin:7px 0 0;color:var(--ll-ink);font-size:1.1875rem;line-height:1.35;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
-html[data-theme] .app .result-pane .nutrition-focus>div:first-child dd{font-size:1.0625rem}
-html[data-theme] .app .result-pane .nutrition-focus small{display:block;margin-top:5px;color:var(--ll-muted);font-size:.6875rem;line-height:1.5;overflow-wrap:anywhere}
-
-/* Alerts stay visible; color belongs to the title, with no left stripe or shadow. */
-html[data-theme] .app .result-pane .warning{margin-top:14px;padding:17px 20px 4px}
-html[data-theme] .app .result-pane .warning>.section-title{padding:0 0 10px;margin:0;border:0}
-html[data-theme] .app .result-pane .warning .section-title h2{font-size:.875rem;line-height:1.5;font-weight:650;letter-spacing:0}
-html[data-theme] .app .result-pane .warning article{margin:0;padding:12px 0;border:0;border-top:1px solid var(--ll-rule);border-radius:0;background:transparent;box-shadow:none}
-html[data-theme] .app .result-pane .warning article strong{display:block;font-size:.8125rem;line-height:1.6;font-weight:600;overflow-wrap:anywhere}
-html[data-theme] .app .result-pane .warning article.alert strong{color:var(--ll-red)}
-html[data-theme] .app .result-pane .warning article.caution strong{color:var(--ll-caution)}
-html[data-theme] .app .result-pane .warning article strong::before{content:"";display:inline-block;width:5px;height:5px;margin-right:7px;border-radius:50%;background:currentColor;vertical-align:2px}
-html[data-theme] .app .result-pane .warning article p{margin:4px 0 0;color:var(--ll-muted);font-size:.75rem;line-height:1.75}
-
-html[data-theme] .app .result-pane .result-utilities{margin-top:14px;overflow:hidden}
-html[data-theme] .app .result-pane .result-utilities>details{margin:0;padding:0;border:0;border-top:1px solid var(--ll-rule);border-image:none;border-radius:0;background:transparent;box-shadow:none}
-html[data-theme] .app .result-pane .result-utilities>details:first-child{border-top:0}
-html[data-theme] .app .result-pane .result-utilities>details>summary{min-height:54px;padding:15px 20px;border-radius:0;font-size:.875rem;line-height:1.6}
-html[data-theme] .app .result-pane .result-utilities>details[open]>summary{background:var(--ll-slip);border-bottom:1px solid var(--ll-rule)}
-html[data-theme] .app .result-pane .result-utilities>details>summary:after{font-size:.6875rem}
-html[data-theme] .app .result-pane .result-utilities .collapsible-content{padding:4px 16px 16px}
-html[data-theme] .app .result-pane .metrics th{font-size:.6875rem;padding:11px 5px;color:var(--ll-muted)}
-html[data-theme] .app .result-pane .metrics td{font-size:.75rem;padding:12px 5px;line-height:1.65;border-top:1px solid var(--ll-rule)}
-html[data-theme] .app .result-pane .metrics td:nth-child(3){font-size:.6875rem}
-html[data-theme] .app .result-pane .metrics tbody tr:nth-child(even){background:transparent}
-html[data-theme] .app .result-pane .report-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px;margin:8px 0 0}
-html[data-theme] .app .result-pane .copy-state{margin:0}
-html[data-theme] .app .result-pane .copy-button{margin-top:0;min-height:44px}
-html[data-theme] .app .result-pane .report-text{margin-top:12px}
-
-@media(hover:hover) and (pointer:fine){
-  html[data-theme] .app .result-pane .result-utilities>details>summary:hover{background:var(--ll-slip)}
+html[data-huashu-direction="a"] .app .result-pane .result-layout>.heading{
+  position:static;display:flex;align-items:center;gap:12px;min-height:32px;margin:0 0 18px;padding:0;
 }
-@media screen and (max-width:680px), screen and (max-width:1000px) and (pointer:coarse){
-  html[data-theme] .app .result-pane .result-overview{padding-top:20px}
-  html[data-theme] .app .result-pane .overview-stats{padding:0 8px 18px}
-  html[data-theme] .app .result-pane .overview-stats>article{padding:0 9px}
-  html[data-theme] .app .result-pane .overview-stats h3{font-size:.75rem;margin-bottom:11px}
-  html[data-theme] .app .result-pane .overview-stats strong{font-size:clamp(1.375rem,6.5vw,1.875rem)}
-  html[data-theme] .app .result-pane .infusion-strip{padding:13px 16px 15px}
-  html[data-theme] .app .result-pane .result-nutrition{padding:17px 16px 0}
-  html[data-theme] .app .result-pane .nutrition-focus{margin-left:-16px;margin-right:-16px;padding:15px 8px}
-  html[data-theme] .app .result-pane .nutrition-focus dd{font-size:1.125rem}
-  html[data-theme] .app .result-pane .nutrition-focus>div:first-child dd{font-size:1rem}
-  html[data-theme] .app .result-pane .warning{padding:16px 16px 3px}
-  html[data-theme] .app .result-pane .result-utilities>details>summary{padding-left:16px;padding-right:16px}
+html[data-huashu-direction="a"] .app .result-pane .heading h2{margin:0;font-size:18px;font-weight:650;line-height:1.5;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .heading:after{display:none}
+html[data-huashu-direction="a"] .app .result-pane :is(.result-overview,.result-nutrition,.warning,.result-utilities){
+  min-width:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible;
 }
-@media(max-width:360px){
-  html[data-theme] .app .result-pane .overview-stats>article{padding-left:7px;padding-right:7px}
-  html[data-theme] .app .result-pane .overview-stats h3{font-size:.6875rem}
-  html[data-theme] .app .result-pane .overview-stats>article>small{font-size:.625rem}
-  html[data-theme] .app .result-pane .nutrition-focus>div{padding-left:7px;padding-right:7px}
-  html[data-theme] .app .result-pane .nutrition-focus dt{font-size:.6875rem}
-  html[data-theme] .app .result-pane .nutrition-focus small{font-size:.6875rem}
+/* Three metrics share one baseline and exactly the same size. */
+html[data-huashu-direction="a"] .app .result-pane .overview-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;align-items:start;margin:0;padding:0;
 }
-@media(prefers-contrast:more){
-  html[data-theme] .app .result-pane .overview-stats>article,
-  html[data-theme] .app .result-pane .nutrition-table th,
-  html[data-theme] .app .result-pane .nutrition-table td,
-  html[data-theme] .app .result-pane .warning article{border-color:var(--ll-line)}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats>article{
+  display:block;grid-column:auto;grid-row:auto;min-width:0;height:auto;margin:0;padding:0 10px;
+  border:0;border-left:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;text-align:left;
 }
-@media(forced-colors:active){
-  html[data-theme] .app .result-pane .result-overview,
-  html[data-theme] .app .result-pane .result-nutrition,
-  html[data-theme] .app .result-pane .warning,
-  html[data-theme] .app .result-pane .result-utilities{background:Canvas!important;color:CanvasText!important;border-color:ButtonText!important}
-  html[data-theme] .app .result-pane .overview-stats #osmCard.danger{color:CanvasText;outline:2px solid Highlight;outline-offset:-2px}
-  html[data-theme] .app .result-pane .overview-stats [data-metric="energy"] h3{background:Canvas;color:CanvasText}
-  html[data-theme] .app .result-pane .nutrient-dot{background:CanvasText}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats>article:first-child{padding-left:0;border-left:0}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats>article:last-child{padding-right:0}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats h3{
+  display:block;margin:0 0 6px;padding:0;font-size:var(--result-label-size);font-weight:500;line-height:1.5;color:var(--muted);letter-spacing:0;
+}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats strong{
+  display:block;min-width:0;margin:0;padding:0;font-size:var(--result-number-size);font-weight:650;line-height:1.2;
+  letter-spacing:-.025em;color:var(--deep);overflow-wrap:anywhere;
+}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats>article>small{
+  display:block;margin:5px 0 0;padding:0;font-size:var(--result-note-size);font-weight:400;line-height:1.5;white-space:nowrap;letter-spacing:0;color:var(--muted);
+}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats #osmCard.danger{background:transparent;border-color:var(--line);box-shadow:none}
+html[data-huashu-direction="a"] .app .result-pane .overview-stats #osmCard.danger :is(h3,strong){color:var(--danger)}
+/* Timing is metadata, not another group of large KPI cards. */
+html[data-huashu-direction="a"] .app .result-pane .infusion-strip{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin:0;padding:10px 0 0;
+  border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;
+}
+html[data-huashu-direction="a"] .app .result-pane .infusion-strip .result-subheading{
+  display:flex;flex:0 1 auto;flex-wrap:wrap;align-items:baseline;justify-content:flex-start;gap:4px 6px;margin:0;padding:0;
+}
+html[data-huashu-direction="a"] .app .result-pane .infusion-strip .result-subheading h3,
+html[data-huashu-direction="a"] .app .result-pane .infusion-strip .result-subheading>span{
+  margin:0;padding:0;font-size:12px;line-height:1.5;font-weight:400;color:var(--muted);letter-spacing:0;
+}
+html[data-huashu-direction="a"] .app .result-pane .infusion-values{
+  display:flex;flex:1 1 184px;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:3px 10px;min-width:0;margin:0;padding:0;
+}
+html[data-huashu-direction="a"] .app .result-pane .infusion-values>div{
+  display:inline-flex;align-items:baseline;gap:4px;min-width:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;
+}
+html[data-huashu-direction="a"] .app .result-pane .infusion-rate{font-size:12px;line-height:1.5;color:var(--muted);font-weight:400;white-space:nowrap}
+html[data-huashu-direction="a"] .app .result-pane .infusion-rate:after{content:":";padding-left:2px}
+html[data-huashu-direction="a"] .app .result-pane .infusion-values strong{
+  display:inline-flex;flex-wrap:nowrap;align-items:baseline;gap:2px;min-width:0;margin:0;padding:0;font-size:14px;font-weight:600;line-height:1.5;letter-spacing:0;color:var(--ink);
+}
+html[data-huashu-direction="a"] .app .result-pane .infusion-values i{min-width:0;font-style:normal;overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .app .result-pane .infusion-values small{flex:0 0 auto;font-size:12px;font-weight:400;white-space:nowrap;color:var(--muted)}
+/* One three-column comparison grid for nutrient amounts and reference values. */
+html[data-huashu-direction="a"] .app .result-pane .result-nutrition{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+html[data-huashu-direction="a"] .app .result-pane .result-nutrition>.result-subheading{display:block;margin:0 0 10px;padding:0}
+html[data-huashu-direction="a"] .app .result-pane .result-nutrition>.result-subheading h3{margin:0;font-size:16px;font-weight:650;line-height:1.5;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table{width:100%;margin:0;border:0;border-collapse:collapse;table-layout:fixed;background:transparent}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table th:first-child{width:40%;text-align:left}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table th:nth-child(2){width:34%;text-align:right}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table th:nth-child(3){width:26%;text-align:right}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table thead th{
+  padding:0 0 7px;border:0;border-bottom:1px solid var(--line);font-size:12px;font-weight:400;line-height:1.5;color:var(--muted);
+}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table thead th:nth-child(2){padding-right:8px}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table tbody :is(th,td){
+  padding:10px 0;border:0;border-bottom:1px solid var(--line);vertical-align:baseline;line-height:1.5;overflow-wrap:anywhere;
+}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table tbody th{padding-right:8px;font-size:14px;font-weight:400;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table tbody td{font-size:var(--result-value-size);font-weight:600;text-align:right;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table tbody td:nth-child(2){padding-right:8px}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-table tbody tr:last-child :is(th,td){border-bottom:0}
+html[data-huashu-direction="a"] .app .result-pane .nutrient-dot{display:none}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-focus{display:block;margin:0;padding:0;border:0;border-radius:0;background:transparent}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-focus>div{
+  display:grid;grid-template-columns:minmax(0,40fr) minmax(0,34fr) minmax(0,26fr);align-items:baseline;
+  gap:0;min-width:0;margin:0;padding:10px 0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;
+}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-focus dt{grid-column:1;grid-row:1;min-width:0;padding-right:8px;font-size:14px;font-weight:400;line-height:1.5;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-focus dd{
+  grid-column:2;grid-row:1;min-width:0;margin:0;padding:0 8px 0 0;font-size:var(--result-value-size);font-weight:600;line-height:1.5;text-align:right;color:var(--ink);overflow-wrap:anywhere;
+}
+html[data-huashu-direction="a"] .app .result-pane .nutrition-focus small{
+  display:block;grid-column:3;grid-row:1;min-width:0;margin:0;padding:0;font-size:12px;font-weight:400;line-height:1.5;text-align:right;color:var(--muted);overflow-wrap:anywhere;
+}
+/* Alerts remain fully visible; secondary tools retain their original disclosure. */
+html[data-huashu-direction="a"] .app .result-pane .warning{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+html[data-huashu-direction="a"] .app .result-pane .warning>.section-title{margin:0;padding:0 0 8px;border:0}
+html[data-huashu-direction="a"] .app .result-pane .warning .section-title h2{margin:0;font-size:16px;font-weight:650;line-height:1.5;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .warning article{margin:0;padding:10px 0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none}
+html[data-huashu-direction="a"] .app .result-pane .warning article:first-of-type{border-top:0}
+html[data-huashu-direction="a"] .app .result-pane .warning article strong{display:block;font-size:14px;font-weight:600;line-height:1.6;color:var(--orange-ink)}
+html[data-huashu-direction="a"] .app .result-pane .warning article strong:before{display:none}
+html[data-huashu-direction="a"] .app .result-pane .warning article p{margin:4px 0 0;font-size:14px;font-weight:400;line-height:1.7;color:var(--muted);overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .app .result-pane .result-utilities{margin-top:10px;border-top:1px solid var(--line)}
+html[data-huashu-direction="a"] .app .result-pane .result-utilities>details{margin:0;padding:0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;overflow:visible}
+html[data-huashu-direction="a"] .app .result-pane .result-utilities>details:last-child{border-bottom:0}
+html[data-huashu-direction="a"] .app .result-pane .result-utilities>details>summary{min-height:48px;margin:0;padding:12px 0;font-size:14px;font-weight:600;line-height:1.6;color:var(--ink);border-radius:0;background:transparent}
+html[data-huashu-direction="a"] .app .result-pane .result-utilities>details>summary:after{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .app .result-pane .result-utilities>details[open]>summary{border-bottom:1px solid var(--line)}
+html[data-huashu-direction="a"] .app .result-pane .collapsible-content{padding:6px 0 14px;overflow:visible}
+html[data-huashu-direction="a"] .app .result-pane .metrics{width:100%;table-layout:fixed;border-collapse:collapse}
+html[data-huashu-direction="a"] .app .result-pane .metrics :is(th,td){padding:10px 4px;border-color:var(--line);font-size:14px;line-height:1.6;overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .app .result-pane .metrics th{font-size:12px;font-weight:500;color:var(--muted)}
+html[data-huashu-direction="a"] .app .result-pane .metrics td:nth-child(2){font-weight:600;color:var(--ink)}
+html[data-huashu-direction="a"] .app .result-pane .metrics td:nth-child(3){font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .app .result-pane .copy-button{min-height:44px;font-size:14px}
+html[data-huashu-direction="a"] .app .result-pane .copy-state{font-size:12px;color:var(--blue)}
+html[data-huashu-direction="a"] .app .result-pane .report-text{font-size:14px;line-height:1.75;border-radius:8px;background:var(--blue-faint);color:var(--ink)}
+@media screen and (min-width:1001px){
+  html[data-huashu-direction="a"] .app .result-pane .result-layout{position:relative;margin-top:48px}
+  html[data-huashu-direction="a"] .app .result-pane .result-layout>.heading{position:absolute;left:0;top:-48px;width:100%;min-height:32px;margin:0}
+}
+@media screen and (max-width:680px),screen and (max-width:1000px) and (pointer:coarse){
+  html[data-huashu-direction="a"] .app .result-pane{--result-number-size:26px}
+  html[data-huashu-direction="a"] .app .result-pane .result-layout{padding:18px 16px}
+  html[data-huashu-direction="a"] .app .result-pane .result-layout>.heading{min-height:44px;margin-bottom:14px}
+  html[data-huashu-direction="a"] .app .result-pane .back-to-cart{min-height:44px;margin-left:auto;border-radius:8px;font-size:14px}
+  html[data-huashu-direction="a"] .app .result-pane .overview-stats>article{padding-left:8px;padding-right:8px}
+  html[data-huashu-direction="a"] .app .result-pane .overview-stats>article:first-child{padding-left:0}
+  html[data-huashu-direction="a"] .app .result-pane .overview-stats>article:last-child{padding-right:0}
+  html[data-huashu-direction="a"] .app .result-pane .infusion-strip{gap:3px;padding-top:8px}
+  html[data-huashu-direction="a"] .app .result-pane .infusion-values{flex-basis:100%;gap:3px 8px}
+  html[data-huashu-direction="a"] .app .result-pane .result-nutrition{margin-top:16px;padding-top:14px}
+  html[data-huashu-direction="a"] .app .result-pane .warning article p{font-size:16px}
+  html[data-huashu-direction="a"] .app .result-pane .warning article strong{font-size:16px}
+  html[data-huashu-direction="a"] .app .result-pane .report-text{font-size:16px}
+}
+@media screen and (max-width:360px){
+  html[data-huashu-direction="a"] .app .result-pane{--result-number-size:24px}
+  html[data-huashu-direction="a"] .app .result-pane .result-layout{padding:16px 12px}
 }
 @media print{
-  html[data-theme] .app .result-pane{--ll-paper:#fff;--ll-slip:#fff;--ll-ink:#000;--ll-muted:#333;--ll-line:#777;--ll-rule:#ccc;--ll-yellow:#fff;--ll-red:#000;--ll-caution:#000}
-  html[data-theme] .app .result-pane .result-overview,
-  html[data-theme] .app .result-pane .result-nutrition,
-  html[data-theme] .app .result-pane .warning,
-  html[data-theme] .app .result-pane .result-utilities{background:#fff;color:#000;border-color:#777;box-shadow:none;break-inside:avoid}
+  html[data-huashu-direction="a"] .app .result-pane{--result-number-size:22px}
+  html[data-huashu-direction="a"] .app .result-pane .result-layout{margin:16px 0 0;padding:16px;border-color:#999}
+  html[data-huashu-direction="a"] .app .result-pane :is(.overview-stats,.infusion-strip,.result-nutrition){break-inside:avoid}
+  html[data-huashu-direction="a"] .app .result-pane .warning article{break-inside:avoid}
+}
+
+</style>
+<style id="huashu-direction-a">
+/* Direction A — parallel clinical workbench. Only presentation is changed. */
+html[data-huashu-direction="a"]{
+  --page:#eef1f3;--paper:#ffffff;--ink:#172c40;--muted:#536676;
+  --blue:#215fba;--deep:#123d70;--blue-soft:#eaf2ff;--blue-faint:#f5f7fa;
+  --orange:#b65d25;--orange-soft:#fff0e5;--orange-ink:#914416;
+  --line:#d4dde4;--control:#a7b7c5;--danger:#a4461e;--danger-soft:#fff0e7;
+  --caution:#924a20;--caution-soft:#fff3e9;--radius:14px;
+  --radius-card:14px;--radius-control:10px;--radius-small:8px;
+  --surface-muted:#f5f7f9;--hairline:#dce3e8;--focus-ring:#d9e7ff;
+  --chrome-muted:var(--muted);--selection-fill:#edf4ff;--glass-fill:var(--paper);
+  --glass-edge:var(--line);--glass-shadow:transparent;--glass-cursor:var(--blue);
+  --sheet-fill:var(--paper);--glass-blur:0px;--energy-fill:var(--blue-soft);
+  --liquid-fill:var(--paper);--macro-aa:#f4f6f8;--macro-fat:#eef1f5;
+  --ll-paper:var(--paper);--ll-ink:var(--ink);--ll-muted:var(--muted);
+  --ll-line:var(--line);--ll-rule:var(--hairline);--ll-slip:var(--surface-muted);
+  --ll-yellow:transparent;--ll-blue:var(--blue);--ll-green:#5f768d;
+  --ll-red:var(--danger);--ll-caution:var(--caution);
+  background:var(--page);font-size:16px;-webkit-text-size-adjust:100%;
+}
+html[data-huashu-direction="a"][data-theme="dark"]{
+  --page:#111c27;--paper:#1b2a38;--ink:#e8eff5;--muted:#b0c0ce;
+  --blue:#a6c8ff;--deep:#d2e3ff;--blue-soft:#263e59;--blue-faint:#172531;
+  --orange:#e8af80;--orange-soft:#412f24;--orange-ink:#f4c59c;
+  --line:#405464;--control:#6d8496;--danger:#f5b18a;--danger-soft:#432e25;
+  --caution:#f2bf95;--caution-soft:#3d2f26;--surface-muted:#223342;
+  --hairline:#354958;--focus-ring:#334d70;--selection-fill:#253d55;
+  --glass-cursor:#a6c8ff;--macro-aa:#263a4b;--macro-fat:#2c3c50;
+}
+html[data-huashu-direction="a"] body{
+  background:var(--page);background-image:none;color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:15px;line-height:1.65;font-variant-numeric:tabular-nums;letter-spacing:0;
+}
+html[data-huashu-direction="a"] .app{max-width:1480px;padding:34px 40px 48px}
+html[data-huashu-direction="a"] :is(input,textarea,select){color:var(--ink)}
+html[data-huashu-direction="a"] :is(input,textarea)::placeholder{color:var(--muted);opacity:1}
+html[data-huashu-direction="a"] :is(button,input,select,textarea,summary):focus{outline-color:var(--blue)}
+html[data-huashu-direction="a"] .topbar{gap:38px;margin-bottom:26px;align-items:center}
+html[data-huashu-direction="a"] .header{gap:24px}
+html[data-huashu-direction="a"] .brand{gap:13px}
+html[data-huashu-direction="a"] .brand-icon{width:44px;height:44px;flex-basis:44px;border-radius:12px;box-shadow:none}
+html[data-huashu-direction="a"] .header h1{font-size:27px;line-height:1.25;font-weight:700;letter-spacing:-.02em}
+html[data-huashu-direction="a"] .header h1 span{font-size:29px;letter-spacing:-.04em;margin-right:8px}
+html[data-huashu-direction="a"] .header .subtitle{margin-top:6px;font-size:12px;line-height:1.6;letter-spacing:0;color:var(--muted)}
+html[data-huashu-direction="a"] .theme-toggle{border-radius:10px;background:var(--paper);border-color:var(--control);color:var(--blue);box-shadow:none}
+html[data-huashu-direction="a"] .app .mode{
+  flex-basis:336px;width:336px;padding:4px;gap:4px;margin:0;
+  border:1px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:none;
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+html[data-huashu-direction="a"] .app .mode button{min-height:44px;border-radius:8px;color:var(--muted);font-size:14px;font-weight:600;letter-spacing:0;background:transparent;box-shadow:none}
+html[data-huashu-direction="a"] .app .mode button.active,
+html[data-huashu-direction="a"] .app .mode.glass-ready button.active{background:var(--blue);color:var(--paper);box-shadow:none}
+html[data-huashu-direction="a"][data-theme="dark"] .app .mode button.active{color:#15273b}
+html[data-huashu-direction="a"] .glass-cursor{display:none}
+html[data-huashu-direction="a"] :is(.panel,.group,.clinical-tool,.warning,.catalog-reference){border:1px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:none}
+html[data-huashu-direction="a"] .patient-panel{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,.8fr);gap:18px 28px;padding:23px 26px 26px}
+html[data-huashu-direction="a"] .patient-panel>.section-title{grid-column:1/-1;padding:0;border:0}
+html[data-huashu-direction="a"] .section-title h2{font-size:16px;font-weight:700;letter-spacing:0}
+html[data-huashu-direction="a"] .patient{grid-column:1;gap:12px}
+html[data-huashu-direction="a"] .field>span:first-child{font-size:12px;color:var(--muted);margin-bottom:8px}
+html[data-huashu-direction="a"] .app .field-box{height:52px;border:1px solid var(--control);border-radius:9px;background:var(--blue-faint);overflow:visible}
+html[data-huashu-direction="a"] .field-box input{padding:8px 0 8px 12px;height:50px;font-size:21px;font-weight:600}
+html[data-huashu-direction="a"] .field-box b{flex:0 0 30px;padding:0 6px 0 0;font-size:12px;line-height:1.3}
+html[data-huashu-direction="a"] .calc-weights{grid-column:2;align-self:stretch;align-items:center;gap:16px;padding:0 0 0 28px;border-color:var(--line);background:transparent;border-radius:0}
+html[data-huashu-direction="a"] .calc-weights span{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .calc-weights strong{font-size:21px;margin-top:9px;line-height:1.4;letter-spacing:-.02em;color:var(--ink);white-space:normal;overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .patient-reference{grid-column:3;align-self:stretch;align-content:center;display:grid;grid-template-columns:1fr;gap:10px;padding:0 0 0 28px;border:0;border-left:1px solid var(--line);font-size:12px}
+html[data-huashu-direction="a"] .patient-reference>span{min-width:0;overflow-wrap:anywhere;font-size:12px;line-height:1.55}
+html[data-huashu-direction="a"] .patient-reference b{margin-left:10px;color:var(--ink);font-size:14px;font-weight:600}
+html[data-huashu-direction="a"] .clinical-tools{gap:12px;margin-top:12px}
+html[data-huashu-direction="a"] .clinical-tool{border-radius:10px;overflow:visible}
+html[data-huashu-direction="a"] .clinical-tool>summary{min-height:52px;padding:14px 20px;color:var(--ink);border-radius:10px;font-size:14px}
+html[data-huashu-direction="a"] .clinical-tool>summary strong{font-size:14px;font-weight:600}
+html[data-huashu-direction="a"] .clinical-tool>summary:after{color:var(--blue)}
+html[data-huashu-direction="a"] .tool-body{padding:22px;background:var(--blue-faint);border-color:var(--line);border-radius:0 0 10px 10px}
+html[data-huashu-direction="a"] .tool-field span{font-size:12px}
+html[data-huashu-direction="a"] :is(.tool-field input,.tool-field select){height:48px;font-size:16px;border-radius:9px;background:var(--paper);border-color:var(--control)}
+html[data-huashu-direction="a"] .app :is(.tool-result>div,.cp-capture-card){border:1px solid var(--line);border-radius:10px;background:var(--blue-soft);color:var(--ink)}
+html[data-huashu-direction="a"] .tool-result strong{font-size:28px;color:var(--ink);overflow-wrap:anywhere}
+html[data-huashu-direction="a"] :is(.tool-result span,.tool-result small,.cp-capture-score span,.cp-capture-score small){font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .tool-reference{border:1px solid var(--line);border-radius:10px;background:var(--paper);overflow:visible}
+html[data-huashu-direction="a"] .tool-reference>summary{min-height:48px;font-size:14px;color:var(--blue)}
+html[data-huashu-direction="a"] .tool-reference>summary:after{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] :is(.tool-reference-content,.tool-note,.cp-prognosis){font-size:14px;color:var(--muted);line-height:1.8}
+html[data-huashu-direction="a"] .tool-note{background:var(--caution-soft);color:var(--caution);border-radius:8px}
+html[data-huashu-direction="a"] :is(.score-table th,.score-table td){font-size:14px;border-color:var(--line)}
+html[data-huashu-direction="a"] .score-table th{background:var(--surface-muted);color:var(--ink)}
+html[data-huashu-direction="a"] .app .cp-choice-title{background:var(--surface-muted);color:var(--ink);font-size:14px;border-radius:8px}
+html[data-huashu-direction="a"] .app .cp-option{min-height:52px;border-color:var(--line)}
+html[data-huashu-direction="a"] .app .cp-option span{font-size:14px}
+html[data-huashu-direction="a"] .cp-option:after{background:var(--paper);border-color:var(--control)}
+html[data-huashu-direction="a"] .app .cp-option.selected{background:var(--selection-fill);color:var(--ink)}
+html[data-huashu-direction="a"] .cp-option.selected:after{border-color:var(--blue)}
+html[data-huashu-direction="a"] .cp-capture-head{font-size:14px;color:var(--ink)}
+html[data-huashu-direction="a"] .app .cp-capture-score>div{background:var(--paper);color:var(--ink);border-radius:8px}
+html[data-huashu-direction="a"] .cp-screenshot-tip{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .cp-reset{min-height:44px;font-size:14px;background:var(--paper);color:var(--blue);border:1px solid var(--control);border-radius:8px}
+html[data-huashu-direction="a"] .workbench{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px;margin-top:32px;align-items:start}
+html[data-huashu-direction="a"] .heading{margin-bottom:16px;gap:16px;min-height:31px}
+html[data-huashu-direction="a"] .heading h2{font-size:22px;color:var(--ink);font-weight:700;letter-spacing:-.02em}
+html[data-huashu-direction="a"] .heading:after{background:var(--line)}
+html[data-huashu-direction="a"] .group{border-radius:12px;margin-top:14px;overflow:visible}
+html[data-huashu-direction="a"] .app .group-head{min-height:58px;padding:15px 42px 15px 22px;background:var(--paper);color:var(--ink);border-radius:12px}
+html[data-huashu-direction="a"] .app .group-head[aria-expanded="true"]{background:var(--surface-muted);border-radius:12px 12px 0 0}
+html[data-huashu-direction="a"] .group-head .group-name{font-size:16px;font-weight:650}
+html[data-huashu-direction="a"] .group-head .group-meta{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .group-head:after{border-color:var(--muted)}
+html[data-huashu-direction="a"] .group-body{border-color:var(--line)}
+html[data-huashu-direction="a"] .app .dose-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,.9fr);gap:22px;padding:23px 22px;border-color:var(--line);background:var(--paper);transition:none}
+html[data-huashu-direction="a"] .app .dose-row:last-child{border-radius:0 0 12px 12px}
+html[data-huashu-direction="a"] .app .dose-copy{padding:0}
+html[data-huashu-direction="a"] .app .dose-copy strong{color:var(--ink);font-size:16px;line-height:1.65;font-weight:600;overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .app .dose-copy small{font-size:12px;line-height:1.75;margin-top:5px;color:var(--muted);overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .app .dose-row.active-dose,
+html[data-huashu-direction="a"] .app .dose-row:focus-within{background:var(--selection-fill)}
+html[data-huashu-direction="a"] .app .dose-row.active-dose .dose-copy strong{color:var(--deep)}
+html[data-huashu-direction="a"] .app .dose-row.active-dose .dose-copy strong:before{display:none}
+html[data-huashu-direction="a"] :is(.risk-badge,.external-badge){font-size:12px;margin:3px 0 0 6px;padding:1px 5px;border-radius:4px;vertical-align:1px;white-space:normal;line-height:1.5}
+html[data-huashu-direction="a"] :is(.risk-a,.risk-b){background:var(--orange-soft);color:var(--orange-ink)}
+html[data-huashu-direction="a"] .external-badge{background:var(--surface-muted);color:var(--muted)}
+html[data-huashu-direction="a"] .app .stepper{grid-template-columns:46px minmax(0,1fr) 46px;height:50px;border:1px solid var(--control);border-radius:9px;background:var(--paper);overflow:visible}
+html[data-huashu-direction="a"] .app .stepper button{min-height:48px;height:48px;line-height:48px;font-size:22px;font-weight:400;background:var(--blue-faint);color:var(--blue);border-color:var(--line);border-radius:8px 0 0 8px}
+html[data-huashu-direction="a"] .app .stepper button:last-child{border-radius:0 8px 8px 0;background:var(--blue-soft);color:var(--blue);border-color:var(--line)}
+html[data-huashu-direction="a"] .app .stepper label{height:48px;padding:0 10px;gap:6px}
+html[data-huashu-direction="a"] .app .stepper input{height:46px;font-size:20px;font-weight:600;letter-spacing:-.02em}
+html[data-huashu-direction="a"] .app .stepper label span{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .app .quick{gap:6px;margin-top:8px}
+html[data-huashu-direction="a"] .app .quick button{min-height:44px;padding:8px 2px;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--muted);font-size:12px;font-weight:500;overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .app .quick button:nth-child(n+3){background:var(--blue-faint);color:var(--blue);border-color:var(--line)}
+html[data-huashu-direction="a"] .app .status{margin-top:8px;font-size:12px;color:var(--muted);line-height:1.7;text-align:right;overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .restore-auto{min-height:44px;font-size:12px;color:var(--blue);border:1px solid var(--control);background:var(--paper);border-radius:7px}
+html[data-huashu-direction="a"] .copy-button{border:1px solid var(--blue);border-radius:8px;background:var(--blue);color:var(--paper);font-size:14px;min-height:44px}
+html[data-huashu-direction="a"][data-theme="dark"] .copy-button{color:#15273b}
+html[data-huashu-direction="a"] .copy-state{font-size:12px;color:var(--blue)}
+html[data-huashu-direction="a"] .report-text{font-size:14px;background:var(--blue-faint);border:1px solid var(--control);border-radius:9px;color:var(--ink)}
+html[data-huashu-direction="a"] .formula-wrap{margin-top:26px}
+html[data-huashu-direction="a"] :is(.formula-button,.collapsible-panel>summary){min-height:56px;font-size:14px;color:var(--ink);border-radius:10px}
+html[data-huashu-direction="a"] .formula-button{background:var(--paper);border:1px solid var(--line)}
+html[data-huashu-direction="a"] .formula-button.active{background:var(--blue-soft);border-color:var(--control);color:var(--deep)}
+html[data-huashu-direction="a"] .formula-workbench{padding:24px;border:1px solid var(--line);border-radius:12px;background:var(--surface-muted)}
+html[data-huashu-direction="a"] .formula-intro{gap:24px}
+html[data-huashu-direction="a"] .formula-intro h2{font-size:20px;line-height:1.5;color:var(--ink)}
+html[data-huashu-direction="a"] .section-kicker{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .modified-badge{font-size:12px;border-radius:6px;background:var(--blue-soft);color:var(--deep)}
+html[data-huashu-direction="a"] .modified-badge.active{background:var(--orange-soft);color:var(--orange-ink)}
+html[data-huashu-direction="a"] .reset-all{min-height:44px;font-size:12px;color:var(--blue)}
+html[data-huashu-direction="a"] :is(.formula-card,.formula-card-head){background:var(--paper);border-color:var(--line);color:var(--ink);border-radius:10px}
+html[data-huashu-direction="a"] .formula-card{overflow:visible}
+html[data-huashu-direction="a"] .formula-card-head{min-height:64px}
+html[data-huashu-direction="a"] .formula-card-head strong{font-size:14px}
+html[data-huashu-direction="a"] :is(.formula-card-head small,.formula-card-head>span:last-child){font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] :is(.formula-card-body,.formula-row,.parameter-row){border-color:var(--line)}
+html[data-huashu-direction="a"] .formula-row strong,
+html[data-huashu-direction="a"] .parameter-row>span strong{font-size:14px;color:var(--ink)}
+html[data-huashu-direction="a"] .formula-row small,
+html[data-huashu-direction="a"] .parameter-row>span small{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .formula-row code{font-size:14px;color:var(--ink);overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .parameter-row.modified{background:var(--orange-soft)}
+html[data-huashu-direction="a"] .parameter-editor input{min-height:46px;background:var(--blue-faint);border:1px solid var(--control);border-radius:8px;font-size:16px;color:var(--ink)}
+html[data-huashu-direction="a"] .parameter-editor b{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .parameter-editor button{min-height:44px;min-width:48px;font-size:12px;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--blue)}
+html[data-huashu-direction="a"] .catalog-reference{border-radius:10px}
+html[data-huashu-direction="a"] .catalog-reference>summary:after{font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] .catalog-ref-item{padding:18px 4px;border-color:var(--line)}
+html[data-huashu-direction="a"] .catalog-ref-item strong{font-size:14px;color:var(--ink)}
+html[data-huashu-direction="a"] .catalog-ref-item span{font-size:14px;color:var(--muted);line-height:1.85}
+html[data-huashu-direction="a"] .catalog-ref-item small{font-size:12px;color:var(--muted);line-height:1.9}
+html[data-huashu-direction="a"] footer{margin-top:32px;padding-top:20px;border-color:var(--line);font-size:12px;color:var(--muted)}
+html[data-huashu-direction="a"] :is(.theme-toggle,.copy-button,.mobile-status button,.sheet-heading button){transition:none;transform:none}
+html[data-huashu-direction="a"] :is(.theme-toggle,.copy-button,.mobile-status button,.sheet-heading button):active{transform:none}
+@media(min-width:1001px) and (max-width:1199px){
+  html[data-huashu-direction="a"] .app{padding-left:28px;padding-right:28px}
+  html[data-huashu-direction="a"] .workbench{gap:24px}
+  html[data-huashu-direction="a"] .patient-panel{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px 22px}
+  html[data-huashu-direction="a"] .patient-reference{grid-column:1/-1;display:flex;gap:12px 28px;padding:14px 0 0;border-left:0;border-top:1px solid var(--line)}
+  html[data-huashu-direction="a"] .app .dose-row{grid-template-columns:1fr;gap:15px}
+}
+@media(max-width:1000px){
+  html[data-huashu-direction="a"] .app{max-width:920px;padding:26px 24px 40px}
+  html[data-huashu-direction="a"] .topbar{display:block;margin-bottom:22px}
+  html[data-huashu-direction="a"] .app .mode{width:100%;margin-top:20px}
+  html[data-huashu-direction="a"] .patient-panel{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px 24px;padding:22px}
+  html[data-huashu-direction="a"] .patient-reference{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px 28px;padding:14px 0 0;border-left:0;border-top:1px solid var(--line)}
+  html[data-huashu-direction="a"] .calc-weights{padding-left:24px;gap:12px}
+  html[data-huashu-direction="a"] .workbench{grid-template-columns:minmax(0,1fr);gap:30px;margin-top:28px}
+  html[data-huashu-direction="a"] .app .dose-row{grid-template-columns:minmax(0,1fr) minmax(250px,.9fr)}
+}
+/* Keep the existing mobile category flow and selected prescription drawer. */
+@media screen and (max-width:680px),screen and (max-width:1000px) and (pointer:coarse){
+  html[data-huashu-direction="a"].mobile-enhanced{--mobile-status-height:104px;scroll-padding-top:calc(76px + env(safe-area-inset-top));scroll-padding-bottom:calc(var(--mobile-status-height) + 24px + env(safe-area-inset-bottom))}
+  html[data-huashu-direction="a"] body{font-size:16px}
+  html[data-huashu-direction="a"] .app{padding:22px 16px calc(var(--mobile-status-height) + 32px + env(safe-area-inset-bottom))}
+  html[data-huashu-direction="a"] .header{gap:14px}
+  html[data-huashu-direction="a"] .header h1{font-size:23px}
+  html[data-huashu-direction="a"] .header h1 span{font-size:26px;margin-right:6px}
+  html[data-huashu-direction="a"] .header .subtitle{font-size:12px}
+  html[data-huashu-direction="a"] .brand{gap:10px}
+  html[data-huashu-direction="a"] .brand-icon{width:40px;height:40px;flex-basis:40px}
+  html[data-huashu-direction="a"] .topbar{margin-bottom:20px}
+  html[data-huashu-direction="a"] .app .mode{margin-top:20px}
+  html[data-huashu-direction="a"] .patient-panel{grid-template-columns:minmax(0,1fr);gap:14px;padding:18px 16px}
+  html[data-huashu-direction="a"] .patient-panel>.section-title{grid-column:1}
+  html[data-huashu-direction="a"] .patient{grid-column:1;gap:10px}
+  html[data-huashu-direction="a"] .field-box input{font-size:20px;padding-left:10px}
+  html[data-huashu-direction="a"] .field-box b{flex-basis:26px;padding-right:5px;font-size:12px}
+  html[data-huashu-direction="a"] .calc-weights{grid-column:1;gap:14px;padding:14px 0 0;border:0;border-top:1px solid var(--line)}
+  html[data-huashu-direction="a"] .calc-weights strong{font-size:19px;margin-top:5px}
+  html[data-huashu-direction="a"] .patient-reference{grid-column:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding-top:14px}
+  html[data-huashu-direction="a"] .patient-reference b{display:block;margin:5px 0 0;font-size:14px;line-height:1.6}
+  html[data-huashu-direction="a"] .clinical-tools{grid-template-columns:1fr;gap:10px;margin-top:10px}
+  html[data-huashu-direction="a"] .clinical-tool>summary{padding:14px 16px}
+  html[data-huashu-direction="a"] .tool-body{padding:16px}
+  html[data-huashu-direction="a"] .tool-grid{grid-template-columns:1fr 1fr;gap:14px}
+  html[data-huashu-direction="a"] .tool-grid>.tool-field:last-child{grid-column:1/-1}
+  html[data-huashu-direction="a"] .tool-result{grid-template-columns:1fr}
+  html[data-huashu-direction="a"] :is(.tool-reference-content,.tool-note,.cp-prognosis){font-size:16px}
+  html[data-huashu-direction="a"] .app .cp-option span{font-size:16px}
+  html[data-huashu-direction="a"] :is(.score-table th,.score-table td){font-size:12px}
+  html[data-huashu-direction="a"] .workbench{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:26px}
+  html[data-huashu-direction="a"] .heading h2{font-size:21px}
+  html[data-huashu-direction="a"].mobile-enhanced .prescription-pane>.heading{margin-bottom:8px}
+  html[data-huashu-direction="a"] .app .mobile-category-bar{
+    top:0;top:env(safe-area-inset-top);padding:7px;gap:3px;margin:0 0 16px;
+    border:1px solid var(--line);border-radius:11px;background:var(--paper);box-shadow:none;
+    backdrop-filter:none;-webkit-backdrop-filter:none;
+  }
+  html[data-huashu-direction="a"] .app .mobile-category-bar button{min-height:46px;padding:10px 2px;border:0!important;border-radius:7px;background:transparent!important;color:var(--muted);font-size:13px;font-weight:600;box-shadow:none;letter-spacing:0}
+  html[data-huashu-direction="a"] .app .mobile-category-bar button[aria-selected="true"],
+html[data-huashu-direction="a"] .app .mobile-category-bar.glass-ready button[aria-selected="true"]{background:var(--blue)!important;color:var(--paper);box-shadow:none}
+  html[data-huashu-direction="a"][data-theme="dark"] .app .mobile-category-bar button[aria-selected="true"]{color:#15273b}
+  html[data-huashu-direction="a"].mobile-enhanced #groups{margin-top:0}
+  html[data-huashu-direction="a"].mobile-enhanced #groups .group{margin-top:0;border-radius:12px}
+  html[data-huashu-direction="a"] .app .dose-row{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:22px 18px;scroll-margin-top:84px}
+  html[data-huashu-direction="a"] .app .dose-copy{padding:0}
+  html[data-huashu-direction="a"] .app .dose-copy strong{font-size:16px;line-height:1.7}
+  html[data-huashu-direction="a"] .app .dose-copy small{font-size:12px;line-height:1.8}
+  html[data-huashu-direction="a"] .app .dose-row .stepper{grid-template-columns:48px minmax(0,1fr) 48px;height:52px;border-radius:9px}
+  html[data-huashu-direction="a"] .app .stepper button,
+html[data-huashu-direction="a"] .app .stepper label{height:50px;line-height:50px}
+  html[data-huashu-direction="a"] .app .stepper input{height:48px;font-size:21px}
+  html[data-huashu-direction="a"] .app .quick{gap:7px;margin-top:9px}
+  html[data-huashu-direction="a"] .app .quick button{min-height:46px;font-size:12px}
+  html[data-huashu-direction="a"] .app .status{font-size:12px;min-height:20px;text-align:left}
+  html[data-huashu-direction="a"].mobile-enhanced .back-to-cart{margin-left:auto;min-height:44px;border-radius:8px;background:var(--paper);border-color:var(--control);color:var(--blue);font-size:12px}
+  html[data-huashu-direction="a"] .mobile-status-host{width:calc(100% - 20px);bottom:calc(8px + env(safe-area-inset-bottom));border:1px solid var(--control);border-radius:13px;background:var(--paper);box-shadow:0 4px 22px #10233422;backdrop-filter:none;-webkit-backdrop-filter:none}
+  html[data-huashu-direction="a"] .mobile-status{grid-template-columns:repeat(3,minmax(0,1fr)) 68px;gap:8px;padding:13px 10px;background:var(--paper);border-radius:13px;color:var(--ink)}
+  html[data-huashu-direction="a"] .mobile-status>div{padding-left:0;border-left:0}
+  html[data-huashu-direction="a"] .mobile-status :is(span,small){font-size:12px;line-height:1.45;letter-spacing:0;color:var(--muted);overflow-wrap:anywhere}
+  html[data-huashu-direction="a"] .mobile-status strong{font-size:20px;margin:4px 0;color:var(--ink);font-weight:650;letter-spacing:-.035em;overflow-wrap:anywhere}
+  html[data-huashu-direction="a"] .mobile-status button{min-height:62px;padding:8px 3px;gap:6px;border:1px solid var(--blue);border-radius:9px;background:var(--blue);color:var(--paper);box-shadow:none;font-size:12px}
+  html[data-huashu-direction="a"] .mobile-status button span{font-size:12px;color:inherit}
+  html[data-huashu-direction="a"][data-theme="dark"] .mobile-status button{color:#15273b}
+  html[data-huashu-direction="a"] .mobile-status [data-alert="true"] :is(strong,span){color:var(--danger)}
+  html[data-huashu-direction="a"] .selected-sheet[open]{border:1px solid var(--control);border-radius:16px;background:var(--paper);box-shadow:0 12px 45px #0004;backdrop-filter:none;-webkit-backdrop-filter:none}
+  html[data-huashu-direction="a"] .sheet-heading{min-height:64px;padding:10px 18px;border-color:var(--line)}
+  html[data-huashu-direction="a"] .sheet-heading h2{font-size:18px;color:var(--ink)}
+  html[data-huashu-direction="a"] .sheet-heading button{min-height:44px;border-radius:8px;background:var(--blue-soft);color:var(--blue);font-size:14px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-items{padding:0 18px;scrollbar-gutter:auto}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line{grid-template-columns:minmax(0,1fr);gap:13px;padding:18px 0;border-color:var(--line)}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .dose-copy{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 8px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .dose-copy strong{grid-column:1;grid-row:1;font-size:16px;color:var(--ink)}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .dose-copy small{grid-column:1;grid-row:2;font-size:12px;max-width:none;display:block;color:var(--muted);margin:0}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .cart-remove{grid-column:2;grid-row:1/3;align-self:start;min-height:44px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .cart-auto{grid-column:2;grid-row:3}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper{width:100%;grid-template-columns:48px minmax(0,1fr) 48px;height:52px;background:var(--paper);border-color:var(--control);border-radius:9px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper :is(button,label){height:50px;line-height:50px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper button{font-size:22px;background:var(--blue-faint);color:var(--blue);border-color:var(--line)}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper button:last-child{background:var(--blue-soft)}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper label{padding:0 12px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper input{height:48px;font-size:21px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper label span{font-size:12px}
+  html[data-huashu-direction="a"] .selected-sheet .cart-line :is(.risk-badge,.external-badge){font-size:12px}
+  html[data-huashu-direction="a"] :is(.cart-remove,.cart-auto){min-height:44px;min-width:44px;font-size:12px;color:var(--blue)}
+  html[data-huashu-direction="a"] .cart-empty:not([hidden]){font-size:14px;color:var(--muted)}
+  html[data-huashu-direction="a"] .sheet-result{min-height:48px;font-size:14px;background:var(--paper);color:var(--blue);border-color:var(--line)}
+  html[data-huashu-direction="a"] #sheetStatusSlot{border-color:var(--line)}
+  html[data-huashu-direction="a"][data-sheet-compact="true"] .mobile-status{padding-top:8px;padding-bottom:8px}
+  html[data-huashu-direction="a"] .formula-workbench{padding:16px}
+  html[data-huashu-direction="a"] .formula-intro{display:block}
+  html[data-huashu-direction="a"] .formula-intro h2{font-size:18px}
+  html[data-huashu-direction="a"] .formula-intro>div+div{margin-top:12px}
+  html[data-huashu-direction="a"] .reset-all{margin-left:0}
+  html[data-huashu-direction="a"] :is(.formula-row,.parameter-row){display:block;padding:16px 14px}
+  html[data-huashu-direction="a"] .formula-row code{display:block;margin-top:8px}
+  html[data-huashu-direction="a"] .parameter-editor{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,auto) 48px;gap:8px;margin-top:12px}
+  html[data-huashu-direction="a"] .parameter-editor input{width:100%;min-width:0;font-size:16px}
+  html[data-huashu-direction="a"] .catalog-ref-item span{font-size:16px}
+}
+@media(max-width:360px){
+  html[data-huashu-direction="a"] .app{padding-left:12px;padding-right:12px}
+  html[data-huashu-direction="a"] .brand-icon{width:35px;height:35px;flex-basis:35px;border-radius:10px}
+  html[data-huashu-direction="a"] .brand{gap:8px}
+  html[data-huashu-direction="a"] .header{gap:8px}
+  html[data-huashu-direction="a"] .header h1{font-size:21px}
+  html[data-huashu-direction="a"] .header h1 span{font-size:24px;margin-right:5px}
+  html[data-huashu-direction="a"] .header .subtitle{font-size:12px}
+  html[data-huashu-direction="a"] .patient-panel{padding:18px 14px}
+  html[data-huashu-direction="a"] .patient{gap:8px}
+  html[data-huashu-direction="a"] .field-box input{font-size:18px;padding-left:7px}
+  html[data-huashu-direction="a"] .field-box b{flex-basis:23px;padding-right:4px}
+  html[data-huashu-direction="a"] .calc-weights{gap:8px}
+  html[data-huashu-direction="a"] .calc-weights strong{font-size:18px}
+  html[data-huashu-direction="a"] .app .mobile-category-bar{padding:5px;gap:2px}
+  html[data-huashu-direction="a"] .app .mobile-category-bar button{font-size:12px}
+  html[data-huashu-direction="a"] .app .dose-row{padding:21px 14px}
+  html[data-huashu-direction="a"] .app .quick{gap:5px}
+  html[data-huashu-direction="a"] .mobile-status{grid-template-columns:repeat(3,minmax(0,1fr)) 60px;gap:6px;padding:12px 8px}
+  html[data-huashu-direction="a"] .mobile-status strong{font-size:18px}
+  html[data-huashu-direction="a"] .mobile-status :is(span,small){font-size:12px}
+}
+@media(hover:hover) and (pointer:fine){
+  html[data-huashu-direction="a"] .app :is(.quick button,.group-head,.clinical-tool>summary,.formula-card-head):hover{background:var(--blue-soft);color:var(--ink)}
+  html[data-huashu-direction="a"] .app .mode button:not(.active):hover{background:var(--surface-muted)}
+}
+@media(prefers-reduced-transparency:reduce),(prefers-contrast:more){
+  html[data-huashu-direction="a"] :is(.mode,.mobile-category-bar,.mobile-status-host,.selected-sheet[open]){background:var(--paper)!important;border-color:var(--control)!important;box-shadow:none;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+}
+@media(forced-colors:active){
+  html[data-huashu-direction="a"] .app .mobile-category-bar button[aria-selected="true"],
+html[data-huashu-direction="a"] .app .mode button.active{background:Highlight!important;color:HighlightText!important;outline:1px solid Highlight}
+}
+@media print{
+  html[data-huashu-direction="a"]{--page:#fff;--paper:#fff;--ink:#000;--muted:#333;--deep:#000;--blue:#000;--surface-muted:#fff;--line:#aaa;--hairline:#ccc}
+  html[data-huashu-direction="a"] .app{max-width:none;padding:0}
+  html[data-huashu-direction="a"] .workbench{display:block}
+  html[data-huashu-direction="a"] :is(.mobile-status-host,.selected-sheet,.mobile-category-bar,.back-to-cart){display:none!important}
+}
+
+/* Round 1: compact reading hierarchy and coherent control geometry. */
+html[data-huashu-direction="a"] :is(.patient,.field,.field-box,.dose-copy,.dose-controls,.prescription-pane,.result-pane){min-width:0}
+html[data-huashu-direction="a"] .app .dose-controls{align-self:center}
+html[data-huashu-direction="a"] .app .field-box input{width:100%;min-width:0}
+html[data-huashu-direction="a"] .field-box b{align-self:center;white-space:nowrap;font-weight:500}
+html[data-huashu-direction="a"] .app .stepper label{min-width:0}
+html[data-huashu-direction="a"] .app .stepper label span{flex:0 0 auto;white-space:nowrap;font-weight:500}
+html[data-huashu-direction="a"] .app .stepper input{min-width:0;width:100%;font-variant-numeric:tabular-nums}
+@media screen and (max-width:680px),screen and (max-width:1000px) and (pointer:coarse){
+  html[data-huashu-direction="a"].mobile-enhanced #groups .group{overflow:hidden}
+  html[data-huashu-direction="a"] .app .dose-row{padding-top:18px;padding-bottom:18px;gap:12px}
+  html[data-huashu-direction="a"] .app .dose-row .stepper{height:52px}
+  html[data-huashu-direction="a"] .app .quick button{min-height:46px}
+  html[data-huashu-direction="a"] :is(.score-table th,.score-table td){font-size:14px;line-height:1.7}
+}
+
+/* Round 2: keyboard clarity, readable secondary content and print contrast. */
+html[data-huashu-direction="a"] :is(button,summary,a):focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+html[data-huashu-direction="a"] .app :is(.field-box,.stepper):focus-within{border-color:var(--blue);box-shadow:0 0 0 3px var(--focus-ring)}
+html[data-huashu-direction="a"] :is(.report-text,.formula-row code){line-height:1.75}
+html[data-huashu-direction="a"] .selected-sheet .cart-line .dose-copy{min-width:0}
+html[data-huashu-direction="a"] .selected-sheet .cart-line .dose-copy strong{overflow-wrap:anywhere}
+html[data-huashu-direction="a"] .auto-rule-note{border-color:var(--line);border-radius:10px;background:var(--blue-soft);color:var(--ink)}
+html[data-huashu-direction="a"] .auto-rule-note strong{font-size:14px;color:var(--ink)}
+html[data-huashu-direction="a"] .auto-rule-note span{font-size:14px;color:var(--muted);line-height:1.75}
+@media screen and (max-width:680px),screen and (max-width:1000px) and (pointer:coarse){
+  html[data-huashu-direction="a"] .auto-rule-note span{font-size:16px}
+  html[data-huashu-direction="a"] .formula-row code{font-size:16px;overflow-wrap:anywhere}
+}
+@media(forced-colors:active){
+  html[data-huashu-direction="a"] :is(button,summary,a):focus-visible{outline-color:Highlight}
+  html[data-huashu-direction="a"] .app :is(.field-box,.stepper):focus-within{border-color:Highlight;box-shadow:none}
+}
+@media print{
+  html[data-huashu-direction="a"][data-theme]{
+    --page:#fff;--paper:#fff;--ink:#000;--muted:#333;--deep:#000;--blue:#000;
+    --blue-soft:#fff;--blue-faint:#fff;--surface-muted:#fff;--line:#999;--hairline:#ccc;
+    --control:#777;--orange:#555;--orange-ink:#222;--orange-soft:#fff;
+    --danger:#000;--danger-soft:#fff;--caution:#333;--caution-soft:#fff;--selection-fill:#fff;
+  }
+}
+
+/* Keep the chosen A appearance; reuse a small set of type roles across modules. */
+html[data-huashu-direction="a"]{--ui-title-size:24px;--ui-section-size:18px;--ui-subsection-size:16px;--ui-label-size:14px;--ui-note-size:12px;--ui-input-size:20px}
+html[data-huashu-direction="a"] body{font-variant-numeric:tabular-nums lining-nums}
+html[data-huashu-direction="a"] .app .header h1{font-size:var(--ui-title-size);font-weight:700;line-height:1.3;letter-spacing:-.02em}
+html[data-huashu-direction="a"] .app .header h1 span{font-size:inherit;font-weight:inherit;letter-spacing:inherit}
+html[data-huashu-direction="a"] .app :is(.section-title h2,.heading h2){font-size:var(--ui-section-size);font-weight:650;line-height:1.5}
+html[data-huashu-direction="a"] .app .prescription-pane>.heading{min-height:32px;margin-bottom:16px}
+html[data-huashu-direction="a"] .app :is(.group-name,.clinical-tool>summary strong){font-size:var(--ui-subsection-size);font-weight:600;line-height:1.5}
+html[data-huashu-direction="a"] .app :is(.mode button,.quick button,.reset-all,.formula-button){font-size:var(--ui-label-size)}
+html[data-huashu-direction="a"] .app :is(.field-box input,.stepper input){font-size:var(--ui-input-size);font-weight:600;letter-spacing:0}
+html[data-huashu-direction="a"] .app :is(.field-box b,.stepper label span,.status,.group-meta){font-size:var(--ui-note-size);line-height:1.5}
+html[data-huashu-direction="a"] .app .group-head{padding-top:14px;padding-bottom:14px}
+html[data-huashu-direction="a"] .selected-sheet .cart-line .stepper input{font-size:var(--ui-input-size);font-weight:600;letter-spacing:0}
+@media screen and (max-width:680px),screen and (max-width:1000px) and (pointer:coarse){
+  html[data-huashu-direction="a"]{--ui-title-size:22px}
+  html[data-huashu-direction="a"].mobile-enhanced .app .prescription-pane>.heading{margin-bottom:8px}
+}
+@media print{
+  html[data-huashu-direction="a"]{--ui-title-size:22px}
 }
 
 </style>
@@ -1737,15 +1705,7 @@ html[data-theme] .app .result-pane .report-text{margin-top:12px}
           <article data-metric="liquid"><h3>总液体量</h3><strong id="liquid">—</strong><small>ml</small></article>
           <article id="osmCard" class="card" data-metric="osm"><h3>估算渗透压</h3><strong id="osm">—</strong><small>mOsm/L</small></article>
         </div>
-        <div class="infusion-strip">
-          <div class="result-subheading"><h3>葡萄糖输注时间</h3><span>速率 mg/kg/min</span></div>
-          <div class="infusion-values">
-            <div><span class="infusion-rate" id="rate35">3.5</span><strong><i id="time35">—</i><small>h</small></strong></div>
-            <div><span class="infusion-rate">4.0</span><strong><i id="time4">—</i><small>h</small></strong></div>
-            <div><span class="infusion-rate">5.0</span><strong><i id="time5">—</i><small>h</small></strong></div>
-          </div>
-        </div>
-      </section>
+        </section>
 
       <section class="result-nutrition" aria-labelledby="nutritionTitle">
         <div class="result-subheading"><h3 id="nutritionTitle">营养构成</h3></div>
@@ -1762,6 +1722,14 @@ html[data-theme] .app .result-pane .report-text{margin-top:12px}
           <div><dt>热氮比</dt><dd id="heatNitrogenSummary">—</dd><small>参考 <span id="heatNitrogenRange">—</span></small></div>
           <div><dt>糖脂比</dt><dd id="sugarFatSummary">—</dd><small>参考 <span id="sugarFatRange">—</span></small></div>
         </dl>
+<div class="infusion-strip">
+          <div class="result-subheading"><h3>葡萄糖输注时间</h3><span>速率 mg/kg/min</span></div>
+          <div class="infusion-values">
+            <div><span class="infusion-rate" id="rate35">3.5</span><strong><i id="time35">—</i><small>h</small></strong></div>
+            <div><span class="infusion-rate">4.0</span><strong><i id="time4">—</i><small>h</small></strong></div>
+            <div><span class="infusion-rate">5.0</span><strong><i id="time5">—</i><small>h</small></strong></div>
+          </div>
+        </div>
       </section>
 
       <section id="warnings" class="warning"></section>
